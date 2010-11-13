@@ -1,0 +1,27 @@
+* To use Python imaging Library and Numeric Python Together
+  - "import Image" // This is a part of PIL with which we will be loading the
+    image
+  - "import numpy" // The numeric python module
+* Loading the image // used PIL
+  - image_binary = Image.open('file name')
+* Opening the image as a Numpy array
+  - image_vector = numpy.asarray(image_binary)
+* Once the image is loaded as a Numpy array it behaves as an ARRAY
+  - So you can do array manipulations
+    - like adding 2 array yeilds an array , as expected.
+    - FORGET that you are working with an IMAGE, treat it like a "Numpy"
+      array.
+* To Convert a Numpy array back to an IPL image
+  - image_again = Image.fromarray(image_vector)
+
+* Pretty Simple Ain't it !
+
+* Note :
+
+| Variable Name | Type        |
+|---------------+-------------|
+| image_binary  | PIL image   |
+| image_vector  | Numpy array |
+| image_again   | PIL image   |
+|---------------+-------------|
+

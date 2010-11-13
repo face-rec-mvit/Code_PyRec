@@ -1,0 +1,38 @@
+
+* Algorithm (import numpy,Image)
+** For every image in the Set.
+*** Load the image.
+**** im_binary = Image.open(PATH_to_image_file)
+**** im_array = numpy.asarray(im_binary)
+*** Convert the image to vector.
+**** im_vector = im_array.flatten()
+** Do the same as above for all images in the set. To get the VECTOR_SET
+*** VECTOR_SET=[]
+*** for each im_vector VECTOR_SET.append(im_vector)
+*** X = numpy.asarray(VECTOR_SET)
+** X is a collection of Vectors Xi
+*** Put matrix X through the KNN clustering Algorithm.
+**** Select appropriate centroids, they can be images or mean of images
+**** For each new image, find the nearest centroid and assign it with the nearest centroid.
+**** Update the centroid. ( average of all points in the centroid).
+**** Repeate the above two steps till no image switch occurs
+**** http://saravananthirumuruganathan.wordpress.com/2010/01/27/k-means-clustering-algorithm/
+*** From the KNN Algorithm get the Adjacency Matrix Sij
+*** Also from the KNN Algorithm get the weight matrix Wij
+*** D = diag(sigma(Wij))
+*** L = (D - W)
+*** Calculate the matrix A
+**** compute XLX.transpose()
+**** Eigen Vectors / Values of the matrix (in the previous step) is found.
+**** Sort the eigen Vectos in ASCENDING ORDER of eigen values
+**** choose "d" vectors from above, corresponding to smallest eigen vectors.
+***** Save the above matrix as A.
+***** TODO We can also find an minimization over A as follows:
+****** use A' in the subsequent steps instead of A , contd.. next point
+****** A' = 2 trace ( A.transpose X L X.transpose() A)
+*** Yi = A.transpose() * Xi
+*** save the Yi vectors as a matrix Y.
+** Take the test vector "Xnew" project it on the reduced space as contd.. next point
+** Ynew = A.transpose() Xnew.
+** find the euclidean distances Di of Ynew from each of Yi in Y.
+** the Yi corresponding to the shortest distance Di is the "recognized" image.

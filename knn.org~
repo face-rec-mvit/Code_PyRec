@@ -1,0 +1,16 @@
+* Algorithm For K-Nearest Neighbour Clustering algorithm.
+** INPUT:
+1) Numpy ndarray of "k" centroid images.
+2) A new image point.
+3) Cluster of images (Initially equal to the centroid array ; If centroid image is taken as a face from the set).
+** OUTPUT:
+1)  
+** Select Centroids.
+** When adding a new point to the centroid, 
+- find the closest centroid using an appropriate "distance metric".
+** Add the point to the centroid's cluster.
+** Update the centroid (Maybe use the mean of all images in the cluster).
+** Repeat last THREE steps , till no point switches clusters.
+** At the end of the algorithm we get K - Clusters with "n" (which can vary)
+- images in each cluster.
+
