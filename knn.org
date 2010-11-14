@@ -1,4 +1,4 @@
-#   <Steps K-Nearest Neighbour Clustering algorithm>
+#   <Steps K-Nearest Neighbour-Clustering algorithm>
 #    Copyright (C) <2010>  <Authors : Dharini,Hariharan,Guruprasad,Kunal,Kiran>
 #
 #    This program is free software: you can redistribute it and/or modify
