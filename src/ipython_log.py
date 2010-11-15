@@ -22,7 +22,6 @@
 #log#-----------------------------------------------------------------------
 
 _ip.magic("cd ../CroppedYale/yaleB01/")
-import Import
 import Image
 import numpy
 a = Image.open("yaleB01_P00A+000E+00.pgm")
