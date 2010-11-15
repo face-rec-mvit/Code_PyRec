@@ -16,7 +16,7 @@
 
 
 import numpy
-import IMage
+import Image
 
 def imageToVector(image):
     """
