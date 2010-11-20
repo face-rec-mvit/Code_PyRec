@@ -32,7 +32,7 @@ def updateNearestCentroid(nearest_centroid , new_image):
     
     updation is done by finding the average of the two.
     """
-    #The code goes here
+    
     
 def knn(centroids,new_image,cluster):
     """
