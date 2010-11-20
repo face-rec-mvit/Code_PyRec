@@ -16,7 +16,24 @@
 
 import numpy 
 import Image
+#import distance #not yet implemented
 
+#NOTE IMPT
+#We can use a dictionary for storing the centroids and clusters.
+#the centroid become the key and the cluster becomes the value.
+#It would be much more faster and much easier to understand.
+
+def updateNearestCentroid(nearest_centroid , new_image):
+    """
+    The first argument is a numpy array of the nearest 
+    centroid to the image.
+    
+    new_image is also a numpy array.
+    
+    updation is done by finding the average of the two.
+    """
+    #The code goes here
+    
 def knn(centroids,new_image,cluster):
     """
     This function is the implementation of the
@@ -39,11 +56,21 @@ def knn(centroids,new_image,cluster):
     The distance can either be euclidean , mahalanobis 
     distance, etc.
     """
-    a = numpy.ndarray([])
+    #a is a temporary numpy array of distances of new_image
+    #from each of the centroids.
+    a = []
+    
+    #NOTE : Use a lambda function and python maps for the following
+    #loop , it should become faster.
     for centroid in centroids:
         a.append(distance(centroid,new_image));
-        #numpy ndarrays' argmin function returns the index
-        #corresponding to the minimum 
-        nearest_centroid=a.argmin()
+        
+    #convert the list 'a' to a numpy array.
+    numpy_a = numpy.asarray(a)        
+    #numpy ndarrays' argmin function returns the index
+    #corresponding to the minimum
+    nearest_centroid=numpy_a.argmin()
+    centroids[nearest_centroid] = updateNearestCentroid( centroids[nearest_centroid] , new_image )
+    cluster = addImageToCluster ( cluster[nearest_centroid] , new_image )
     
     return centroid,cluster
