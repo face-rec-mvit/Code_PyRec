@@ -25,6 +25,7 @@ def get_files(directory,ftype=None):
     files=list()
     #arg[0]=files
     #arg[1]=ftype
+    directory = os.path.abspath(directory)
     
     if directory == None :
         print """
