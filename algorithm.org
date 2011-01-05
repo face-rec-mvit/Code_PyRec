@@ -1,3 +1,4 @@
+
 * Algorithm (import numpy,Image)
 ** For every image in the Set.
 *** Load the image.
