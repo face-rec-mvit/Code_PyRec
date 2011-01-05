@@ -21,10 +21,7 @@ def get_files(directory,ftype=None):
     e.g. ["jpeg","jpg","pgm"] 
     """
 
-    #arg = ()
     files=list()
-    #arg[0]=files
-    #arg[1]=ftype
     directory = os.path.abspath(directory)
     
     if directory == None :
@@ -42,7 +39,6 @@ def get_files(directory,ftype=None):
         #file type(s) is/are mentioned        
         os.path.walk(directory,gen_files,files)
         #arg[0] is now populated with the files in the directory
-        #ftemp = arg[0]
         ftemp = files
         newList = list()
         for f in ftemp:
@@ -53,24 +49,21 @@ def get_files(directory,ftype=None):
 
     else :
         os.path.walk(directory,gen_files,files)
-        #files = arg[0]
         
     return files
 
 def print_list(l):
     for entry in l:
         print entry
-        #print "\n"
 
 if __name__ == '__main__' :
     arg = sys.argv
-    #print arg,len(arg)
 
     if len(arg) == 2:
         dirname = arg[1]
         print dirname,2
         file_list = get_files(dirname,None)
-        print_list(file_list)#return(0)
+        print_list(file_list)
 
     elif len(arg) == 3:
         dirname = arg[2]
@@ -78,7 +71,7 @@ if __name__ == '__main__' :
             arg[1]=arg[1][len("--types="):]
             ftype=arg[1].split(",")            
             file_list = get_files(dirname,ftype)
-            print_list(file_list)#return(0)
+            print_list(file_list)
         else:
             print "Error in --types"#return(1)
     else:
