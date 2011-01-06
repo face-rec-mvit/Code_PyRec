@@ -4,7 +4,7 @@ import numpy
 import initial_processing
 import get_abs_path_of_all_files_in_directory as lslR
 import sys
-
+import kNN
 
 #------Please Fill in the following details------
 """
@@ -31,6 +31,10 @@ class Image_Directory(object) :
     keywords = {}
     xs = []
     ys = []
+    model = kNN()
+    k=int()
+    adjacency_matrix = [][]
+    weight_matrix = [][]
     """
     ftypes is a list of all the types of images that must
     be included from the directory mentioned.
@@ -42,6 +46,8 @@ class Image_Directory(object) :
         self.keywords = keys
         self.ftypes = types
         self.create_xs_ys()
+        self.k = len(numpy.unique(self.ys))
+        self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys)))
 
     def create_xs_ys(self):
         files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
@@ -52,6 +58,8 @@ class Image_Directory(object) :
                 if file.rfind(value) != -1 :
                     self.xs.append(initial_processing.imageToVector(file))
                     self.ys.append(key)
+
+    def create_weight_matrix(self):
 
 
 class Class_Directory(object) :

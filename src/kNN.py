@@ -28,6 +28,7 @@ equal_weight    Every example is given a weight of 1.
 """
 
 import numpy
+import copy
 
 class kNN:
     """Holds information necessary to do nearest neighbors classification.
@@ -83,6 +84,7 @@ def calculate(knn, x, weight_fn=equal_weight, distance_fn=None):
     x = numpy.asarray(x)
 
     order = []  # list of (distance, index)
+    order_copy = []
     if distance_fn:
         for i in range(len(knn.xs)):
             dist = distance_fn(x, knn.xs[i])
@@ -96,6 +98,7 @@ def calculate(knn, x, weight_fn=equal_weight, distance_fn=None):
             temp[:] = x - knn.xs[i]
             dist = numpy.sqrt(numpy.dot(temp,temp))
             order.append((dist, i))
+    order_copy = copy.copy(order)
     order.sort()
 
     # first 'k' are the ones I want.
@@ -106,7 +109,7 @@ def calculate(knn, x, weight_fn=equal_weight, distance_fn=None):
         klass = knn.ys[i]
         weights[klass] = weights[klass] + weight_fn(x, knn.xs[i])
 
-    return weights
+    return weights,order_copy
 
 def classify(knn, x, weight_fn=equal_weight, distance_fn=None):
     """classify(knn, x[, weight_fn][, distance_fn]) -> class
