@@ -33,8 +33,8 @@ class Image_Directory(object) :
     ys = []
     model = kNN()
     k=int()
-    adjacency_matrix = [][]
-    weight_matrix = [][]
+    adjacency_matrix = list()
+    weight_matrix = list()
     """
     ftypes is a list of all the types of images that must
     be included from the directory mentioned.
@@ -48,6 +48,8 @@ class Image_Directory(object) :
         self.create_xs_ys()
         self.k = len(numpy.unique(self.ys))
         self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys)))
+        self.create_weight_matrix()
+        self.create_adjacency_matrix()
 
     def create_xs_ys(self):
         files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
@@ -60,6 +62,22 @@ class Image_Directory(object) :
                     self.ys.append(key)
 
     def create_weight_matrix(self):
+        for image in self.xs:
+            w,dist = kNN.calculate(self.model,image)
+            self.weight_matrix.append([(distance) for (distance , node) in dist])
+
+    def create_adjacency_matrix(self):
+        temp = list()
+        for i in self.ys:
+            for j in self.ys:
+                if self.ys.index(i) == self.ys.index(j):
+                    continue
+                elif self.ys[i] == self.ys[j]:
+                    temp.append(1)
+                else:
+                    temp.append(0)
+            self.adjacency_matrix.append(temp)
+
 
 
 class Class_Directory(object) :
