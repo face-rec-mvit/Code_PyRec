@@ -105,7 +105,12 @@ def calculate(knn, x, weight_fn=equal_weight, distance_fn=None):
     weights = {}  # class -> number of votes
     for k in knn.classes:
         weights[k] = 0.0
-    for dist, i in order[:knn.k]:
+
+    #print knn.k
+    #print type(order)
+    #print order[:knn.k]
+    for dist, i in order[:len(knn.k)]:
+        #for i in order[:knn.k]:
         klass = knn.ys[i]
         weights[klass] = weights[klass] + weight_fn(x, knn.xs[i])
 

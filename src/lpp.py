@@ -31,10 +31,10 @@ class Image_Directory(object) :
     keywords = {}
     xs = []
     ys = []
-    model = kNN()
+    #model of type kNN is created in __init__
     k=int()
-    adjacency_matrix = list()
-    weight_matrix = list()
+    #adjacency_matrix = list()#create in __init__
+    #weight_matrix = list() #create in __init__
     """
     ftypes is a list of all the types of images that must
     be included from the directory mentioned.
@@ -47,9 +47,9 @@ class Image_Directory(object) :
         self.ftypes = types
         self.create_xs_ys()
         self.k = len(numpy.unique(self.ys))
-        self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys)))
-        self.create_weight_matrix()
-        self.create_adjacency_matrix()
+        self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys))
+        self.adjacency_matrix = self.create_adjacency_matrix()
+        self.weight_matrix = self.create_weight_matrix()
 
     def create_xs_ys(self):
         files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
