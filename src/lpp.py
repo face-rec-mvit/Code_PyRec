@@ -10,7 +10,7 @@ import kNN
 """
 NOTE :
 Either give the image directory and specify a keywords for classes
-OR 
+OR
 Give the Class Image Directory
 """
 class Image_Directory(object) :
@@ -20,9 +20,9 @@ class Image_Directory(object) :
     The pattern will be matched against
     the absolute path of the image
     kind of like grep
-    
+
     keywords = {
-                    0:"pattern0" , 
+                    0:"pattern0" ,
                     1:"pattern1" ,
                     2:"pattern2"
                }
@@ -62,21 +62,46 @@ class Image_Directory(object) :
                     self.ys.append(key)
 
     def create_weight_matrix(self):
+        mat = list()
         for image in self.xs:
             w,dist = kNN.calculate(self.model,image)
-            self.weight_matrix.append([(distance) for (distance , node) in dist])
+            mat.append([(distance) for (distance , node) in dist])
+        return mat
 
     def create_adjacency_matrix(self):
-        temp = list()
-        for i in self.ys:
-            for j in self.ys:
-                if self.ys.index(i) == self.ys.index(j):
-                    continue
-                elif self.ys[i] == self.ys[j]:
-                    temp.append(1)
+        col = list()
+        #for i in self.ys:
+        #    row = list()
+        #    for j in self.ys:
+        #        if self.ys.index(i) == self.ys.index(j):
+        #            print "index equal %s  %s " % (self.ys.index(i) , self.ys.index(j))
+        #            continue
+        #        elif self.ys[i] == self.ys[j]:
+        #            print "value equal %s  %s " % (self.ys.index(i) , self.ys.index(j))
+        #            row.append(1)
+        #        else:
+        #            row.append(0)
+        #    col.append(row)
+        for i in range(len(self.ys)):
+            row = list()
+            for j in range(len(self.ys)):
+                #if i==j:
+                #    continue
+                #elif self.ys[i] == self.ys[j]:
+                if self.ys[i] == self.ys[j]:
+                    row.append(1)
                 else:
-                    temp.append(0)
-            self.adjacency_matrix.append(temp)
+                    row.append(0)
+                col.append(row)
+        return col
+
+    def print_adjacency_matrix(self):
+        for i in self.adjacency_matrix:
+            print i
+
+    def print_weight_matrix(self):
+        for i in self.weight_matrix:
+            print i
 
 
 
@@ -85,7 +110,7 @@ class Class_Directory(object) :
     directory containing text files
     like so : 0.txt , 1.txt
     [class number].txt
-    containing absolute paths of images belonging 
+    containing absolute paths of images belonging
     to that class
     """
     CLASS_IMAGE_DIRECTORY = ""
