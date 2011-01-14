@@ -116,5 +116,8 @@ class Class_Directory(object) :
     CLASS_IMAGE_DIRECTORY = ""
 
 
-
-
+if __name__ == '__main__':
+    print """
+    This file is to be used from within a python interpreter
+    as of now.
+    """
