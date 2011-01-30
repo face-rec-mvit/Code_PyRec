@@ -26,7 +26,8 @@ class Image_Directory(object) :
                     1:"pattern1" ,
                     2:"pattern2"
                }
-    It is done this way because you
+    It is done this way so that you can specify
+    all images in a class by a regexp
     """
     keywords = {}
     xs = []
@@ -116,5 +117,45 @@ class Class_Directory(object) :
     CLASS_IMAGE_DIRECTORY = ""
 
 
+if __name__ == '__main__':
+    #print """
+    #This file is to be used from within a python interpreter
+    #as of now.
+    #"""
+    arg = sys.argv
+
+    if len(arg) != 4:
+        print """
+        Incorrect number of arguments.
+        Usage:
+
+        python lpp.py <directory> "<keys separated by ;>" "<types of files separated by ,>"
+
+        e.g. you want all path names with "rego0" to belong to the 0th class 
+        and "rego1" in the 1st class you must write. 
+
+        python lpp.py /path/to/images "rego0;rego1" "png"
+
+        NOTE: ALL ARGUMENTS ARE NECESSARY
+        AND THIS IS JUST FOR TESTING , CALL lpp.py FROM ANOTHER PROGRAM 
+        FOR PRACTICAL PURPOSES.
+        """
+    else:
+        #get the directory
+        directory = arg[1]
+        
+        #get the keys and convert them to dictionary
+        temp = arg[2].split(";")
+        classes = [i for i in range(len(temp))]
+        keys = dict(zip(classes,temp))
+
+        #get the file types
+        types = arg[3].split(",")
+        
+        ImageDir_Object = Image_Directory(directory,keys,types)
+        print "Success !!! ImageDir_Object Created"
+        print "Adjacency Matrix" ,ImageDir_Object.print_adjacency_matrix()
+        print "Weight Matrix", ImageDir_Object.print_weight_matrix()
+        print "NOTE : To use this module , call it from another program"
 
 
