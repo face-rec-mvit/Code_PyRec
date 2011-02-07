@@ -1,0 +1,95 @@
+1.Different algorithms tackle different face recognition challenges tp varying
+accuracy.
+
+2.In a dynamic scenario, the recognition challenges vary.
+
+3.The variation above can be triggered by various parameters, one such parameter
+could be time:
+At different times of the day the illumination of an environment is different.
+
+4.Hence we need to determine dynamically ( based on above parameters like time
+etc ) which algorithm is to be chosen.
+
+5. W.R.T point 4 . There cannot be just 1 algorithm which can be relied upon.We
+must determine the degree to which the algorithm must be preferred
+(contributes to accurate recognition) based on the above parameters.
+
+6.The more the number of parameters , more accurate / appropriate a choice of
+algorithms can be made , leading to better results.
+
+7.The parameters MAY NOT bear any physical significance. They are mere pointers
+that help us in identifying the conditions at which an algorithm OR a
+combination of algorithms is to be chosen.
+
+-------------------------------------------------------------------------------
+A sample scenario (Use Case):
+
+Let us assume we have N face images in the database F1,F2,F3,......,Fn
+and we have M recognition algorithms A1,A2,A3,....,Am
+Also we have K parameters P1,P2,P3,......,Pk
+
+There are two phases to the proposed hybrid algorithm:
+Phase 1: The Training phase
+
+This phase is actually the identification phase. Here we basically run all the
+recognition algorithms and test for all the N faces. Some algorithm Am is able
+to correctly recognize all the N faces hence it has 100% efficiency and
+similarly some other algorithm Am' has 77% accuracy etc. 
+(NOTE: this is supervised learning , as the user must verify the recognition
+results of the algorithms)
+
+Now we note down the K Parameters that characterise this experiment.
+
+The Experiment(Training) above is repeated a lot of times to collect a lot of sets of the
+Parameters. as below.
+                               percentage accuracy
+                             /   \
+ID---P1---P2---P3---P4------A1---A2
+01---09--100---30---0.450--100---45
+02---02---78---67---0.001--088---33
+03---77----1---88---0.220--097---09
+
+
+Phase 2: The Testing phase
+Now supposing we are testing our hybrid model.
+What this model proposes is that , we do not need to run through all the
+algorithms and identify which one performs the best. We just need to find out
+the values of the Parameters , say for example:
+
+At the time of testing our model, the values of parameters are,
+
+P1---P2---P3---P4---
+03---77----1---0.220
+
+The above set of parameters match the ID-3 in the training table. Now we know
+that Algorithm A1 performs very well in this situation (set of P values) so we
+just use the A1 algorithm (we do not need to run all the recognition algorithms
+:)) and Stastically we are sure to get very good efficiency. (In Case we do not
+get good recognition , it implies there is another Parameter P' which we have
+not considered (IMPT))
+
+
+Now comes the most important part of our algorithm:
+What Parameters should we consider , How do we calculate them and What is their
+significance.
+
+We could theoretically try to save infinite number of state data (to uniquely
+identify every experiment (training) instance) But that makes increases the time
+complexity while matching the patterns while testing.
+
+What we must do , while developing our model is to identify some finite 
+(preferrably small number K) set of parameters P1,P2..Pk such that we can
+uniquely identify an instance of our experiment (one training instance)
+
+Some sample Parameters can be:
+1. Time of day
+2. Subject that is being taught ( Or what are the People under the test
+condition doing i.e studying, eating. etc)
+3. For how long is the subject being taught ( eg. for the past 10 minutes or 40
+minutes )
+4. What is the average pixel intensity at the time of testing.
+5. What is the decibel value at the time of testing (This can be considered an
+example of point 7 , this doesn't have any physical significance to
+face-recognition but it is a very good candidate for parameter to identify a
+pattern)
+`
