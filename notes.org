@@ -1,3 +1,8 @@
+* OPENCV BEST CONFIGURATION
+** minimum face size (40,40)
+** image scale (2)
+** haar scale (1.2)
+** Cascade used mcs_upperbody
 * To use Python imaging Library and Numeric Python Together
   - "import Image" // This is a part of PIL with which we will be loading the
     image

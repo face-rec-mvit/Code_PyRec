@@ -1,4 +1,4 @@
-1.Different algorithms tackle different face recognition challenges tp varying
+1.Different algorithms tackle different face recognition challenges to varying
 accuracy.
 
 2.In a dynamic scenario, the recognition challenges vary.
@@ -34,11 +34,11 @@ Phase 1: The Training phase
 This phase is actually the identification phase. Here we basically run all the
 recognition algorithms and test for all the N faces. Some algorithm Am is able
 to correctly recognize all the N faces hence it has 100% efficiency and
-similarly some other algorithm Am' has 77% accuracy etc. 
+similarly some other algorithm Am' has 77% accuracy etc.
 (NOTE: this is supervised learning , as the user must verify the recognition
 results of the algorithms)
 
-Now we note down the K Parameters that characterise this experiment.
+Now we note down the K Parameters that characterize this experiment.
 
 The Experiment(Training) above is repeated a lot of times to collect a lot of sets of the
 Parameters. as below.
@@ -77,14 +77,14 @@ We could theoretically try to save infinite number of state data (to uniquely
 identify every experiment (training) instance) But that makes increases the time
 complexity while matching the patterns while testing.
 
-What we must do , while developing our model is to identify some finite 
-(preferrably small number K) set of parameters P1,P2..Pk such that we can
+What we must do , while developing our model is to identify some finite
+(preferrbly small number K) set of parameters P1,P2..Pk such that we can
 uniquely identify an instance of our experiment (one training instance)
 
 Some sample Parameters can be:
 1. Time of day
 2. Subject that is being taught ( Or what are the People under the test
-condition doing i.e studying, eating. etc)
+condition doing i.e studying, eating. etc )
 3. For how long is the subject being taught ( eg. for the past 10 minutes or 40
 minutes )
 4. What is the average pixel intensity at the time of testing.
@@ -92,4 +92,4 @@ minutes )
 example of point 7 , this doesn't have any physical significance to
 face-recognition but it is a very good candidate for parameter to identify a
 pattern)
-`
+
