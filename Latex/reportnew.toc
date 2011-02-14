@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {0.1}Introduction}{1}{section.0.1}
+\contentsline {section}{\numberline {0.2}Motivation}{1}{section.0.2}
+\contentsline {section}{\numberline {0.3}Algorithm}{1}{section.0.3}
+\contentsline {section}{\numberline {0.4}Software Requirements}{2}{section.0.4}
+\contentsline {section}{\numberline {0.5}Hadrware Requirements}{2}{section.0.5}
+\contentsline {section}{\numberline {0.6}Conclusion}{2}{section.0.6}
