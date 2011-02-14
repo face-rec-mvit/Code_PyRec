@@ -1,4 +1,4 @@
-\section*{Software Requirements}
+\section{Software Requirements}
 \begin{itemize}
 \item \textbf{Python} : Implementation Language of Choice , because of its Rapid Prototyping Capabilities. Python also has very good Image Processing and Distributed / Parallel Computing libraries.
 \item \textbf{OpenCV} : The Computer Vision Library being used.

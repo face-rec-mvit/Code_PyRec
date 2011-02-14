@@ -2,13 +2,13 @@
 
 \begin{center}
 
-\textup{\large A report on}\\[1.0cm]
+\textup{\large Synopsis}\\[1.0cm]
 
 % Title
-\uppercase{\Large \textbf {<title here>}}\\[3.0cm]
+\uppercase{\Large \textbf {A Learning Algorithm for Optimal Face Recognition in Dynamic Environments}}\\[3.0cm]
 
 % Done by
-\normalsize Done by \\
+\normalsize By \\
 \begin{table}[h]
 \centering
 \begin{tabular}{lr}\hline \\
@@ -24,11 +24,15 @@ Roll No & Names of Students \\ \\ \hline
 \vfill
 
 % Bottom of the page
-\includegraphics[width=0.20\textwidth]{./sirmvit-logo}\\[1cm]
+\normalsize
+\textsc{Under the Guidance of }\\
+Mr G Thippeswamy\\
+{\small Assistant Professor}\\
+{\small Department of Computer Science & Engineering}\\
 \LARGE{Sir M Visvesvaraya Institute of Technology }\\
 \normalsize
 \textsc{Krishnadeveraya Nagar, Hunasamranhalli, NH-7, Via- Yelahanka, Bangalore-562157, Karnataka, India}\\
-Banglore, Karnataka \\
+
 \vspace{0.5cm}
 
 

@@ -1,4 +1,4 @@
-\section*{Introduction}
+\section{Introduction}
 
 A general statement of the Face Recognition problem (in computer vision) can be formulated as follows: Given a Still Image or a Video sequence, identify one or more persons' face(s) in the scene using a stored database of faces.\\ 
 \\*
