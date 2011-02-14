@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.1.21)  14 FEB 2011 13:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.1.21)  14 FEB 2011 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -287,21 +287,21 @@ ignored
                    \relax 
 l.1 \section
             {Hadrware Requirements} [1]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 3.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
 ) (./conclusion.tex)
 [2] (./reportnew.aux) ) 
 Here is how much of TeX's memory you used:
- 4913 strings out of 495062
- 72264 string characters out of 1182644
+ 4914 strings out of 495062
+ 72279 string characters out of 1182644
  142325 words of memory out of 3000000
- 8004 multiletter control sequences out of 15000+50000
- 7880 words of font info for 28 fonts, out of 3000000 for 9000
+ 8005 multiletter control sequences out of 15000+50000
+ 8187 words of font info for 29 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,8n,36p,1139b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
@@ -309,7 +309,7 @@ Here is how much of TeX's memory you used:
 b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
 e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on reportnew.pdf (3 pages, 78611 bytes).
+Output written on reportnew.pdf (3 pages, 79064 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
