@@ -43,5 +43,5 @@
 \input{./software.tex}
 \input{./hardware.tex}
 \input{./conclusion.tex}
-\input{./citations.tex}
+
 \end{document}
