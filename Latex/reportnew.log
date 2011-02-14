@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2011.1.22)  15 FEB 2011 02:22
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2011.1.22)  15 FEB 2011 02:32
 entering extended mode
  %&-line parsing enabled.
 **reportnew.tex
@@ -222,16 +222,31 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]) (./algorithm.tex) (./software.tex
+Non-PDF special ignored!]) (./algorithm.tex
+! Missing } inserted.
+<inserted text> 
+                }
+l.8 \end{enumerate}
+                   
+? 
+) (./software.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
-
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
-) (./hardware.tex)
-(./conclusion.tex [2
+
+Overfull \hbox (15.84964pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/12 be-cause of its Rapid Pro-to-typ-ing Ca-pa-bil-i-ties. Python
+ []
+
+
+Overfull \hbox (6.78491pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/12 also has very good Im-age Pro-cess-ing and Dis-tributed
+ []
+
+) (./hardware.tex [2
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -244,14 +259,35 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!]) [3
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]) (./conclusion.tex)
+
+! LaTeX Error: \begin{quote} on input line 2 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \end{document}
+                   
+? 
+[3
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!] (./reportnew.aux) ) 
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] (./reportnew.aux) )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 2 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
  3269 strings out of 95087
  46827 string characters out of 1183278
@@ -259,14 +295,13 @@ Here is how much of TeX's memory you used:
  6410 multiletter control sequences out of 10000+50000
  8487 words of font info for 30 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 28i,8n,21p,1298b,372s stack positions out of 5000i,500n,6000p,200000b,5000s
-</usr/share/texmf-texlive/fonts/ty
-pe1/bluesky/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmcs
-c10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/
-texmf-texlive/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/
-type1/bluesky/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cms
-y10.pfb>
-Output written on reportnew.pdf (4 pages, 52322 bytes).
+ 28i,8n,21p,1298b,499s stack positions out of 5000i,500n,6000p,200000b,5000s
+</usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmbx12.pfb></u
+sr/share/texmf-texlive/fonts/type1/bluesky/cm/cmcsc10.pfb></usr/share/texmf-tex
+live/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/blu
+esky/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr17.pfb></
+usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmsy10.pfb>
+Output written on reportnew.pdf (4 pages, 53149 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
