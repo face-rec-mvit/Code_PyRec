@@ -4,6 +4,6 @@ Our Proposed model is a learning Algorithm which while training runs all the rec
 We break up our approach into two parts:
 \begin{enumerate}
 \item{The learning algorithm (which uses a neural network based algorithm to learn characteristics of a dynamic scene).}
-\item{Various Face-Recognition algorithms like SIFT (Scale Invariant Feature Transform) , LPP (Locality Preserving Projections) and PCA (Principle Component Analysis) which perform the actual recognition. (These algorithms are a representative set, many more such algorithms can be implemented.)
+\item{Various Face-Recognition algorithms like SIFT (Scale Invariant Feature Transform) , LPP\cite{Lap} (Locality Preserving Projections) and  PCA (Principle Component Analysis)\cite{Eig} which perform the actual recognition. (These algorithms are a representative set, many more such algorithms can be implemented.)
 \end{enumerate}
 \end{quote}
