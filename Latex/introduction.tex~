@@ -1,5 +1,5 @@
 \section*{Introduction}
 
 A general statement of the Face Recognition problem (in computer vision) can be formulated as follows: Given a Still Image or a Video sequence, identify one or more persons' face(s) in the scene using a stored database of faces.\\ 
-\\*
+\\
 In contemporary applications, Face Recognition systems are becoming increasingly popular and have become integral part of most modern Biometric Systems.  Face Recognition has   numerous applications   including   visual   surveillance   and   security, personal authentication etc. Face Recognition systems can be designed to be non intrusive thus making them ideal for military surveillance and public surveillance requirements in crowded areas. In many legacy document archives (e.g. Police Records, Real Estate Documents), Images of people's faces is available and thus using Face Recognition to search through such large databases is a natural choice. Even with so many applications and advancements in the Face Recognition domain, many challenges remain unsolved.
