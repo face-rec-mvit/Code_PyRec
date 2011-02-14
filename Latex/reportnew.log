@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2011.1.22)  15 FEB 2011 02:13
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2011.1.22)  15 FEB 2011 02:17
 entering extended mode
  %&-line parsing enabled.
 **reportnew.tex
@@ -171,11 +171,7 @@ LaTeX Info: Redefining \pageref on input line 28.
 \@outlinefile=\write3
 \openout3 = `reportnew.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -211,13 +207,13 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-(./introduction.tex) (./motivation.tex) (./algorithm.tex) (./software.tex
-[1
+(./introduction.tex) (./motivation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--1
+
+ []
+
+) (./algorithm.tex) (./software.tex [1
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -253,20 +249,20 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!] (./reportnew.aux) ) 
 Here is how much of TeX's memory you used:
- 3277 strings out of 95087
- 46913 string characters out of 1183278
+ 3271 strings out of 95087
+ 46842 string characters out of 1183278
  108696 words of memory out of 1500000
- 6418 multiletter control sequences out of 10000+50000
+ 6412 multiletter control sequences out of 10000+50000
  8487 words of font info for 30 fonts, out of 1200000 for 2000
  28 hyphenation exceptions out of 8191
- 28i,8n,36p,1298b,372s stack positions out of 5000i,500n,6000p,200000b,5000s
+ 28i,8n,22p,1298b,372s stack positions out of 5000i,500n,6000p,200000b,5000s
 </usr/share/texmf-texlive/fonts/ty
 pe1/bluesky/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmcs
 c10.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/
 texmf-texlive/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/
 type1/bluesky/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/bluesky/cm/cms
 y10.pfb>
-Output written on reportnew.pdf (3 pages, 51974 bytes).
+Output written on reportnew.pdf (3 pages, 51845 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
