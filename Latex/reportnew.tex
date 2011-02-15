@@ -20,6 +20,7 @@
 % Just compile this file using pdflatex after making all required changes.
 
 \documentclass[12pt,a4paper]{report}
+\usepackage[top=100px,bottom=100px,left=70px,right=70px]{geometry}
 \usepackage[pdftex]{graphicx} %for embedding images
 \usepackage{url} %for proper url entries
 \usepackage[dvips, bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={Project Synopsis}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
@@ -39,9 +40,10 @@
 %%%%
 \input{./introduction.tex}
 \input{./motivation.tex}
+\newpage
 \input{./algorithm.tex}
 \input{./software.tex}
 \input{./hardware.tex}
 \input{./conclusion.tex}
-\input{./citations.tex}
+%\input{./citations.tex}
 \end{document}
