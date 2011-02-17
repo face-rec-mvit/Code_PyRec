@@ -41,6 +41,8 @@ class Image_Directory(object) :
     be included from the directory mentioned.
     Defaults to None
     """
+    image_size=0
+    number_of_images=0
     ftypes = list()
     def __init__(self,image_directory,keys,types=None):
         self.IMAGE_DIRECTORY=image_directory
@@ -70,15 +72,22 @@ class Image_Directory(object) :
         print "Matrix D Calculated"
         self.L = self.D - self.weight_matrix 
         print "Matrix L Calculated"
+        self.calculate_XtransposeLX()
+        #calculate eigen values and eigen vectors
+        self.eigenValues,self.eigenVectors = numpy.linalg.eig(self.B)
+         
+    def calculate_XtransposeLX(self):
         self.X = numpy.matrix(self.xs)
         #we will do X'LX
         #In-case the images are more than what can be stored in the RAM , use
         #memmap 
+        self.image_size=len(self.xs[0])
+        self.number_of_images=len(self.xs)
         print "Performing X'L"
         print "Creating Memmap"
         self.B_XtransposeL = \
         numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
-        shape = (77760,66))
+        shape = (self.image_size,self.number_of_images))
         print "Memmap Created"
         print "Calculating X'LX"
         self.B_XtransposeL = numpy.transpose(self.X) * self.L
@@ -87,16 +96,16 @@ class Image_Directory(object) :
         #print self.B.shape
         self.B_XtransposeL = \
         numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
-        shape = (77760,66))
+        shape = (self.image_size,self.number_of_images))
         #-------------------------------
-        print self.X.shape
-        print self.L.shape
-        print self.B_XtransposeL.shape
+        #print self.X.shape
+        #print self.L.shape
+        #print self.B_XtransposeL.shape
         #-------------------------------
         print "Performing X'L * X"
         self.B = \
         numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
-        shape = (77760,77760))
+        shape = (self.image_size,self.image_size))
         
         #print self.B.shape
         #del self.B
@@ -115,11 +124,12 @@ class Image_Directory(object) :
         del self.B
         self.B = \
         numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
-        shape = (77760,77760))
+        shape =(self.image_size,self.image_size))
 
         print "X'LX Calculated"
 
- 
+
+
     #def __del__(self):
     #    print "Deleting the memmap file"
     #    del self.B
