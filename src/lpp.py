@@ -78,7 +78,7 @@ class Image_Directory(object) :
         print "Creating Memmap"
         self.B_XtransposeL = \
         numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
-        shape = tuple([self.X.shape[1],self.L.shape[0]]))
+        shape = (77760,66))
         print "Memmap Created"
         print "Calculating X'LX"
         self.B_XtransposeL = numpy.transpose(self.X) * self.L
@@ -87,7 +87,7 @@ class Image_Directory(object) :
         #print self.B.shape
         self.B_XtransposeL = \
         numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
-        shape = tuple([self.X.shape[1],self.X.shape[1]]))
+        shape = (77760,66))
         #-------------------------------
         print self.X.shape
         print self.L.shape
@@ -96,15 +96,26 @@ class Image_Directory(object) :
         print "Performing X'L * X"
         self.B = \
         numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
-        shape = tuple([self.X.shape[1],self.X.shape[1]]))
+        shape = (77760,77760))
         
-        print self.B_XtransposeL.shape
+        #print self.B.shape
+        #del self.B
 
-        self.B = self.B_XtransposeL * self.X
+        for i in range(self.B_XtransposeL.shape[0]):
+            print i
+            #self.B = \
+            #numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
+            #shape = (77760,77760))
+            temp = 0
+            for j in range(self.X.shape[0]):
+                temp += self.B_XtransposeL[i,j]*self.X[j,i]
+            self.B[i,j]=temp
+            #del self.B
+
         del self.B
         self.B = \
-        numpy.memap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
-        shape = tuple([self.X.shape[1],self.X.shape[1]]))
+        numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
+        shape = (77760,77760))
 
         print "X'LX Calculated"
 
