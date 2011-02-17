@@ -98,23 +98,24 @@ def calculate(knn, x, weight_fn=equal_weight, distance_fn=None):
             temp[:] = x - knn.xs[i]
             dist = numpy.sqrt(numpy.dot(temp,temp))
             order.append((dist, i))
-    order_copy = copy.copy(order)
-    order.sort()
+    #order_copy = copy.copy(order)
+    #order.sort()
 
-    # first 'k' are the ones I want.
-    weights = {}  # class -> number of votes
-    for k in knn.classes:
-        weights[k] = 0.0
+    ## first 'k' are the ones I want.
+    #weights = {}  # class -> number of votes
+    #for k in knn.classes:
+    #    weights[k] = 0.0
 
-    #print knn.k
-    #print type(order)
-    #print order[:knn.k]
-    for dist, i in order[:len(knn.k)]:
-        #for i in order[:knn.k]:
-        klass = knn.ys[i]
-        weights[klass] = weights[klass] + weight_fn(x, knn.xs[i])
+    ##print knn.k
+    ##print type(order)
+    ##print order[:knn.k]
+    #for dist, i in order[:len(knn.k)]:
+    #    #for i in order[:knn.k]:
+    #    klass = knn.ys[i]
+    #    weights[klass] = weights[klass] + weight_fn(x, knn.xs[i])
 
-    return weights,order_copy
+    #return weights,order_copy
+    return order
 
 def classify(knn, x, weight_fn=equal_weight, distance_fn=None):
     """classify(knn, x[, weight_fn][, distance_fn]) -> class
