@@ -5,7 +5,7 @@ import initial_processing
 import get_abs_path_of_all_files_in_directory as lslR
 import sys
 import kNN
-
+import operator #for itemgetter in sorted()
 #------Please Fill in the following details------
 """
 NOTE :
@@ -47,25 +47,91 @@ class Image_Directory(object) :
         self.keywords = keys
         self.ftypes = types
         self.create_xs_ys()
+        print "XS and YS created"
+        #place all the xs belonging to same ys together
+        temp = zip(self.xs,self.ys)
+        #print temp
+        temp_new = sorted(temp,key=operator.itemgetter(1))
+        #print temp_new
+        #xs after sorting as per ys
+        self.xs = [(xs) for xs,ys in temp_new]
+        #in xs each row is an image
+        self.ys = [(ys) for xs,ys in temp_new]
         self.k = len(numpy.unique(self.ys))
         self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys))
-        self.adjacency_matrix = self.create_adjacency_matrix()
-        self.weight_matrix = self.create_weight_matrix()
+        print "KNN Model Created"
+        self.adjacency_matrix = numpy.matrix(self.create_adjacency_matrix())
+        print "Adjacency Matrix Calculated"
+        self.weight_matrix = numpy.matrix(self.create_weight_matrix())
+        print "Weight Matrix Calculated"
+        #for significance of D & L please check the Algorithm 
+        self.D = numpy.matrix(numpy.diag(numpy.sum(self.weight_matrix,axis=1)))
+        #axis=1 row wise , axis=2 col wise
+        print "Matrix D Calculated"
+        self.L = self.D - self.weight_matrix 
+        print "Matrix L Calculated"
+        self.X = numpy.matrix(self.xs)
+        #we will do X'LX
+        #In-case the images are more than what can be stored in the RAM , use
+        #memmap 
+        print "Performing X'L"
+        print "Creating Memmap"
+        self.B_XtransposeL = \
+        numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
+        shape = tuple([self.X.shape[1],self.L.shape[0]]))
+        print "Memmap Created"
+        print "Calculating X'LX"
+        self.B_XtransposeL = numpy.transpose(self.X) * self.L
+        #write B to file and free memory
+        del self.B_XtransposeL
+        #print self.B.shape
+        self.B_XtransposeL = \
+        numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
+        shape = tuple([self.X.shape[1],self.X.shape[1]]))
+        #-------------------------------
+        print self.X.shape
+        print self.L.shape
+        print self.B_XtransposeL.shape
+        #-------------------------------
+        print "Performing X'L * X"
+        self.B = \
+        numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
+        shape = tuple([self.X.shape[1],self.X.shape[1]]))
+        
+        print self.B_XtransposeL.shape
+
+        self.B = self.B_XtransposeL * self.X
+        del self.B
+        self.B = \
+        numpy.memap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
+        shape = tuple([self.X.shape[1],self.X.shape[1]]))
+
+        print "X'LX Calculated"
+
+ 
+    #def __del__(self):
+    #    print "Deleting the memmap file"
+    #    del self.B
 
     def create_xs_ys(self):
         files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
+        #print files_list
         for file in files_list:
             for item in self.keywords.iteritems():
+                #the 1st entry is the class number 0,1,2,3...
                 key = item[0]
+                #the second entry is the reg-exp identifying the class 
                 value = item[1]
                 if file.rfind(value) != -1 :
+                    #print key , file
                     self.xs.append(initial_processing.imageToVector(file))
                     self.ys.append(key)
 
     def create_weight_matrix(self):
         mat = list()
         for image in self.xs:
-            w,dist = kNN.calculate(self.model,image)
+            #w,dist = kNN.calculate(self.model,image)
+            dist = kNN.calculate(self.model,image)
             mat.append([(distance) for (distance , node) in dist])
         return mat
 
