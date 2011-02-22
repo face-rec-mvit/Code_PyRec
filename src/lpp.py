@@ -50,6 +50,7 @@ class Image_Directory(object) :
         self.ftypes = types
         self.create_xs_ys()
         print "XS and YS created"
+        
         #place all the xs belonging to same ys together
         temp = zip(self.xs,self.ys)
         #print temp
@@ -62,19 +63,49 @@ class Image_Directory(object) :
         self.k = len(numpy.unique(self.ys))
         self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys))
         print "KNN Model Created"
+        
         self.adjacency_matrix = numpy.matrix(self.create_adjacency_matrix())
+        #the adjacency matrix takes up a lot of ram so , keeping it on disk
+
+        self.adj_temp = \
+        numpy.memmap(open("/tmp/memmap_adj.temp","w+"),dtype='uint8',mode='w+',\
+        shape = (self.adjacency_matrix.shape[0],self.adjacency_matrix.shape[1]))
+        #del saves the matrix to disk
+        del self.adj_temp
+
+        #open the matrix again
+        self.adjacency_matrix = \
+        numpy.memmap(open("/tmp/memmap_adj.temp","w+"),dtype='uint8',mode='w+',\
+        shape = (self.adjacency_matrix.shape[0],self.adjacency_matrix.shape[1]))
         print "Adjacency Matrix Calculated"
+        
+        
         self.weight_matrix = numpy.matrix(self.create_weight_matrix())
+        self.weight_temp = \
+        numpy.memmap(open("/tmp/memmap_weight.temp","w+"),dtype='uint8',mode='w+',\
+        shape = (self.weight_matrix.shape[0],self.weight_matrix.shape[1]))
+        #del saves the matrix to disk
+        del self.weight_temp
+
+        #open the matrix to disk
+        self.weight_temp = \
+        numpy.memmap(open("/tmp/memmap_weight.temp","w+"),dtype='uint8',mode='w+',\
+        shape = (self.weight_matrix.shape[0],self.weight_matrix.shape[1]))
         print "Weight Matrix Calculated"
+        
         #for significance of D & L please check the Algorithm 
         self.D = numpy.matrix(numpy.diag(numpy.sum(self.weight_matrix,axis=1)))
         #axis=1 row wise , axis=2 col wise
         print "Matrix D Calculated"
+        
         self.L = self.D - self.weight_matrix 
         print "Matrix L Calculated"
+        
         self.calculate_XtransposeLX()
         #calculate eigen values and eigen vectors
+        print "Calculating Eigen Vectors and Values"
         self.eigenValues,self.eigenVectors = numpy.linalg.eig(self.B)
+        print "Eigen Values and Vectors Calculated"
          
     def calculate_XtransposeLX(self):
         self.X = numpy.matrix(self.xs)
@@ -85,6 +116,10 @@ class Image_Directory(object) :
         self.number_of_images=len(self.xs)
         print "Performing X'L"
         print "Creating Memmap"
+        #-------------------
+        print self.image_size
+        print self.number_of_images
+        #-------------------
         self.B_XtransposeL = \
         numpy.memmap(open("/tmp/memmap_B.temp","w+"),dtype='uint8',mode='w+',\
         shape = (self.image_size,self.number_of_images))
@@ -111,7 +146,7 @@ class Image_Directory(object) :
         #del self.B
 
         for i in range(self.B_XtransposeL.shape[0]):
-            print i
+            #print i
             #self.B = \
             #numpy.memmap(open("/tmp/memap_Bfinal.temp","w+"),dtype="uint8",mode='w+',\
             #shape = (77760,77760))
