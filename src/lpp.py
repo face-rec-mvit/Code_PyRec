@@ -54,12 +54,12 @@ class Image_Directory(object) :
         #place all the xs belonging to same ys together
         temp = zip(self.xs,self.ys)
         #print temp
-        temp_new = sorted(temp,key=operator.itemgetter(1))
+        self.xs_ys_zip = sorted(temp,key=operator.itemgetter(1))
         #print temp_new
         #xs after sorting as per ys
-        self.xs = [(xs) for xs,ys in temp_new]
+        self.xs = [(xs) for xs,ys in self.xs_ys_zip]
         #in xs each row is an image
-        self.ys = [(ys) for xs,ys in temp_new]
+        self.ys = [(ys) for xs,ys in self.xs_ys_zip]
         self.k = len(numpy.unique(self.ys))
         self.model = kNN.train(self.xs,self.ys,numpy.unique(self.ys))
         print "KNN Model Created"
@@ -106,7 +106,42 @@ class Image_Directory(object) :
         print "Calculating Eigen Vectors and Values"
         self.eigenValues,self.eigenVectors = numpy.linalg.eig(self.B)
         print "Eigen Values and Vectors Calculated"
-         
+        self.eigSorted = \
+        sorted(zip(self.eigenValues,self.eigenVectors),key=operator.itemgetter(0))
+        #print len(self.temp)
+        #select the first d eigenVectors
+        self.d = 50
+        self.A = numpy.matrix([vec for (val,vec) in \
+                self.eigSorted][:self.d])
+        #print self.A.shape
+        self.y = []
+        self.calculateYis()
+        #the Ys must be transposed so that each row belongs to 1 image
+        #and can be referenced as y[0] to be the first image
+        #we then zip the y with ys to know which image belongs to which class
+        self.yZipYs = zip(self.y,self.ys)
+        print "Created a zip of Y and ys"
+        print "Starting to Test"
+        self.test()
+
+    def test(self):
+        num = len(self.files_list)
+        i =0
+        for file in self.files_list:
+            if num - i > 0 :
+                print "processing Image number %d" % i
+                x = initial_processing.imageToVector(file)
+                x_class = self.yZipYs[x]
+
+            i +=1
+
+    def calculateYis(self):
+        print "Calculating Yi for all Xi"
+        self.xtemp = numpy.matrix(self.xs).transpose()
+        print self.xtemp.shape
+        self.y = self.A * self.xtemp
+        print "Calcuated Yi s"
+
     def calculate_XtransposeLX(self):
         self.X = numpy.matrix(self.xs)
         #we will do X'LX
@@ -170,9 +205,9 @@ class Image_Directory(object) :
     #    del self.B
 
     def create_xs_ys(self):
-        files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
+        self.files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
         #print files_list
-        for file in files_list:
+        for file in self.files_list:
             for item in self.keywords.iteritems():
                 #the 1st entry is the class number 0,1,2,3...
                 key = item[0]
