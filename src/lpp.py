@@ -1,6 +1,7 @@
 #! /usr/bin/python
 
 import numpy
+from scipy import spatial
 import initial_processing
 import get_abs_path_of_all_files_in_directory as lslR
 import sys
@@ -119,26 +120,65 @@ class Image_Directory(object) :
         #the Ys must be transposed so that each row belongs to 1 image
         #and can be referenced as y[0] to be the first image
         #we then zip the y with ys to know which image belongs to which class
-        self.yZipYs = zip(self.y,self.ys)
+        self.yZipYs = dict(zip(tuple(self.y),self.ys))
+        print self.yZipYs
         print "Created a zip of Y and ys"
-        print "Starting to Test"
-        self.test()
+        #self.test()
+        print """Call the test() method like ImageDir , with
+        directory to test images as the first arg and the dictionary 
+        of {regexp:class} as the second argument, NOTE : the file 
+        types are assumed to be the same as that of training images"""
 
-    def test(self):
-        num = len(self.files_list)
-        i =0
-        for file in self.files_list:
+    def test(self,test_path,test_classes):
+        print "Starting to Test"
+        #test_path = raw_input("Enter the Path containing test images:")
+        #test_pattern = list(raw_input("Enter the regexp identifying \
+        #test images in the directory above:"))
+        test_files = lslR.get_files(test_path,self.ftypes)
+        num = len(test_files)
+        i = 0
+        success = 0
+        failure = 0
+        for fil in test_files:
             if num - i > 0 :
                 print "processing Image number %d" % i
-                x = initial_processing.imageToVector(file)
-                x_class = self.yZipYs[x]
-
+            xTest = \
+            numpy.matrix(initial_processing.imageToVector(fil))
+            xTest_class = -1
+            #----------------debug code------------
+            #print type(xTest)
+            #--------------------------------------
+            #project testing image on A
+            yTest = numpy.transpose(self.A * xTest.transpose())
+            #find the distance of yTest from each Yi
+            minPair = [numpy.inf,()] #inf denotes infinity
+            self.y_Transpose = self.y.transpose()
+            for y in self.y_Transpose:
+                #print type(yTest),type(y),yTest.shape,y.shape
+                dist = spatial.distance.euclidean(yTest,y)
+                if dist < minPair[0]:
+                    minPair[0] = dist
+                    minPair[1] = tuple(y)
+            print "type of minPair[1]"+str(type(minPair[1]))
+            type
+            print "Image Belongs to the Class %d" % self.yZipYs[minPair[1]]
+            for key in test_classes.keys():
+                if fil.find(key) != -1:
+                    xTest_class = test_classes[key]
+                    break
+            recognized_class = self.xs_ys_zip[minPair[1]]
+            if recognized_class == xTest_class :
+                success += 1
+            else:
+                failure += 1
+            
             i +=1
+        print "Success Rate is : %d" % double(success/(success+failure))
 
     def calculateYis(self):
         print "Calculating Yi for all Xi"
         self.xtemp = numpy.matrix(self.xs).transpose()
-        print self.xtemp.shape
+        #print self.xtemp.shape
         self.y = self.A * self.xtemp
         print "Calcuated Yi s"
 
