@@ -5,7 +5,8 @@ import sys
 
 def gen_files(files,top,names):
     for name in names:
-        path = top + "/" + str(name)
+        path = top + os.sep + str(name)
+        #use os specific path separator
         if os.path.isfile(path):
             files.append(path)
     return files
