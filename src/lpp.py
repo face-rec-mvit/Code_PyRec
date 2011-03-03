@@ -1,5 +1,6 @@
 #! /usr/bin/python
 
+#from __future__ import division #for the final success rate calculation
 import numpy
 from scipy import spatial
 import initial_processing
@@ -120,8 +121,9 @@ class Image_Directory(object) :
         #the Ys must be transposed so that each row belongs to 1 image
         #and can be referenced as y[0] to be the first image
         #we then zip the y with ys to know which image belongs to which class
-        self.yZipYs = dict(zip(tuple(self.y),self.ys))
-        print self.yZipYs
+        self.y = [tuple(i) for i in self.y.tolist()]
+        self.yZipYs = dict(zip(self.y,self.ys))
+        #print self.yZipYs
         print "Created a zip of Y and ys"
         #self.test()
         print """Call the test() method like ImageDir , with
@@ -141,7 +143,7 @@ class Image_Directory(object) :
         failure = 0
         for fil in test_files:
             if num - i > 0 :
-                print "processing Image number %d" % i
+                print "processing Image number: (%d) , Corresponding to File name: %s " % (i,fil)
             xTest = \
             numpy.matrix(initial_processing.imageToVector(fil))
             xTest_class = -1
@@ -149,37 +151,53 @@ class Image_Directory(object) :
             #print type(xTest)
             #--------------------------------------
             #project testing image on A
-            yTest = numpy.transpose(self.A * xTest.transpose())
+            #yTest = numpy.transpose(self.A * xTest.transpose())
+            yTest = xTest * self.A.transpose()
             #find the distance of yTest from each Yi
-            minPair = [numpy.inf,()] #inf denotes infinity
-            self.y_Transpose = self.y.transpose()
-            for y in self.y_Transpose:
+            distAndYPair = [] #inf denotes infinity
+            #self.y_Transpose = numpy.transpose(self.y)
+            #for y in self.y_Transpose:
+            for y in self.y:
                 #print type(yTest),type(y),yTest.shape,y.shape
                 dist = spatial.distance.euclidean(yTest,y)
-                if dist < minPair[0]:
-                    minPair[0] = dist
-                    minPair[1] = tuple(y)
-            print "type of minPair[1]"+str(type(minPair[1]))
-            type
-            print "Image Belongs to the Class %d" % self.yZipYs[minPair[1]]
+                #if dist < minPair[0]:
+                #    print "iterating to find the minimum match"
+                #    print "y :",y
+                #    print "yTest :",yTest
+                #    minPair[0] = dist
+                #    minPair[1] = tuple(y)
+                distAndYPair.append([dist,y])
+            #print "type of minPair[1]"+str(type(minPair[1]))
+            #print minPair[1] in self.y_Transpose
+            distAndYPair.sort()
+            #print minPair[1] in numpy.transpose(self.y)
+            #print type(self.y[0])
+            #print "Minimum distance: ",minPair[0]
+
+            recognized_class = self.yZipYs[distAndYPair[0][1]]
+            #because the class number starts from 0 and the numbering of 
+            #of 
             for key in test_classes.keys():
                 if fil.find(key) != -1:
                     xTest_class = test_classes[key]
                     break
-            recognized_class = self.xs_ys_zip[minPair[1]]
             if recognized_class == xTest_class :
                 success += 1
             else:
                 failure += 1
+            print "Success %d , Failure %d" % (success,failure) 
+            print "Recognized Class: %d And xTest_Class: %d " % \
+            (recognized_class,xTest_class) 
             
             i +=1
-        print "Success Rate is : %d" % double(success/(success+failure))
+        print "Success Rate is : %f" % (float(success)/float(success+failure))
 
     def calculateYis(self):
         print "Calculating Yi for all Xi"
-        self.xtemp = numpy.matrix(self.xs).transpose()
-        #print self.xtemp.shape
-        self.y = self.A * self.xtemp
+        #self.xtemp = numpy.matrix(self.xs).transpose()
+        ##print self.xtemp.shape
+        #self.y = self.A * self.xtemp
+        self.y = numpy.matrix(self.xs)*self.A.transpose()
         print "Calcuated Yi s"
 
     def calculate_XtransposeLX(self):
