@@ -91,12 +91,6 @@ def get_files(directory,include=None,exclude=None,ftype=None):
             #the string is stripped() before searching
             if result :#regex not in filename
                 included_list.append(entry)
-        #print "include is:",include
-        #included_list=[]
-        #for entry in files:
-        #    result = entry.find(include)
-        #    if result >=0 :
-        #        included_list.append(entry)
         files = included_list
 
 
@@ -130,10 +124,10 @@ def print_list(l):
 if __name__ == '__main__' :
     arg = sys.argv
     dirname = arg[len(arg)-1]
+    #the last argument is the directory name 
     type_list = None
     includ = None
     exclud = None 
-    #the last argument is the directory name 
     
     if len(arg) == 1:
         print get_files(None)
@@ -141,15 +135,6 @@ if __name__ == '__main__' :
         file_list = get_files(directory=dirname,ftype=None)
         print_list(file_list)
     else:
-        #elif len(arg) == 3:
-        #    dirname = arg[2]
-        #    if ( arg[1].startswith("--types=" )):
-        #        arg[1]=arg[1][len("--types="):]
-        #        typ=arg[1].split(",")            
-        #        file_list = get_files(directory=dirname,ftype=typ)
-        #        print_list(file_list)
-        #    else:
-        #        print "Error in --types"#return(1)
         if "--types" in arg:
             type_list = arg[arg.index("--types")+1].split(",")
             #print type_list
