@@ -46,10 +46,13 @@ class Image_Directory(object) :
     image_size=0
     number_of_images=0
     ftypes = list()
-    def __init__(self,image_directory,keys,types=None):
+    def \
+    __init__(self,image_directory,classKeys,ftype=None,include=None,exclude=None):
         self.IMAGE_DIRECTORY=image_directory
-        self.keywords = keys
-        self.ftypes = types
+        self.keywords = classKeys
+        self.ftypes = ftype
+        self.include = include
+        self.exclude = exclude
         self.create_xs_ys()
         print "XS and YS created"
         
@@ -126,24 +129,35 @@ class Image_Directory(object) :
         #print self.yZipYs
         print "Created a zip of Y and ys"
         #self.test()
-        print """Call the test() method like ImageDir , with
+        print """
+        Call the test() method like ImageDir , with
         directory to test images as the first arg and the dictionary 
         of {regexp:class} as the second argument, NOTE : the file 
-        types are assumed to be the same as that of training images"""
+        types are assumed to be the same as that of training images
+        """
 
-    def test(self,test_path,test_classes):
+    def test(self,image_directory,classKeys,include=None,exclude=None):
+        #the following reassignment is done to keep the __init__
+        #method and the test method arguments consistent
+        test_path = image_directory
+        test_classes = classKeys
+        includ = include
+        exclud = exclude
+
         print "Starting to Test"
         #test_path = raw_input("Enter the Path containing test images:")
         #test_pattern = list(raw_input("Enter the regexp identifying \
         #test images in the directory above:"))
-        test_files = lslR.get_files(test_path,self.ftypes)
+        test_files = \
+        lslR.get_files(directory=test_path,ftype=self.ftypes,include=includ,exclude=exclud)
+
         num = len(test_files)
         i = 0
         success = 0
         failure = 0
         for fil in test_files:
-            if num - i > 0 :
-                print "processing Image number: (%d) , Corresponding to File name: %s " % (i,fil)
+            #if num - i > 0 :
+            #    print "processing Image number: (%d) , Corresponding to File name: %s " % (i,fil)
             xTest = \
             numpy.matrix(initial_processing.imageToVector(fil))
             xTest_class = -1
@@ -185,9 +199,9 @@ class Image_Directory(object) :
                 success += 1
             else:
                 failure += 1
-            print "Success %d , Failure %d" % (success,failure) 
-            print "Recognized Class: %d And xTest_Class: %d " % \
-            (recognized_class,xTest_class) 
+            #print "Success %d , Failure %d" % (success,failure) 
+            #print "Recognized Class: %d And xTest_Class: %d " % \
+            #(recognized_class,xTest_class) 
             
             i +=1
         print "Success Rate is : %f" % (float(success)/float(success+failure))
@@ -263,7 +277,9 @@ class Image_Directory(object) :
     #    del self.B
 
     def create_xs_ys(self):
-        self.files_list = lslR.get_files(self.IMAGE_DIRECTORY,self.ftypes)
+        self.files_list = \
+        lslR.get_files(directory=self.IMAGE_DIRECTORY,include=self.include,\
+                exclude = self.exclude,ftype=self.ftypes)
         #print files_list
         for file in self.files_list:
             for item in self.keywords.iteritems():
@@ -286,6 +302,7 @@ class Image_Directory(object) :
 
     def create_adjacency_matrix(self):
         col = list()
+        print "Creating Adjacency Matrix"
         #for i in self.ys:
         #    row = list()
         #    for j in self.ys:
@@ -309,7 +326,9 @@ class Image_Directory(object) :
                 else:
                     row.append(0)
                 col.append(row)
+        print "Adjacency Matrix Created"
         return col
+        
 
     def print_adjacency_matrix(self):
         for i in self.adjacency_matrix:
@@ -318,6 +337,7 @@ class Image_Directory(object) :
     def print_weight_matrix(self):
         for i in self.weight_matrix:
             print i
+
 
 
 
