@@ -1,3 +1,8 @@
+################ This is a basic DCT process for a single image.. ###############
+
+
+
+
 import numpy
 import Image
 s=Image.open("Example_5.jpg")                                   # Example_5.jpg is a Garyscale image
@@ -78,4 +83,4 @@ for h in range(8):
 		print DCT[k][h-k]
 		i+=1
 
-
+################ now ListN will contain the prominent N values of DCT.. ##################
