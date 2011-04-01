@@ -1,0 +1,16 @@
+I'm currently doing DCT for a single image..
+
+As of now, DCT without normalization is done..
+
+After doing the normalization part, i will move on to making this work for the database..
+
+further i feel that,
+	reading images form database,
+	finding euclidian distance between vectors,
+	calculating efficiency,
+	etc
+are common for all our algorithms, so we could reuse that part of the code.
+
+@kunal :
+surely I will make a class called DCT, and include these are methods..
+but as of now, i'm just starting of vt these functions. (which will turn out to be member functions of the class)
