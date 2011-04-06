@@ -1,3 +1,19 @@
+Executable files : 
+
+1) train.py : This does the training of all the images given to it as input
+
+	Usage : python train.py "directory of images" 
+
+2) test_for_random_image.py : This does the test for the randomdly selected image 
+
+	Usage : python test_for_random_image.py "directory of images"
+
+It outputs two images : 
+	first image output is the randomly selected image
+	second image output is image mapped on eigen space
+
 I would like to change the code to Object Oriented very soon
-As of now PCA training for any given database is working fine
-and the cide should be modified such that it take 
+As of now PCA training for any given database is working fine.
+
+
+
