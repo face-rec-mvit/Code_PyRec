@@ -1,5 +1,5 @@
 #<This script does training of PCA-Principle Component Analysis .>
-#    Copyright (C) <2011>  <Authors : Dharani,Guruprasad, Kiran Tej, Kunal Ghosh>
+#    Copyright (C) <2011>  <Authors : Dharini,Guruprasad, Kiran Tej, Kunal Ghosh>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -90,12 +90,25 @@ def train(pathtoimages):
 	for i in range(no_of_images):
 		temp_class_name=split_image_names[i][length_split_image_name-2]  #extracting class names
 		class_names.append(temp_class_name)  # creating a list of class names 
+
+# Uncomment to know all the different classes with repetitions
+	
+	#print "printing all class names"
 	#print class_names
+
 	set_of_class_names=set(class_names)  #removing the repetitions using set so it contains only unique classes
+
+# Uncomment to know all the different classes without repetitions
+
+	#print "printing unique set of class names"
 	#print set_of_class_names
+
 	no_of_classes=len(set_of_class_names)  #getting the count of no of classes
 	no_of_images_per_class=no_of_images/no_of_classes  #getting the count of no of images per class
-	#print no_of_images_per_class
+
+# Uncomment to print the know thw number of images per class
+
+	#print "number of images per class = %d " %(no_of_images_per_class)
 	
 #arranging the input directory of images into the order of class
 
@@ -107,6 +120,7 @@ def train(pathtoimages):
 		entire_class.append(each_class)  #contains all the images arranged according to the class
 	
 	entire_class_backup=entire_class
+
 #code to  create trainset and testset 
 #one random image selected in one class will be added in testset and all other remaining (no_of_images_per_class) will be added to trainset
 
@@ -117,6 +131,8 @@ def train(pathtoimages):
 		temp_train=entire_class[i]
 		temp_train.remove(entire_class[i][image_no_for_test])
 		train_data_set.append(temp_train)
+
+# Uncomment following lines in order to know the details of the train_data_set
 	
 	#print type(train_data_set)
 	#print "printing training data set"
@@ -129,7 +145,6 @@ def train(pathtoimages):
 	#print train_data_set_matrix.shape
 	
 	#print "printing one individual image in training data set"
-	
 	#print train_data_set
 
 # we need the entire training data set as a single list
@@ -137,16 +152,40 @@ def train(pathtoimages):
 		c=0
 		for c in range(no_of_images_per_class-1):
 			entire_train_data_as_list.append(train_data_set[r][c])
+
+# Calling traindb in train_database which actually does the training part and it returns some which actually is needed during the testing phase
+# It returns 3 values
+# (1) mean_img : contains the mean of all the images, its a 1-d array/list
+# (2) eigen_selected : Usually only the major values of the eigen vector are taken, this contain those major eigen values only
+# (3) signature_images_for_train_set : contains the signatures (mapped images / eigen images ) for the entire training dataset
 	
 	mean_img,eigen_selected,signature_images_for_train_set=train_database.traindb(train_data_set)
 
-	#print signature_images_for_train_set
-	print "signature type"
-	print type(signature_images_for_train_set)
-	print "signature length"
-	print len(signature_images_for_train_set)
+# to find number of images trained per class
+
+	no_images_trained_per_class=no_of_images_per_class-1
+
+#print signature_images_for_train_set
+
+# Uncomment the following lines when any lengths or the types of the following variables are to be checked
+ 
+#	print "signature type"
+#	print type(signature_images_for_train_set)
+#	print "signature length"
+#	print len(signature_images_for_train_set)
+
+# Calling the testdb in test_database.py which takes in quite a number of arguments, lets explore the arguments
+
+# arg_1 : signature_images_for_train_set :  contains the signatures (mapped images / eigen images ) for the entire training dataset ( which is return by train_database )
+# arg_2 : test_data_set : contains the list of test data images which is randomly selected, one from each class
+# arg_3 : entire_train_data_as_list : contains entire train data set ( removed test_data_set from original input ) 
+# arg_4 : mean_img : contains the mean of all the images, its a 1-d array/list ( which is return by train_database )
+# arg_5 : eigen_selected : Usually only the major values of the eigen vector are taken, this contain those major eigen values only ( which is return by train_database )
+# arg_6 : no_images_trained_per_class : contains  number of images actually trained per class from the original dataset 
+
 	
-	test_database.testdb(signature_images_for_train_set,test_data_set,entire_train_data_as_list,mean_img,eigen_selected,no_of_images_per_class-1)
+
+	test_database.testdb(signature_images_for_train_set,test_data_set,entire_train_data_as_list,mean_img,eigen_selected,no_images_trained_per_class)
 	
 	
 	
@@ -156,7 +195,7 @@ def train(pathtoimages):
 	
 # Need to create a dictonary in which class name as the key and all images under that class as a list of images which is a key
 
-	set_of_class_names
+	
 
 	
 	

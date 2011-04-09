@@ -28,7 +28,35 @@ import os
 #mean_img_for_test : contains the mean of the trained images which is used for finding eucludian/norm
 #eigen_selected_for_test : contains large eigen vectors 
 
-def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_selected_for_test,trained_images_per_class):
+def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_selected_for_test,trained_images_per_class,flag_for_rename):
+
+# Need to set the flags depending on the file names and directory structure
+
+#	rename_flag_is_set=0
+
+#	print test_set
+#	file_path_name_from_test_set_to_set_flag=test_set[0]
+#	file_path_name_from_test_set_to_set_flag_split=file_path_name_from_test_set_to_set_flag.split(os.sep)
+	
+#	print file_path_name_from_test_set_to_set_flag_split
+
+#	file_path_from_test_set_to_set_flag_length=len(file_path_name_from_test_set_to_set_flag_split)
+#	file_name_from_test_set_to_set_flag=file_path_name_from_test_set_to_set_flag_split[file_path_from_test_set_to_set_flag_length-1]
+#	print file_name_from_test_set_to_set_flag
+
+#	index_of_underscore=file_name_from_test_set_to_set_flag.find('_')
+#		
+#	index_of_dot=file_name_from_test_set_to_set_flag.index('.')
+#
+#	rindex_of_dot=file_name_from_test_set_to_set_flag.rindex('.')
+#	print index_of_underscore
+
+#	if(index_of_underscore>=0):
+#		rename_flag_is_set=1
+
+#	if(index_of_dot>=0):
+#		rename_flag_is_set=2		*/
+
 	temp_norm_list=[]
 	sucess=0
 	signature_images_backup=signature_images
@@ -50,14 +78,31 @@ def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_sele
 		recognized=train_set[temp_index_min_in_norm_list]
 		
 ########## code of checking if the algorithm identified correctly or not
-		temp_split_taken_name=i.split(os.sep)
-		temp_split_recognized_name=recognized.split(os.sep)
+		if(flag_for_rename==1):
+			index_of_underscore=i.find('_')
+			if(index_of_underscore>=0):
+				new_i=i.replace('_',os.sep,1)
+				new_recognized=recognized.replace('_',os.sep,1)
+			else:
+				new_i=i.replace('.',os.sep,1)
+				new_recognized=recognized.replace('.',os.sep,1)
+		else: 
+			new_i=i
+			new_recognized=recognized
+			
+		temp_split_taken_name=new_i.split(os.sep)
+		temp_split_recognized_name=new_recognized.split(os.sep)
 		len_of_split_file_name=len(temp_split_recognized_name)
 		
 		if(temp_split_taken_name[len_of_split_file_name-2]==temp_split_recognized_name[len_of_split_file_name-2]):
+	
+			print "taken class : " + temp_split_taken_name[len_of_split_file_name-2]
+			print "recognized class : " +temp_split_recognized_name[len_of_split_file_name-2] 
 			print "sucess"
 			sucess=sucess+1
 		else :
+			print "taken class : " + temp_split_taken_name[len_of_split_file_name-2]
+			print "recognized class : " +temp_split_recognized_name[len_of_split_file_name-2] 
 			print "failure"
 			
 
