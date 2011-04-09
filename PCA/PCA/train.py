@@ -24,7 +24,6 @@
 #! /usr/bin/python
 
 """ importing all the required modules"""
-import random
 import numpy
 import sys
 import initial_processing as ip
@@ -40,15 +39,11 @@ total_img_vect=[]   # variable to contain total images in vector form
 mean_img_vect=[]   # variable  for containing mean of all images
 sum_img_vect=[]   # variable  for containing sum of all images
 mean_for_subtraction=[] # variable contains clones of mean used for subtracting
-norm_list = [] # variable to hold all the norm values during testing phase
 
 """ get_files method in the module get_abs_names is called """
 
 src_img_dir=sys.argv[1]
-images=lslR.get_files(src_img_dir)    
-images_abs_names=images
-
-
+images=lslR.get_files(src_img_dir)    # This should be generic in such a way to be given at run time using sys.argv, To be changed very soon
 
 """ 
 we might have to initialise mean_image_vect and sum_image_vect,
@@ -56,9 +51,6 @@ so we might required to know the dimension of each image,
 so one test image is read and then all the required values are found out
 
 """
-
-
-
 shape_image=Image.open(images[0])
 shape_image_array=numpy.asarray(shape_image)
 shape=shape_image_array.shape
@@ -73,8 +65,6 @@ for i in range(total_dimensions_per_image):
 	mean_img_vect.append(0)
 	sum_img_vect.append(0)
 
-sum_img_vect=numpy.asarray(sum_img_vect)
-
 
 """
 we might have to convert images to vectors before processing,
@@ -82,14 +72,9 @@ so imageToVector method in initial_processing is called
 and all individual images are appended to total_img_vect
 
 """
-
-
-
 for i in images :
 	image_vect=ip.imageToVector(i)
 	total_img_vect.append(image_vect)
-
-#print total_img_vect
 
 """ we might have to number of images to calculate 
 mean/sum of the images 
@@ -98,10 +83,8 @@ total_no_of_images=len(total_img_vect)
 
 """finding the total of all the images"""
 
-
 for i in range(total_no_of_images):
-	tempa=total_img_vect[i]
-	sum_img_vect=sum_img_vect + tempa
+	sum_img_vect=sum_img_vect+total_img_vect[i]
 
 """ finding the mean of all the images """
 
@@ -164,48 +147,9 @@ for i in range(total_no_of_images) :
 print cv_signature_images.shape 
 print " is the sizeof the signature matrix " 
 
+ 
+
 """ cv_signature_images contains the signature of all the test images with each images consisting of only "no_of_eigen_vectors_to_be_taken" number of dimensions """
-
-random_image_select=random.random()*total_no_of_images  # select any random image using randon method
-random_image_select=round(random_image_select) 
-random_image_select=int(random_image_select) # to be casted to integer coz using this as list index
-
-rand_img=Image.open(images_abs_names[random_image_select])
-
-print " the random image selected is "
-
-rand_img.show()
-
-rand_vect=ip.imageToVector(images_abs_names[random_image_select]) # convert image to vector
-
-rand_mean_subtracted = rand_vect - mean_img_vect  # subtracting the mean from the random image
-
-rand_mean_subtracted_transpose=numpy.transpose(rand_mean_subtracted) # Transpose required to map to the image space
-
-random_image_mapped=numpy.matrix(rand_mean_subtracted_transpose)*numpy.matrix(mapped_eig_large_select) # mapping the random image onto image space
-
-""" 
-Calculating the norm for the random image with all the signatures of the image
-
-"""
-for i in range(total_no_of_images):
-	temp_for_calc_norm = cv_signature_images[i] - random_image_mapped
-	norm_list.append(scipy.linalg.norm(temp_for_calc_norm,2))
-
-min_in_norm_list = min(norm_list) # finding the minimum in the norm list which intends to be the required image
-
-index_min_in_norm_list = norm_list.index(min_in_norm_list) # finding the index of the required destination image
-
-found_img_name=images_abs_names[index_min_in_norm_list] # Getting the file name of deatination image
-
-found_img = Image.open(found_img_name) # Opening the image for displaying it to the user
-
-print " The image found is "
-
-found_img.show()
-
-
-
 	
 
 

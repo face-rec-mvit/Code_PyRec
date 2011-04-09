@@ -46,9 +46,8 @@ norm_list = [] # variable to hold all the norm values during testing phase
 
 src_img_dir=sys.argv[1]
 images=lslR.get_files(src_img_dir)    
+
 images_abs_names=images
-
-
 
 """ 
 we might have to initialise mean_image_vect and sum_image_vect,
@@ -56,13 +55,13 @@ so we might required to know the dimension of each image,
 so one test image is read and then all the required values are found out
 
 """
-
-
-
 shape_image=Image.open(images[0])
 shape_image_array=numpy.asarray(shape_image)
 shape=shape_image_array.shape
 total_dimensions_per_image=shape[0]*shape[1]
+
+print "printing shape of the image"
+print shape
 
 """ 
 initialising all the required values such as 
@@ -73,8 +72,6 @@ for i in range(total_dimensions_per_image):
 	mean_img_vect.append(0)
 	sum_img_vect.append(0)
 
-sum_img_vect=numpy.asarray(sum_img_vect)
-
 
 """
 we might have to convert images to vectors before processing,
@@ -82,14 +79,9 @@ so imageToVector method in initial_processing is called
 and all individual images are appended to total_img_vect
 
 """
-
-
-
 for i in images :
 	image_vect=ip.imageToVector(i)
 	total_img_vect.append(image_vect)
-
-#print total_img_vect
 
 """ we might have to number of images to calculate 
 mean/sum of the images 
@@ -98,10 +90,8 @@ total_no_of_images=len(total_img_vect)
 
 """finding the total of all the images"""
 
-
 for i in range(total_no_of_images):
-	tempa=total_img_vect[i]
-	sum_img_vect=sum_img_vect + tempa
+	sum_img_vect=sum_img_vect+total_img_vect[i]
 
 """ finding the mean of all the images """
 
@@ -119,6 +109,7 @@ the vectors are to be conveted for furthur processsing of
 co-relation etc.., and transpose is taken so it matches the required
 order, which is each column containing one image in 2-d matrix
 """
+
 total_img_array=numpy.asarray(total_img_vect)
 total_img_array=numpy.transpose(total_img_array)
 
