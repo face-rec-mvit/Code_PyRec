@@ -8,12 +8,22 @@ Executable files :
 
 	Usage : python test_for_random_image.py "directory of images"
 
-It outputs two images : 
+	It outputs two images : 
 	first image output is the randomly selected image
 	second image output is image mapped on eigen space
 
-I would like to change the code to Object Oriented very soon
+
+3) PCA_train.py : Works for ORL like directory structure
+
+4) PCa_train_generic.py : Works for any directory structure ( flat or hierarchy)
+
+
+
 As of now PCA training for any given database is working fine.
+
+TODO:
+
+Code is to be cleaned and arranged propely and documented properly
 
 
 
