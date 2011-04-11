@@ -1,0 +1,32 @@
+1) Yale Database: .gif format 
+   image dimension : 320*243 pixels
+   file size : ranges between 26 to 69 kb	 	
+   download url : http://www.cs.princeton.edu/courses/archive/spr03/cs496/images/
+   No of Images = 165
+   No of classes = 15
+   Images per class = 11	
+
+2) Yale Database: .pgm format 
+   image dimension : 320*243 pixels
+   file size : 76 kb
+   download url : http://www.cs.uml.edu/~giam/91.580.203/Projects/DGabriel/dat/yalefaces/yalefaces%20%28copy%29/
+   No of Images = 165
+   No of classes = 15
+   Images per class = 11
+
+3) Resized yale Database or cropped yale : .gif format  ( This is given by Prof.GTS )
+   image dimension : 92*112 pixels
+   file size : around 10.2-11 kb
+   download url : http://www.mediafire.com/?uy8435aji57pd26
+   No of Images = 165
+   No of classes = 15
+   Images per class = 11
+ 	
+
+4) ORL Database : .pgm format
+   image dimension : 92*112 pixels
+   file size : around 10.2-11 kb
+   download url : http://www.cl.cam.ac.uk/Research/DTG/attarchive/pub/data/att_faces.zip	
+   No of Images = 400
+   No of classes = 40
+   Images per class = 10
