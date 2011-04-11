@@ -17,7 +17,7 @@
 
 #! /usr/bin/python
 
-#importing all the required modules
+#############################################################importing all the required modules#############################################
 
 import numpy
 import sys
@@ -28,6 +28,8 @@ import Image
 import scipy.linalg
 import numpy.matlib
 from numpy.matlib import zeros
+
+########################################################### all the required modules imported ################################################
 
 #we  have to initialise mean_image_vect and sum_image_vect,
 #so we  required to know the dimension of each image,

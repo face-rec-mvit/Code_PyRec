@@ -93,6 +93,7 @@ def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_sele
 		temp_split_taken_name=new_i.split(os.sep)
 		temp_split_recognized_name=new_recognized.split(os.sep)
 		len_of_split_file_name=len(temp_split_recognized_name)
+
 		
 		if(temp_split_taken_name[len_of_split_file_name-2]==temp_split_recognized_name[len_of_split_file_name-2]):
 	
