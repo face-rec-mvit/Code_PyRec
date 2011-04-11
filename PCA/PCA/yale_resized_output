@@ -1,0 +1,71 @@
+67
+printing all class names
+['10', '15', '4', '13', '14', '4', '9', '14', '12', '13', '10', '2', '4', '7', '13', '14', '9', '14', '10', '7', '7', '10', '1', '9', '3', '6', '5', '12', '6', '5', '13', '11', '5', '1', '6', '5', '1', '13', '3', '15', '6', '8', '9', '6', '15', '7', '8', '5', '13', '14', '5', '4', '10', '7', '13', '2', '9', '3', '11', '7', '10', '13', '9', '7', '2', '14', '9', '8', '1', '11', '3', '6', '15', '12', '12', '10', '11', '6', '15', '4', '9', '8', '4', '1', '2', '12', '8', '10', '3', '7', '13', '4', '10', '9', '15', '6', '5', '14', '6', '5', '13', '2', '12', '7', '11', '14', '12', '7', '8', '2', '11', '15', '14', '2', '15', '1', '10', '3', '2', '11', '12', '5', '2', '15', '8', '5', '8', '10', '1', '11', '8', '4', '4', '12', '12', '12', '1', '14', '6', '3', '1', '3', '3', '11', '11', '3', '1', '8', '9', '2', '8', '15', '1', '4', '3', '15', '2', '9', '11', '4', '7', '6', '14', '13', '5']
+printing unique set of class names
+set(['11', '10', '13', '12', '15', '14', '1', '3', '2', '5', '4', '7', '6', '9', '8'])
+number of images per class = 11 
+150
+(150, 20)
+ is the sizeof the signature matrix 
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/10_5.gif
+taken class : 10
+recognized class : 10
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/13_9.gif
+taken class : 13
+recognized class : 13
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/6_8.gif
+taken class : 6
+recognized class : 6
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/9_5.gif
+taken class : 9
+recognized class : 9
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/5_7.gif
+taken class : 5
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/10_4.gif
+taken class : 10
+recognized class : 8
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/8_8.gif
+taken class : 8
+recognized class : 8
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/9_7.gif
+taken class : 9
+recognized class : 2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/7_4.gif
+taken class : 7
+recognized class : 13
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/8_2.gif
+taken class : 8
+recognized class : 8
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/2_11.gif
+taken class : 2
+recognized class : 2
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/8_6.gif
+taken class : 8
+recognized class : 8
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/1_8.gif
+taken class : 1
+recognized class : 1
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/9_6.gif
+taken class : 9
+recognized class : 9
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/YALE RESIZED DATASET/11_9.gif
+taken class : 11
+recognized class : 11
+sucess
+printing sucess
+ identified 11 images out of 15 images 

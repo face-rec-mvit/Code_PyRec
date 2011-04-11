@@ -1,0 +1,71 @@
+-1
+printing all class names
+['subject03', 'subject09', 'subject03', 'subject07', 'subject08', 'subject09', 'subject07', 'subject02', 'subject14', 'subject08', 'subject13', 'subject02', 'subject13', 'subject11', 'subject04', 'subject14', 'subject12', 'subject06', 'subject04', 'subject15', 'subject05', 'subject06', 'subject01', 'subject06', 'subject15', 'subject04', 'subject01', 'subject15', 'subject07', 'subject04', 'subject14', 'subject09', 'subject01', 'subject12', 'subject15', 'subject06', 'subject07', 'subject14', 'subject12', 'subject01', 'subject11', 'subject07', 'subject01', 'subject09', 'subject06', 'subject09', 'subject08', 'subject05', 'subject14', 'subject10', 'subject05', 'subject03', 'subject05', 'subject01', 'subject02', 'subject03', 'subject03', 'subject05', 'subject08', 'subject10', 'subject01', 'subject08', 'subject10', 'subject09', 'subject11', 'subject05', 'subject14', 'subject12', 'subject14', 'subject01', 'subject04', 'subject01', 'subject12', 'subject07', 'subject09', 'subject05', 'subject01', 'subject10', 'subject02', 'subject13', 'subject15', 'subject15', 'subject02', 'subject15', 'subject11', 'subject06', 'subject11', 'subject03', 'subject04', 'subject03', 'subject02', 'subject02', 'subject12', 'subject11', 'subject06', 'subject10', 'subject07', 'subject02', 'subject13', 'subject11', 'subject10', 'subject01', 'subject13', 'subject12', 'subject12', 'subject09', 'subject14', 'subject13', 'subject09', 'subject12', 'subject15', 'subject05', 'subject12', 'subject04', 'subject09', 'subject08', 'subject04', 'subject05', 'subject14', 'subject10', 'subject08', 'subject04', 'subject03', 'subject15', 'subject11', 'subject13', 'subject11', 'subject13', 'subject14', 'subject10', 'subject07', 'subject07', 'subject04', 'subject08', 'subject13', 'subject03', 'subject09', 'subject03', 'subject02', 'subject08', 'subject13', 'subject11', 'subject15', 'subject06', 'subject10', 'subject11', 'subject12', 'subject02', 'subject03', 'subject05', 'subject08', 'subject04', 'subject06', 'subject08', 'subject05', 'subject14', 'subject06', 'subject15', 'subject10', 'subject10', 'subject02', 'subject07', 'subject07', 'subject13', 'subject06']
+printing unique set of class names
+set(['subject11', 'subject01', 'subject07', 'subject15', 'subject10', 'subject12', 'subject13', 'subject03', 'subject02', 'subject05', 'subject04', 'subject14', 'subject06', 'subject09', 'subject08'])
+number of images per class = 11 
+150
+(150, 20)
+ is the sizeof the signature matrix 
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject08.rightlight
+taken class : subject08
+recognized class : subject07
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject14.noglasses
+taken class : subject14
+recognized class : subject14
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject07.glasses
+taken class : subject07
+recognized class : subject03
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject12.rightlight
+taken class : subject12
+recognized class : subject05
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject09.wink
+taken class : subject09
+recognized class : subject09
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject03.noglasses
+taken class : subject03
+recognized class : subject03
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject12.sleepy
+taken class : subject12
+recognized class : subject12
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject06.glasses
+taken class : subject06
+recognized class : subject06
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject02.wink
+taken class : subject02
+recognized class : subject02
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject10.glasses
+taken class : subject10
+recognized class : subject03
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject14.centerlight
+taken class : subject14
+recognized class : subject14
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject13.rightlight
+taken class : subject13
+recognized class : subject09
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject08.leftlight
+taken class : subject08
+recognized class : subject15
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject12.normal
+taken class : subject12
+recognized class : subject12
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/PCA/databases/yalefaces gif/subject10.normal
+taken class : subject10
+recognized class : subject10
+sucess
+printing sucess
+ identified 9 images out of 15 images 
