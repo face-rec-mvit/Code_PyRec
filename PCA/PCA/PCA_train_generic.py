@@ -194,7 +194,7 @@ def pre_process(pathtoimages):
 			if(flag_for_changing_file_name==0):
 				temp_image_name_modified=images[i].replace('.',os.sep,1)
 			else:
-				temp_image_name_modified=images[i].replace('_',os.sep,1)
+				temp_image_name_modified=images[i].replace('_',os.sep)
 			images_name_modified.append(temp_image_name_modified)
 
 		#Uncomment following 2-lines to see the modified file names

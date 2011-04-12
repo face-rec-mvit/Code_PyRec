@@ -1,5 +1,5 @@
 #<This script does training of PCA-Principle Component Analysis .>
-#    Copyright (C) <2011>  <Authors : Dharani,Guruprasad, Kiran Tej, Kunal Ghosh>
+#    Copyright (C) <2011>  <Authors : Dharini,Guruprasad, Kiran Tej, Kunal Ghosh>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -78,8 +78,10 @@ def traindb(image_list):
 # we  have to know number of images to calculate 
 ##mean/sum of the images 
 
-	total_no_of_images=len(total_img_vect)
-	print total_no_of_images 
+	total_no_of_trained_images=len(total_img_vect)
+
+#Uncomment following line to know the number of trained images
+	#print "Total number of trained images = %d " %(total_no_of_trained_images)
 	
 
 #finding the total of all the images
@@ -145,8 +147,11 @@ def traindb(image_list):
 	for i in range(total_no_of_images) :
 		cv_signature_images[i]=mean_sub_img_array_transpose[i] * mapped_eig_large_select
 
-	print cv_signature_images.shape 
-	print " is the sizeof the signature matrix " 
+#Uncomment following two lines to print the shape of the signature matrix
+
+	#print cv_signature_images.shape 
+	#print " is the sizeof the signature matrix " 
+
 	return mean_img_vect,mapped_eig_large_select,cv_signature_images
 
  

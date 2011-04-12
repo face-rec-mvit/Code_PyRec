@@ -1,5 +1,5 @@
 #<This script does training of PCA-Principle Component Analysis .>
-#    Copyright (C) <2011>  <Authors : Dharani,Guruprasad, Kiran Tej, Kunal Ghosh>
+#    Copyright (C) <2011>  <Authors : Dharini,Guruprasad, Kiran Tej, Kunal Ghosh>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -82,7 +82,7 @@ def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_sele
 			index_of_underscore=i.find('_')
 			if(index_of_underscore>=0):
 				new_i=i.replace('_',os.sep,1)
-				new_recognized=recognized.replace('_',os.sep,1)
+				new_recognized=recognized.replace('_',os.sep)
 			else:
 				new_i=i.replace('.',os.sep,1)
 				new_recognized=recognized.replace('.',os.sep,1)
