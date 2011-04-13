@@ -21,6 +21,8 @@ import Image
 import sys
 import random
 from PIL import ImageStat
+import getmetrics
+import pickle
 
 ####### decide_algo function depending on the input decides on the best algorithm to be chosen
 ##### Input : Given by the user which has the input directory names
@@ -48,8 +50,18 @@ def decide_algo(input_str):
 
 ####### Image.Stat properties
 
-	test_mean=test_image_stat._getmean()
+	metric = getmetrics.return_metrics(wrapper_test_image_names[randomly_selected_image])
+	fp=open('metric_pickle_test','w+')
+	pickle.dump(metric,fp)
+	fp.close()
+	
+	print "printing metric list"
+	print metric
+
+
+"""	test_mean=test_image_stat._getmean()
 	print test_mean
+	
 	
 	test_median=test_image_stat._getmedian()
 	print test_median
@@ -101,11 +113,13 @@ def decide_algo(input_str):
 	
 	
 
-	#test_
+	
 	print type(test_mean[0])
 	print len(test_mean)
 
-	wrapper_test_image.show()
+#	wrapper_test_image.show() """
+	
+	
 	
 	
 	
