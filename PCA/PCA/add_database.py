@@ -1,4 +1,4 @@
-#< This script has the wrapper which decides on which algorithm to be chosen. >
+#< This script adds the database to the previously trained dataset or this can also be used to create initial list of trained datasets by calling directly. >
 #    Copyright (C) <2011>  <Authors : Dharini,Guruprasad, Kiran Tej, Kunal Ghosh>
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -20,14 +20,14 @@ import pickle
 import sys
 
 def add_db(db_path):
-	file_pointer_to_read_db=open("trained_databases","r")
-	file_pointer_to_read_db.seek(0)
-	list_old=pickle.load(file_pointer_to_read_db)
-	list_old.append(db_path)
+	file_pointer_to_read_db=open("trained_databases","r") # For writing purposes it should be opened in "r" mode 
+	file_pointer_to_read_db.seek(0) # not required but on safer side it again made to point to beginning
+	list_old=pickle.load(file_pointer_to_read_db) # Loading from pickle to list
+	list_old.append(db_path) # Creating a new list , by adding the newly available database name
 	
-	fp=open("trained_databases","w+")
+	fp=open("trained_databases","w+") # For writing purposes it should be opened in "w+" mode 
 	fp.seek(0)
-	pickle.dump(list_old,fp)
+	pickle.dump(list_old,fp)  # writing to pickle
 	fp.close()
 	file_pointer_to_read_db.close()
 	
@@ -35,12 +35,12 @@ def add_db(db_path):
 	
 
 if __name__=='__main__':
-	arg=sys.argv
-	no_of_databases_initially_trained=len(arg)-1
+	arg=sys.argv # back up
+	no_of_databases_initially_trained=len(arg)-1 # -1 coz one argument is file.py itself 
 	for i in range(no_of_databases_initially_trained):
-		database.append(arg[i+1])
+		database.append(arg[i+1])  # Creating a list of all the databases initially to be trained
 	print "printing databases"
-	print database
-	fp=open("trained_databases","w+")
-	pickle.dump(database,fp)
-	fp.close()
+	print database # Printing databases for initial training as list
+	fp=open("trained_databases","w+") # For writing purposes it should be opened in "w+" mode
+	pickle.dump(database,fp)  # Writing to file
+	fp.close() 

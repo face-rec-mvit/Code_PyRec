@@ -32,8 +32,8 @@ import os
 ## Output : Database name
 
 def get_db_name(db_path):
-	db_split_path_names=db_path.split(os.sep)
-	return(db_split_path_names[len(db_split_path_names)-1])
+	db_split_path_names=db_path.split(os.sep) # Spliting the path according to os.sep which retuns a list
+	return(db_split_path_names[len(db_split_path_names)-1]) # returning database name
 
 
 ####### decide_algo function depending on the input decides on the best algorithm to be chosen
@@ -56,10 +56,10 @@ def decide_algo(input_str):
 	#print "image names"
 	#print wrapper_test_image_names
 
-	wrapper_test_image_names.sort()
-	no_of_images=len(wrapper_test_image_names)
-	randomly_selected_image=random.random()*no_of_images
-	randomly_selected_image=int(round(randomly_selected_image))
+	wrapper_test_image_names.sort() # Sorting the image names
+	no_of_images=len(wrapper_test_image_names) # Getting the length of number of images
+	randomly_selected_image=random.random()*no_of_images # getting the random value in between 0 and no_of_images
+	randomly_selected_image=int(round(randomly_selected_image)) # converting to integer coz index should be a integer
 	
 	#Uncomment following 2 - lines to print the index randomly selected image
 
@@ -68,9 +68,9 @@ def decide_algo(input_str):
 	#print "number of images"
 	#print len(wrapper_test_image_names)
 
-	wrapper_test_image=Image.open(wrapper_test_image_names[randomly_selected_image])
+	#wrapper_test_image=Image.open(wrapper_test_image_names[randomly_selected_image]) 
 	
-	test_image_stat=ImageStat.Stat(wrapper_test_image)
+	# test_image_stat=ImageStat.Stat(wrapper_test_image) # To convert to Imagestat object whcih gives the stat properties of the image
 
 ######## We will be doing the decision based on the 16-metrices. 
 ###### Only when the test image (image set) satisfies all the 16 metrices it means that the given test database is actually one of the trained dataset
@@ -82,41 +82,42 @@ def decide_algo(input_str):
 
 ####### Image.Stat properties
 
-	flag=1
-
-	metric = getmetrics.return_metrics(wrapper_test_image_names[randomly_selected_image])
+	flag=0 # Initializing the flag, flag=0 means database not identified, assuming db not identified in the beginning, will be set once db is identified
+ 
+	metric = getmetrics.return_metrics(wrapper_test_image_names[randomly_selected_image]) # Calling the return_metrics of getmetrics which returns 16 metrics as list
 
 ##### We need to get the names of the databases which are previously trained 	
-	fp_for_trained_db=open("trained_databases","r")
-	fp_for_trained_db.seek(0)
-	trained_datasets=pickle.load(fp_for_trained_db)	
+	fp_for_trained_db=open("trained_databases","r") # Opening trained_databases in "r" mode to read the list of trained db's
+	fp_for_trained_db.seek(0) # Not necessary,  but still on safer hand its given so fp_for_trained_db points to beginning of the file
+	trained_datasets=pickle.load(fp_for_trained_db)	# loading the trained data lists from pickle to trained_datasets
 	
-	for i in range(len(trained_datasets)):	
-		face_names=lslR.get_files(trained_datasets[i])
-		face_names.sort()
-		#image_selected=Image.open(face_names[randomly_selected_image])
-		trained_metric=getmetrics.return_metrics(face_names[randomly_selected_image])
+	for i in range(len(trained_datasets)): # Have to be checked on all the previously trained datasets 	  
+		face_names=lslR.get_files(trained_datasets[i]) # Getting the absolute path names of the database
+		face_names.sort() # Sorting the absolute path names
+		trained_metric=getmetrics.return_metrics(face_names[randomly_selected_image]) # Calling the return_metrics of getmetrics which returns 16 metrics as list
 		
-		if(metric.__eq__(trained_metric)):
+		if(metric.__eq__(trained_metric)): # Comparing if all the 16 metrics of the image is matching
 
 			print "Data base identified"
 			print "Identified database is"
-			print trained_datasets[i]
-			flag=0
-			break  
-	if(flag==1): # means database not identified
+			print trained_datasets[i] # printing the identified database name
+			flag=1 # Setting the flag if database is identified 
+			break   # once if database is identified then we can come out of loop 
+
+	if(flag==0): # means database not identified
 		##### Need to extract the trained dataset path 
-		trained_data_path=trained_datasets[0]
-		rindex_ossep=trained_data_path.rindex(os.sep)
-		trained_data_path=trained_data_path[0:rindex_ossep]
-		src_path=input_str
-		dest_path=trained_data_path+os.sep
-		dest_path=dest_path+get_db_name(input_str)
+		trained_data_path=trained_datasets[0] # Taking any database path to extract trained database path
+		rindex_ossep=trained_data_path.rindex(os.sep) # Getting the path of the trained databases directory
+		trained_data_path=trained_data_path[0:rindex_ossep] # Getting the path of the trained databases directory
+		src_path=input_str  # Getting source directory of new database 
+		dest_path=trained_data_path+os.sep # Creating destination directory for taking back up of new database
+		dest_path=dest_path+get_db_name(input_str) # Creating destination directory for taking back up of new database
 		
 		
 		print "Data base not identifed"
-		shutil.copytree(src_path,dest_path)
-		add_database.add_db(sys.argv[1])
+		print "Adding database to our trained database sets"
+		shutil.copytree(src_path,dest_path) # creating a copy of the entire database, dynamically updating new database to trained set
+		add_database.add_db(sys.argv[1]) # Adding the new database to the previously trained list. 
 		print "Database added"
 
 	
