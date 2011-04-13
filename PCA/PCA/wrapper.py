@@ -23,19 +23,51 @@ import random
 from PIL import ImageStat
 import getmetrics
 import pickle
+import add_database
+import shutil
+import os
+
+###### get_db_name returns the database name 
+#### Input : path of database
+## Output : Database name
+
+def get_db_name(db_path):
+	db_split_path_names=db_path.split(os.sep)
+	return(db_split_path_names[len(db_split_path_names)-1])
+
 
 ####### decide_algo function depending on the input decides on the best algorithm to be chosen
 ##### Input : Given by the user which has the input directory names
 ### Depending on some metrics it actually decides on which algorithm to be chosen
 
+#trained_datasets=['/home/kiran/Documents/Facerec/databases/ORL','/home/kiran/Documents/Facerec/databases/yalefaces gif','/home/kiran/Documents/Facerec/databases/yalefaces pgm']
+
+#'/home/kiran/Documents/Facerec/databases/trained/YALE RESIZED DATASET'
+
 
 def decide_algo(input_str):
-	print input_str
+	
+	#print input_str
+		
 	wrapper_test_image_names = lslR.get_files(input_str)
+	
+	#Uncomment following 2-lines to print all the image names
+
+	#print "image names"
+	#print wrapper_test_image_names
+
 	wrapper_test_image_names.sort()
 	no_of_images=len(wrapper_test_image_names)
 	randomly_selected_image=random.random()*no_of_images
 	randomly_selected_image=int(round(randomly_selected_image))
+	
+	#Uncomment following 2 - lines to print the index randomly selected image
+
+	#print "Index of randomly selected image = %d" %(randomly_selected_image)
+
+	#print "number of images"
+	#print len(wrapper_test_image_names)
+
 	wrapper_test_image=Image.open(wrapper_test_image_names[randomly_selected_image])
 	
 	test_image_stat=ImageStat.Stat(wrapper_test_image)
@@ -50,13 +82,59 @@ def decide_algo(input_str):
 
 ####### Image.Stat properties
 
+	flag=1
+
 	metric = getmetrics.return_metrics(wrapper_test_image_names[randomly_selected_image])
-	fp=open('metric_pickle_test','w+')
-	pickle.dump(metric,fp)
-	fp.close()
+
+##### We need to get the names of the databases which are previously trained 	
+	fp_for_trained_db=open("trained_databases","r")
+	fp_for_trained_db.seek(0)
+	trained_datasets=pickle.load(fp_for_trained_db)	
 	
-	print "printing metric list"
-	print metric
+	for i in range(len(trained_datasets)):	
+		face_names=lslR.get_files(trained_datasets[i])
+		face_names.sort()
+		#image_selected=Image.open(face_names[randomly_selected_image])
+		trained_metric=getmetrics.return_metrics(face_names[randomly_selected_image])
+		
+		if(metric.__eq__(trained_metric)):
+
+			print "Data base identified"
+			print "Identified database is"
+			print trained_datasets[i]
+			flag=0
+			break  
+	if(flag==1): # means database not identified
+		##### Need to extract the trained dataset path 
+		trained_data_path=trained_datasets[0]
+		rindex_ossep=trained_data_path.rindex(os.sep)
+		trained_data_path=trained_data_path[0:rindex_ossep]
+		src_path=input_str
+		dest_path=trained_data_path+os.sep
+		dest_path=dest_path+get_db_name(input_str)
+		
+		
+		print "Data base not identifed"
+		shutil.copytree(src_path,dest_path)
+		add_database.add_db(sys.argv[1])
+		print "Database added"
+
+	
+	
+	
+
+####### Trying out pickel but loading only the randomly selected image at run time looks cool coz of efficiency issues
+
+	
+	#fp=open('metric_pickle_test','w+')
+	#pickle.dump(metric,fp)
+	#fp.close()
+	#f=open('metric_pickle_test','r+')
+	#m=pickle.load(f)
+	#print m.__eq__(metric)
+	
+	#print "printing metric list"
+	#print metric
 
 
 """	test_mean=test_image_stat._getmean()
