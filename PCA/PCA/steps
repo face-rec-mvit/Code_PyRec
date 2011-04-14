@@ -1,0 +1,8 @@
+1) First add_database is to be called with database paths that is used in training
+
+	Purpose : to tell the wrapper that these algorithms is trained.
+
+2) map_algo_db is used to mapping and decide on which algorithm is better for which database
+	
+	Purpose : to tell the wrapper which algo suits for which database
+3) 

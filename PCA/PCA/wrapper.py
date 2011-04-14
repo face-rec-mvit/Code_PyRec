@@ -26,10 +26,14 @@ import pickle
 import add_database
 import shutil
 import os
+import PCA_train_generic
+import train_with_all
 
 ###### get_db_name returns the database name 
 #### Input : path of database
 ## Output : Database name
+
+algorithms = ["PCA","DCT","LPP"]
 
 def get_db_name(db_path):
 	db_split_path_names=db_path.split(os.sep) # Spliting the path according to os.sep which retuns a list
@@ -102,6 +106,14 @@ def decide_algo(input_str):
 			print "Identified database is"
 			print trained_datasets[i] # printing the identified database name
 			flag=1 # Setting the flag if database is identified 
+			identified_database_name=get_db_name(trained_datasets[i])
+			if(identified_database_name.__contains__("ORL")):
+				PCA_train_generic.pre_process(trained_datasets[i])			
+			if(identified_database_name.__contains__("yalefaces gif")):
+				print "LPP is to be called"
+			if(identified_database_name.__contains__("yalefaces pgm")):
+				print "DCT is to be called"
+
 			break   # once if database is identified then we can come out of loop 
 
 	if(flag==0): # means database not identified
@@ -117,9 +129,12 @@ def decide_algo(input_str):
 		print "Data base not identifed"
 		print "Adding database to our trained database sets"
 		shutil.copytree(src_path,dest_path) # creating a copy of the entire database, dynamically updating new database to trained set
-		add_database.add_db(sys.argv[1]) # Adding the new database to the previously trained list. 
+		add_database.add_db(dest_path) # Adding the new database (which is presently copied to dest_path) to the previously trained list. 
 		print "Database added"
-
+		index_best_algo_chosen=train_with_all.choose_best(dest_path)
+		best_algo_chosen=algorithms[index_best_algo_chosen]
+		
+		print "Algorithm chosen is " +best_algo_chosen " bacause it has the more efficiency then other algorithms on this database
 	
 	
 	
