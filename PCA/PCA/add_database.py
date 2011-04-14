@@ -47,3 +47,4 @@ if __name__=='__main__':
 	fp=open("trained_databases","w+") # For writing purposes it should be opened in "w+" mode
 	pickle.dump(database,fp)  # Writing to file
 	fp.close() 
+	map_algo_db.store_map_main()
