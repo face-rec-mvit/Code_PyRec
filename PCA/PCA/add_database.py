@@ -18,6 +18,7 @@ database=[]
 
 import pickle
 import sys
+import map_algo_db
 
 def add_db(db_path):
 	file_pointer_to_read_db=open("trained_databases","r") # For writing purposes it should be opened in "r" mode 
@@ -30,6 +31,8 @@ def add_db(db_path):
 	pickle.dump(list_old,fp)  # writing to pickle
 	fp.close()
 	file_pointer_to_read_db.close()
+	map_algo_db.store_map(db_path)
+	
 	
 	#print list_old
 	

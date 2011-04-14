@@ -39,7 +39,7 @@ def store_map_main():
 	print dataset_algo
 	
 	fp_dataset_algo=open("mapping_dataset_algo","w+")
-	pickle(dataset_algo,fp_dataset_algo)
+	pickle.dump(dataset_algo,fp_dataset_algo)
 
 def store_map(new_to_map):
 	fp_dataset_algo=open("mapping_dataset_algo","r")
