@@ -27,7 +27,7 @@ def store_map_main():
 	trained_dbs=pickle.load(fp_sm)
 	print trained_dbs
 	for i in range(len(trained_dbs)):
-		algo_index=train_with_all.choose_best(i)
+		algo_index=train_with_all.choose_best(trained_dbs[i])
 		best_chosen_algo.append(algorithms_m[algo_index])
 	print best_chosen_algo
 	

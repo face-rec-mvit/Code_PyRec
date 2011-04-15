@@ -39,6 +39,7 @@ from numpy.matlib import zeros
 import os
 import train_database
 import test_database
+import test1_database
 
 ########################################################### all the required modules imported ##################################################################
 
@@ -343,7 +344,10 @@ def pre_process(pathtoimages):
 # arg_7 : flag_for_tesing : flag which actually if the given directory structure is flat or hierarchy; It sets the flag if the structure is flat
 
 
-	test_database.testdb(signature_images_for_train_set,test_data_set,entire_train_data_as_list,mean_img,eigen_selected,no_images_trained_per_class,flag_for_testing)
+	r=test_database.testdb(signature_images_for_train_set,test_data_set,entire_train_data_as_list,mean_img,eigen_selected,no_images_trained_per_class,flag_for_testing)
+	
+	return r
+	
 	
 	
 

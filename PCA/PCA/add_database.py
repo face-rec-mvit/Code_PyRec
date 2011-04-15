@@ -39,6 +39,7 @@ def add_db(db_path):
 
 if __name__=='__main__':
 	arg=sys.argv # back up
+	database=[]
 	no_of_databases_initially_trained=len(arg)-1 # -1 coz one argument is file.py itself 
 	for i in range(no_of_databases_initially_trained):
 		database.append(arg[i+1])  # Creating a list of all the databases initially to be trained
@@ -47,4 +48,4 @@ if __name__=='__main__':
 	fp=open("trained_databases","w+") # For writing purposes it should be opened in "w+" mode
 	pickle.dump(database,fp)  # Writing to file
 	fp.close() 
-	map_algo_db.store_map_main()
+	map_algo_db.store_map_main() # Automatically calls this to map database to algoritm

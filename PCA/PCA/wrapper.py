@@ -138,6 +138,7 @@ def decide_algo(input_str):
 		shutil.copytree(src_path,dest_path) # creating a copy of the entire database, dynamically updating new database to trained set
 		add_database.add_db(dest_path) # Adding the new database (which is presently copied to dest_path) to the previously trained list. 
 		print "Database added"
+		print dest_path
 		index_best_algo_chosen=train_with_all.choose_best(dest_path)
 		best_algo_chosen=algorithms[index_best_algo_chosen]
 		
