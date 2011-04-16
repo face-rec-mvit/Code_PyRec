@@ -88,11 +88,11 @@ def LPP(directory,testImageCount=30):
     #print testString
     
     #Now call the LPP methods
-    ImageDir=lpp.Image_Directory(directory,classKeys=dict(zip(range(len(Class)),Class)),ftype=Type,exclude=testString)
+    ImageDir=lpp.Image_Directory(directory,classKeys=dict(zip(range(len(Class)),Class)),ftype=Type,exclude=testString,numOfEigVectors=100)
     efficiency=ImageDir.test(directory,classKeys=dict(zip(Class,range(len(Class)))),include=testString)
     
     return efficiency
     
 if __name__ == '__main__':
     efficiency = LPP(sys.argv[1])
-    print "The efficiency of LPP with the given dataset is %d" % efficiency
+    print "The efficiency of LPP with the given dataset is %f" % (efficiency*100)
