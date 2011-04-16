@@ -137,6 +137,10 @@ class Image_Directory(object) :
         """
 
     def test(self,image_directory,classKeys,include=None,exclude=None):
+        """
+        The method implements the testing part of the algorithm and returns
+        the successrate in fractions between 0 and 1
+        """
         #the following reassignment is done to keep the __init__
         #method and the test method arguments consistent
         test_path = image_directory
