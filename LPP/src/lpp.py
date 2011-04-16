@@ -47,7 +47,7 @@ class Image_Directory(object) :
     number_of_images=0
     ftypes = list()
     def \
-    __init__(self,image_directory,classKeys,ftype=None,include=None,exclude=None):
+    __init__(self,image_directory,classKeys,ftype=None,include=None,exclude=None,numOfEigVectors=50):
         self.IMAGE_DIRECTORY=image_directory
         self.keywords = classKeys
         self.ftypes = ftype
@@ -115,7 +115,7 @@ class Image_Directory(object) :
         sorted(zip(self.eigenValues,self.eigenVectors),key=operator.itemgetter(0))
         #print len(self.temp)
         #select the first d eigenVectors
-        self.d = 50
+        self.d = numOfEigVectors
         self.A = numpy.matrix([vec for (val,vec) in \
                 self.eigSorted][:self.d])
         #print self.A.shape
@@ -204,7 +204,9 @@ class Image_Directory(object) :
             #(recognized_class,xTest_class) 
             
             i +=1
-        print "Success Rate is : %f" % (float(success)/float(success+failure))
+        rate = (float(success)/float(success+failure))
+        #print "Success Rate is : %f" % rate
+        return rate
 
     def calculateYis(self):
         print "Calculating Yi for all Xi"
