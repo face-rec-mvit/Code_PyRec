@@ -1,17 +1,34 @@
 #! /usr/bin/python
 
-from src import lpp
-import numpy as np
 import time
 import os
 import sys
+import random
+import numpy as np
 from src import get_abs_path_of_all_files_in_directory as lslR
+from src import lpp
 
-def LPP(directory):
+def getRandom(minimum,maximum,count):
+    """
+    returns a list of count number of  unique random numbers
+    in the range minimum and maximum
+    """
+    nums = []    
+    while(len(nums) != count):
+        num=random.randint(minimum,maximum)
+        if num not in nums:
+            nums.append(num)
+    return nums
+    
+def LPP(directory,testImageCount=30):
     """
     This is the wrapper LPP function which takes in only the face database
     (directory containing face images) and returns the efficiency of LPP 
     when run on the database.
+    
+    testImageCount is the number of images taken in the test case. This is an 
+    arbitrary number. Unique random images are taken from the Image Database
+    to be included in the Test Set.
     
     NOTE:
     1.The file type is assumed to be the one with maximum occurance in the
@@ -28,7 +45,7 @@ def LPP(directory):
     classList = []
     #classList is a list of all last directory names in the directory tree of 
     #the face image database. These are assumed to denote classes.
-    File = []
+    Files = []
     #this list is almost as same as filesList except that this list contains only
     #files having a max occurring extension
     
@@ -49,19 +66,32 @@ def LPP(directory):
         if f.endswith(Type[0]):
             Class = f.split(os.sep)[-2]        
             #get the name of the last directory
-            
-            
+            Files.append(f)
             if Class in classList:            
                 pass
                 #if Class is already there in classList then ignore        
             else:
                 classList.append(Class)
                 #if Class is not in List then append it                
-        
-    #print "Dict Type:" ,dictType
-    print "Class List :" ,classList
+                
     
-
-if __name__ == "__main__":
+    #generate testImageCount unique random numbers
+    randList=getRandom(minimum=0,maximum=len(Files),count=30)
+    
+    #generate the string of file names that are to be included in the testSet
+    testString = ""
+    for num in randList:
+        testString += str(Files[num])+"|"
+    #remove the trailing |
+    testString=testString[:-1]
+    
+    #print testString
+    
+    #Now call the LPP methods
+    ImageDir=lpp.Image_Directory(directory,classKeys=zip(range(len(Class)),Class),ftype=Type,exclude=testString)
+    ImageDir.test(directory,classKeys=zip(Class,range(len(Class))),include=testString)
+    
+    
+if __name__ == '__main__':
     efficiency = LPP(sys.argv[1])
     print "The efficiency of LPP with the given dataset is %d" % efficiency
