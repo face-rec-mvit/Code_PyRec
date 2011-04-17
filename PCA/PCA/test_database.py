@@ -109,6 +109,7 @@ def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_sele
 
 	print "printing sucess"
 	print " identified %d images out of %d images "  %(sucess,len(test_set))
+	return (float(sucess)/len(test_set))*100
 
 		
 

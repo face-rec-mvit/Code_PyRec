@@ -23,22 +23,58 @@ import random
 from PIL import ImageStat
 import getmetrics
 import pickle
+import add_database
+import shutil
+import os
+import PCA_train_generic
+import train_with_all
+
+###### get_db_name returns the database name 
+#### Input : path of database
+## Output : Database name
+
+algorithms = ["PCA","DCT","LPP"]
+
+def get_db_name(db_path):
+	db_split_path_names=db_path.split(os.sep) # Spliting the path according to os.sep which retuns a list
+	return(db_split_path_names[len(db_split_path_names)-1]) # returning database name
+
 
 ####### decide_algo function depending on the input decides on the best algorithm to be chosen
 ##### Input : Given by the user which has the input directory names
 ### Depending on some metrics it actually decides on which algorithm to be chosen
 
+#trained_datasets=['/home/kiran/Documents/Facerec/databases/ORL','/home/kiran/Documents/Facerec/databases/yalefaces gif','/home/kiran/Documents/Facerec/databases/yalefaces pgm']
+
+#'/home/kiran/Documents/Facerec/databases/trained/YALE RESIZED DATASET'
+
 
 def decide_algo(input_str):
-	print input_str
-	wrapper_test_image_names = lslR.get_files(input_str)
-	wrapper_test_image_names.sort()
-	no_of_images=len(wrapper_test_image_names)
-	randomly_selected_image=random.random()*no_of_images
-	randomly_selected_image=int(round(randomly_selected_image))
-	wrapper_test_image=Image.open(wrapper_test_image_names[randomly_selected_image])
 	
-	test_image_stat=ImageStat.Stat(wrapper_test_image)
+	#print input_str
+		
+	wrapper_test_image_names = lslR.get_files(input_str)
+	
+	#Uncomment following 2-lines to print all the image names
+
+	#print "image names"
+	#print wrapper_test_image_names
+
+	wrapper_test_image_names.sort() # Sorting the image names
+	no_of_images=len(wrapper_test_image_names) # Getting the length of number of images
+	randomly_selected_image=random.random()*no_of_images # getting the random value in between 0 and no_of_images
+	randomly_selected_image=int(round(randomly_selected_image)) # converting to integer coz index should be a integer
+	
+	#Uncomment following 2 - lines to print the index randomly selected image
+
+	#print "Index of randomly selected image = %d" %(randomly_selected_image)
+
+	#print "number of images"
+	#print len(wrapper_test_image_names)
+
+	#wrapper_test_image=Image.open(wrapper_test_image_names[randomly_selected_image]) 
+	
+	# test_image_stat=ImageStat.Stat(wrapper_test_image) # To convert to Imagestat object whcih gives the stat properties of the image
 
 ######## We will be doing the decision based on the 16-metrices. 
 ###### Only when the test image (image set) satisfies all the 16 metrices it means that the given test database is actually one of the trained dataset
@@ -50,13 +86,79 @@ def decide_algo(input_str):
 
 ####### Image.Stat properties
 
-	metric = getmetrics.return_metrics(wrapper_test_image_names[randomly_selected_image])
-	fp=open('metric_pickle_test','w+')
-	pickle.dump(metric,fp)
-	fp.close()
+	flag=0 # Initializing the flag, flag=0 means database not identified, assuming db not identified in the beginning, will be set once db is identified
+ 
+	metric = getmetrics.return_metrics(wrapper_test_image_names[randomly_selected_image]) # Calling the return_metrics of getmetrics which returns 16 metrics as list
+
+
+
+#			break   # once if database is identified then we can come out of loop  """
+
+##### We need to get the names of the databases which are previously trained, Rewriting this part with more efficient way
+ 	
+	fp_for_trained_db=open("mapping_dataset_algo","r") # Opening trained_databases in "r" mode to read the list of trained db's
+	fp_for_trained_db.seek(0) # Not necessary,  but still on safer hand its given so fp_for_trained_db points to beginning of the file
+	trained_datasets=pickle.load(fp_for_trained_db)	# loading the trained data lists from pickle to trained_datasets
 	
-	print "printing metric list"
-	print metric
+	for i in range(len(trained_datasets)): # Have to be checked on all the previously trained datasets 	  
+		face_names=lslR.get_files(trained_datasets[i][0]) # Getting the absolute path names of the database
+		face_names.sort() # Sorting the absolute path names
+		trained_metric=getmetrics.return_metrics(face_names[randomly_selected_image]) # Calling the return_metrics of getmetrics which returns 16 metrics as list
+		
+		if(metric.__eq__(trained_metric)): # Comparing if all the 16 metrics of the image is matching
+
+			print "Data base identified"
+			print "Identified database is"
+			print trained_datasets[i][0] # printing the identified database name
+			flag=1 # Setting the flag if database is identified 
+			identified_algo_name=trained_datasets[i][1]
+			if(identified_algo_name=="PCA"):
+				PCA_train_generic.pre_process(trained_datasets[i][0])			
+			if(identified_algo_name=="DCT"):
+				print "DCT is to be called"
+			if(identified_algo_name=="LPP"):
+				print "LPP is to be called"
+	
+
+			break   # once if database is identified then we can come out of loop 
+
+
+	if(flag==0): # means database not identified
+		##### Need to extract the trained dataset path 
+		trained_data_path=trained_datasets[0][0] # Taking any database path to extract trained database path
+		rindex_ossep=trained_data_path.rindex(os.sep) # Getting the path of the trained databases directory
+		trained_data_path=trained_data_path[0:rindex_ossep] # Getting the path of the trained databases directory
+		src_path=input_str  # Getting source directory of new database 
+		dest_path=trained_data_path+os.sep # Creating destination directory for taking back up of new database
+		dest_path=dest_path+get_db_name(input_str) # Creating destination directory for taking back up of new database
+		
+		
+		print "Data base not identifed"
+		print "Adding database to our trained database sets"
+		shutil.copytree(src_path,dest_path) # creating a copy of the entire database, dynamically updating new database to trained set
+		add_database.add_db(dest_path) # Adding the new database (which is presently copied to dest_path) to the previously trained list. 
+		print "Database added"
+		print dest_path
+		index_best_algo_chosen=train_with_all.choose_best(dest_path)
+		best_algo_chosen=algorithms[index_best_algo_chosen]
+		
+		print "Algorithm chosen is " +best_algo_chosen +" bacause it has the more efficiency then other algorithms on this database"
+	
+	
+	
+
+####### Trying out pickel but loading only the randomly selected image at run time looks cool coz of efficiency issues
+
+	
+	#fp=open('metric_pickle_test','w+')
+	#pickle.dump(metric,fp)
+	#fp.close()
+	#f=open('metric_pickle_test','r+')
+	#m=pickle.load(f)
+	#print m.__eq__(metric)
+	
+	#print "printing metric list"
+	#print metric
 
 
 """	test_mean=test_image_stat._getmean()
@@ -128,3 +230,28 @@ def decide_algo(input_str):
 if __name__=='__main__':
 	arg=sys.argv
 	decide_algo(sys.argv[1])
+
+##### We need to get the names of the databases which are previously trained 	
+#	fp_for_trained_db=open("trained_databases","r") # Opening trained_databases in "r" mode to read the list of trained db's
+#	fp_for_trained_db.seek(0) # Not necessary,  but still on safer hand its given so fp_for_trained_db points to beginning of the file
+#	trained_datasets=pickle.load(fp_for_trained_db)	# loading the trained data lists from pickle to trained_datasets
+#	
+#	for i in range(len(trained_datasets)): # Have to be checked on all the previously trained datasets 	  
+#		face_names=lslR.get_files(trained_datasets[i]) # Getting the absolute path names of the database
+#		face_names.sort() # Sorting the absolute path names
+#		trained_metric=getmetrics.return_metrics(face_names[randomly_selected_image]) # Calling the return_metrics of getmetrics which returns 16 metrics as list
+#		
+#		if(metric.__eq__(trained_metric)): # Comparing if all the 16 metrics of the image is matching
+#
+#			print "Data base identified"
+#			print "Identified database is"
+#			print trained_datasets[i] # printing the identified database name
+#			flag=1 # Setting the flag if database is identified 
+#			identified_database_name=get_db_name(trained_datasets[i])
+#			if(identified_database_name.__contains__("ORL")):
+#				PCA_train_generic.pre_process(trained_datasets[i])			
+#			if(identified_database_name.__contains__("yalefaces gif")):
+#				print "LPP is to be called"
+#			if(identified_database_name.__contains__("yalefaces pgm")):
+#				print "DCT is to be called"
+#

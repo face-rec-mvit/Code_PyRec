@@ -1,4 +1,4 @@
-#<This script does training of PCA-Principle Component Analysis .>
+#<This script is the frame work part, structures the images in one particular frame work .>
 #    Copyright (C) <2011>  <Authors : Dharini,Guruprasad, Kiran Tej, Kunal Ghosh>
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,26 @@
 
 """
 
- Usage : python trainpca.py "path to directory of images"
+ Usage : python frame_work.py "path to directory of images"
+ Return values : This script returns 6 values in the following order 
+ 
+ return order : train_data_set,entire_train_data_as_list,no_of_classes,no_of_images_per_class,test_data_set,flag_for_testing
+	
+	train_data_set = list of all training images as an 2-d array
+	entire_train_data_as_list = list of all training images as a single list
+	no_of_classes = total number of classes in the given input database
+	no_of_images_per_class= Number  of images per class
+	test_data_set=list of training images as a 1-array ( In case user wants, can be typecasted to list in his script using this return value )
+	flag_for_testing=This is the flag which says about the directory directory structure. 
+	                 flag_for_testing = 1 , means the directory structure is flat, means modifications of path names is necessary to extract class names
+  			 flag_for_testing = 0 , means the directory structure is hierarchical which means modifcations is not necessary for extracting class names
+
+This is usually called from the "main" script of the algorithm i.e for eg. if PCA is the algorithm we are using we have to call this from PCA_main as follows 
+
+	 train_data_set,entire_train_data_as_list,no_of_classes,no_of_images_per_class,test_data_set,flag_for_testing=frame_work.pre_process(images_path)
+ 	
+Then using the above return values the training part and testing part is called in the PCA_main in our example taken
+		
  Note  : The code works for irrespetive of any directory structure. But as far as possible try to avoid underscores and dots in the names of the directory.	
 
 """
@@ -306,50 +325,10 @@ def pre_process(pathtoimages):
 		c=0
 		for c in range(no_of_images_per_class-1):
 			entire_train_data_as_list.append(train_data_set[r][c])
-
-	######### Calling traindb in train_database which actually does the training part and it returns some values which actually is needed during the testing phase.
-	####### Input Argument : train_data_set ( set of tranining images )
-	##### It returns 3 values
-	#### (1) mean_img : contains the mean of all the images, its a 1-d array/list
-	### (2) eigen_selected : Usually only the major values of the eigen vector are taken, this contain those major eigen values only
-	## (3) signature_images_for_train_set : contains the signatures (mapped images / eigen images ) for the entire training dataset
 	
-	mean_img,eigen_selected,signature_images_for_train_set=train_database.traindb(train_data_set)
-
-	#### to find number of images trained per class
-	## Thas obviously no_of_images_per_class - 1 because one image will be taken for testing part
-
-	no_images_trained_per_class=no_of_images_per_class-1
-
-	#Uncomment following to print signature of the trained images
-
-	#print "Printing the signature/co-relation matrix of the trained image 
-	#print signature_images_for_train_set
-
-	####### Uncomment the following lines when any lengths or the types of the signature variable are to be checked
- 
-	#print "signature type"
-	#print type(signature_images_for_train_set)
-	#print "signature length"
-	#print len(signature_images_for_train_set)
-
-# Calling the testdb in test_database.py which takes in quite a number of arguments, lets explore the arguments
-
-# arg_1 : signature_images_for_train_set :  contains the signatures (mapped images / eigen images ) for the entire training dataset ( which is return by train_database )
-# arg_2 : test_data_set : contains the list of test data images which is randomly selected, one from each class
-# arg_3 : entire_train_data_as_list : contains entire train data set ( removed test_data_set from original input ) 
-# arg_4 : mean_img : contains the mean of all the images, its a 1-d array/list ( which is return by train_database )
-# arg_5 : eigen_selected : Usually only the major values of the eigen vector are taken, this contain those major eigen values only ( which is return by train_database )
-# arg_6 : no_images_trained_per_class : contains  number of images actually trained per class from the original dataset 
-# arg_7 : flag_for_tesing : flag which actually if the given directory structure is flat or hierarchy; It sets the flag if the structure is flat
+	return (train_data_set,entire_train_data_as_list,no_of_classes,no_of_images_per_class,test_data_set,flag_for_testing)
 
 
-	r=test_database.testdb(signature_images_for_train_set,test_data_set,entire_train_data_as_list,mean_img,eigen_selected,no_images_trained_per_class,flag_for_testing)
-	
-	return r
-	
-	
-	
 
 if __name__=='__main__':
 	arg=sys.argv

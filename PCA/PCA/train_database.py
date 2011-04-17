@@ -78,7 +78,7 @@ def traindb(image_list):
 # we  have to know number of images to calculate 
 ##mean/sum of the images 
 
-	total_no_of_trained_images=len(total_img_vect)
+	total_no_of_images=len(total_img_vect)
 
 #Uncomment following line to know the number of trained images
 	#print "Total number of trained images = %d " %(total_no_of_trained_images)
@@ -88,10 +88,15 @@ def traindb(image_list):
 
 	for i in range(total_no_of_images):
 		sum_img_vect=sum_img_vect+total_img_vect[i]
+		#print "printing the total sum of images"
+		#print sum_img_vect
 
 # finding the mean of all the images 
 
 	mean_img_vect=sum_img_vect/total_no_of_images
+	#print "printing the mean of all images"
+	#print mean_img_vect
+
 
 # we need to clone mean_img_vect as manytimes as number of images 
 ##to subtract from total_img_vect which actually contains vectors of all 
