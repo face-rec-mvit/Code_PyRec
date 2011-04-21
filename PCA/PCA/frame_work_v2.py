@@ -20,7 +20,7 @@
  Usage : python frame_work.py "path to directory of images"
  Return values : This script returns 6 values in the following order 
  
- return order : train_data_set,entire_train_data_as_list,no_of_classes,test_data_set,count_of_dots_original_path,flag_for_testing
+ return order : train_data_set,entire_train_data_as_list,no_of_classes,no_of_images_per_class,test_data_set,flag_for_testing
 	
 	train_data_set = list of all training images as an 2-d array
 	entire_train_data_as_list = list of all training images as a single list
@@ -56,9 +56,6 @@ import scipy.linalg
 import numpy.matlib
 from numpy.matlib import zeros
 import os
-import train_database
-import test_database
-import test1_database
 
 ########################################################### all the required modules imported ##################################################################
 
@@ -182,6 +179,11 @@ def pre_process(pathtoimages):
 	#print class_names
 
 	set_of_class_names=set(class_names)  #removing the repetitions using set so it contains only unique classes
+	
+	##################### Converting back to list coz set doesnt support indexing #######
+
+	unique_class_names=list(set_of_class_names)
+	unique_class_names.sort()
 
 	###################### Uncomment following 2 lines to know all different classes without repetitions
 
@@ -197,7 +199,7 @@ def pre_process(pathtoimages):
 	#Checking if the classes are partitioned properly.
 	
 	flag_for_testing=0 # flag required to be set to 1 if in case if the directory structure is flat
-	
+	count_of_dots_original_path=0
 	if(no_of_classes<=1): # if number of classes is 1 it means that partition has not happend 
 		flag_for_testing=1  # setting  the flag indicating flat architecture
 		temp_str_for_checking_if_underscore_is_present=images[0] 
@@ -209,10 +211,10 @@ def pre_process(pathtoimages):
 			flag_for_changing_file_name=0 # set this flag to 0 which means that seperator is '.' or any other symbol
 
 		# Modifying the images names so that it that seperator remains os.sep through out
-
+                count_of_dots_original_path=pathtoimages.count('.')
 		for i in range(no_of_images):
 			if(flag_for_changing_file_name==0):
-				temp_image_name_modified=images[i].replace('.',os.sep,1)
+				temp_image_name_modified=images[i].replace('.',os.sep,count_of_dots_original_path+1)
 			else:
 				temp_image_name_modified=images[i].replace('_',os.sep)
 			images_name_modified.append(temp_image_name_modified)
@@ -265,30 +267,42 @@ def pre_process(pathtoimages):
 		#print set_of_class_names
 
 		no_of_classes=len(set_of_class_names)  #getting the count of no of classes
+		
+		####Converting back to list so coz set doesnt support indexing
 
-	
-	no_of_images_per_class=no_of_images/no_of_classes  #getting the count of no of images per class
+		unique_class_names=list(set_of_class_names)
+		unique_class_names.sort()
 
-	# Uncomment to print the know the number of images per class
-
-	#print "number of images per class = %d " %(no_of_images_per_class)
 	
 	#################arranging the input directory of images into the order of class
 
+	img_counter=0
+        num_of_images_each_class=[]
 	for  i in range(no_of_classes):
 		each_class=[]
-		for j in range(no_of_images_per_class):
-			img_counter=i*no_of_images_per_class+j
+		num_of_images_each_class.append(class_names.count(unique_class_names[i]))
+		for j in range(class_names.count(unique_class_names[i])):
+			#print "img=%d" %(img_counter)
+			#print images[img_counter]
 			each_class.append(images[img_counter])
+			img_counter=img_counter+1
 		entire_class.append(each_class)  #contains all the images arranged according to the class
 	
 	entire_class_backup=entire_class
+
+	#print "imagecounter=%d" %(img_counter)
+	
+	#print "number of images =%d" %(len(images))
+	#print entire_class
+	#print "printing number of images per class"
+	#print num_of_images_each_class
+	#print "total number of images = %d" %(sum(num_of_images_each_class))
 
 	#code to  create trainset and testset 
 	#one random image selected in one class will be added in testset and all other remaining (no_of_images_per_class) will be added to trainset
 
 	for i in range(no_of_classes):
-		image_no_for_test=random.random()*no_of_images_per_class	
+		image_no_for_test=random.random()*num_of_images_each_class[i]	
 		image_no_for_test=int(image_no_for_test)
 		test_data_set.append(entire_class[i][image_no_for_test])
 		temp_train=entire_class[i]
@@ -309,24 +323,24 @@ def pre_process(pathtoimages):
 	#print test_data_set
 	
 			
-	test_data_set_matrix=numpy.matrix(test_data_set) # converting to matrix to perform multiplication 
-	train_data_set_matrix=numpy.matrix(train_data_set) # converting to matrix to perform multiplication 
-	
-	#############Uncomment following lines to know the shapes and details of train_data_set and test_data_set
-
-	#print "Printing test data shape 	
-	#print test_data_set_matrix.shape
-	#print "Printing train data shape 
-	#print train_data_set_matrix.shape
-	
 	################### we need the entire training data set as a single list
 
+	entire_train_data_as_list=[]
 	for r in  range(no_of_classes):
-		c=0
-		for c in range(no_of_images_per_class-1):
-			entire_train_data_as_list.append(train_data_set[r][c])
+		entire_train_data_as_list.extend(train_data_set[r])
+	print "Total number of trained images = %d " %(len(entire_train_data_as_list))
 	
-	return (train_data_set,entire_train_data_as_list,no_of_classes,no_of_images_per_class,test_data_set,flag_for_testing)
+	return (train_data_set,entire_train_data_as_list,no_of_classes,test_data_set,count_of_dots_original_path,flag_for_testing)
+
+#Copy paste this piece of code to know how many images are present in each class, The corresponding count will be present in list named num_of_images_each_class
+#	for  i in range(no_of_classes):
+#		num_of_images_each_class.append(class_names.count(unique_class_names[i]))
+
+## Or else in the run time user can use the property of len of list as 
+#	class_count=0
+#	for i in test_data_set:
+#		print "The number of images in %d class is  %d " %(class_count,len(i)) 
+#		class_count=class_count+1
 
 
 

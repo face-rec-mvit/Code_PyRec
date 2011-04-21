@@ -22,13 +22,17 @@ import scipy.linalg
 import sys
 import os
 
-#this function takes four inputs for processing
-#signature_images : contains the signatures of each train image which is a low dimensional image
-#test_set : contains the entire test data set of image names
-#mean_img_for_test : contains the mean of the trained images which is used for finding eucludian/norm
-#eigen_selected_for_test : contains large eigen vectors 
+# testdb function in test_database.py which takes in quite a number of arguments, lets explore the arguments
 
-def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_selected_for_test,trained_images_per_class,flag_for_rename):
+# arg_1 : signature_images_for_train_set :  contains the signatures (mapped images / eigen images ) for the entire training dataset ( which is return by train_database )
+# arg_2 : test_data_set : contains the list of test data images which is randomly selected, one from each class
+# arg_3 : entire_train_data_as_list : contains entire train data set ( removed test_data_set from original input ) 
+# arg_4 : mean_img : contains the mean of all the images, its a 1-d array/list ( which is return by train_database )
+# arg_5 : eigen_selected : Usually only the major values of the eigen vector are taken, this contain those major eigen values only ( which is return by train_database )
+# arg_6 : count_of_dots_original_path : contains number of dots the original path has, this +1 gives number of dots to be replaced to get modified names
+# arg_7 : flag_for_tesing : flag which actually says if the given directory structure is flat or hierarchy; It sets the flag if the structure is flat
+
+def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_selected_for_test,count_of_dots_original_path,flag_for_rename):
 
 # Need to set the flags depending on the file names and directory structure
 
@@ -81,11 +85,11 @@ def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_sele
 		if(flag_for_rename==1):
 			index_of_underscore=i.find('_')
 			if(index_of_underscore>=0):
-				new_i=i.replace('_',os.sep,1)
+				new_i=i.replace('_',os.sep)
 				new_recognized=recognized.replace('_',os.sep)
 			else:
-				new_i=i.replace('.',os.sep,1)
-				new_recognized=recognized.replace('.',os.sep,1)
+				new_i=i.replace('.',os.sep,count_of_dots_original_path+1)
+				new_recognized=recognized.replace('.',os.sep,count_of_dots_original_path+1)
 		else: 
 			new_i=i
 			new_recognized=recognized
