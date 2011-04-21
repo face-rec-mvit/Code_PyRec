@@ -33,7 +33,7 @@ def imageToVector(image):
     im_binary = Image.open(image);
     #Check if image is 'RGB' convert it to grey scale for processing
     if(im_binary.mode=='RGB'):
-	im_binary=im_binary('L')	
+	im_binary=im_binary.convert('L')	
     #Convert the PIL image to a numpy array.
     im_array = numpy.asarray(im_binary);
     #Convert the numpy array to a vector.
