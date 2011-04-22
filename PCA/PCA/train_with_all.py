@@ -16,14 +16,17 @@
 
 import os
 import PCA_train_generic
+import return_percent_pixels
 
-def choose_best(database_name):
+
+def choose_best(new_database):
 
 	#### New database should be checked on all the algorithms and the best case efficiency should be taken for furthur uses
 
-	efficiency_PCA=PCA_train_generic.pre_process(database_name)
-	print efficiency_PCA
-	#efficiency_PCA=80
+		
+	#print efficiency_PCA
+
+	efficiency_PCA=80
 	efficiency_LPP=60
 	efficiency_DCT=70
 	

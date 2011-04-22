@@ -28,6 +28,8 @@ import shutil
 import os
 import PCA_train_generic
 import train_with_all
+import compare_with_all
+import PCA_main
 
 ###### get_db_name returns the database name 
 #### Input : path of database
@@ -103,6 +105,9 @@ def decide_algo(input_str):
 	for i in range(len(trained_datasets)): # Have to be checked on all the previously trained datasets 	  
 		face_names=lslR.get_files(trained_datasets[i][0]) # Getting the absolute path names of the database
 		face_names.sort() # Sorting the absolute path names
+		no_of_images_in_train=len(face_names)
+		if (no_of_images_in_train<randomly_selected_image):
+			continue 
 		trained_metric=getmetrics.return_metrics(face_names[randomly_selected_image]) # Calling the return_metrics of getmetrics which returns 16 metrics as list
 		
 		if(metric.__eq__(trained_metric)): # Comparing if all the 16 metrics of the image is matching
@@ -113,7 +118,7 @@ def decide_algo(input_str):
 			flag=1 # Setting the flag if database is identified 
 			identified_algo_name=trained_datasets[i][1]
 			if(identified_algo_name=="PCA"):
-				PCA_train_generic.pre_process(trained_datasets[i][0])			
+				PCA_main.main_pca(trained_datasets[i][0])			
 			if(identified_algo_name=="DCT"):
 				print "DCT is to be called"
 			if(identified_algo_name=="LPP"):
@@ -139,10 +144,29 @@ def decide_algo(input_str):
 		add_database.add_db(dest_path) # Adding the new database (which is presently copied to dest_path) to the previously trained list. 
 		print "Database added"
 		print dest_path
-		index_best_algo_chosen=train_with_all.choose_best(dest_path)
+		index_best_algo_chosen=compare_with_all.choose_best_algo(dest_path,trained_datasets)
 		best_algo_chosen=algorithms[index_best_algo_chosen]
 		
 		print "Algorithm chosen is " +best_algo_chosen +" bacause it has the more efficiency then other algorithms on this database"
+	
+		new_list_to_append=[]
+		new_list_to_append.append(dest_path)
+		new_list_to_append.append(best_algo_chosen)
+
+		trained_datasets.append(new_list_to_append)
+	
+		fp_to_update_trained_db=open("mapping_dataset_algo","w+") # Opening trained_databases in "r" mode to read the list of trained db's
+		fp_to_update_trained_db.seek(0) # Not necessary,  but still on safer hand its given so fp_for_trained_db points to beginning of the file
+		pickle.dump(trained_datasets,fp_to_update_trained_db)	# updating the mapping_dataset file
+		fp_to_update_trained_db.close()
+		if(best_algo_chosen=="PCA"):
+			PCA_main.main_pca(dest_path)			
+		if(best_algo_chosen=="DCT"):
+			print "DCT is to be called"
+		if(best_algo_chosen=="LPP"):
+			print "LPP is to be called"
+	
+		
 	
 	
 	
