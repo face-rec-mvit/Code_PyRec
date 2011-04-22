@@ -1,0 +1,14 @@
+\section*{Executive Summary}
+
+The typesetting software \LaTeX~ offers many advantages for the
+preparation of project reports. It produces beautifully typeset
+output, elegantly handles equations and cross references and helps
+maintain consistent formatting. Sadly few undergraduate students are
+familiar with this software.
+
+% Blank lines separate paragraphs
+This template report has been developed to provide an accessible
+starting point for students who would like to use \LaTeX~ for their
+project report. The source document is available on-line
+\cite{Phillips04} and is annotated with comments and instructions.
+

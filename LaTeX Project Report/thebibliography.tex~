@@ -1,0 +1,31 @@
+
+
+\bibitem{Oetiker00} Tobias~Oetiker, Hubert~Partl, Irene~Hyna and
+Elisabeth~Schlegl, ``The Not So Short Introduction to \LaTeXe,''
+distributed with \LaTeXe, Version 3.13, 23 February 2000.
+
+% Use this format of references to online material
+\bibitem{Green04} C.~A.~Green, ``Honours and Design Project Work:
+Guide to Preparation of Final Year Project Reports,'' available at
+https://www.eleceng.adelaide.edu.au/INFO\_UG/4039/documents/finalreport.pdf,
+February 2004.
+
+\bibitem{Phillips04} B.~J.~Phillips and S.~P.~Mickan, ``A \LaTeX~
+Project Report Template,'' available at
+http://www.eleceng.adelaide.edu.au/personal/phillips, June 2004.
+
+\bibitem{Phillips04a} B.~J.~Phillips ``Getting Started with \LaTeX,''
+available at http://www.eleceng.adelaide.edu.au/personal/phillips,
+June 2004.
+
+% Use this format for references to books
+\bibitem{Shagger69} M.~Shagger, \emph{Reflexive Perspectives on
+  Post-Modern Verbosity}, 3rd~ed., Addison-Hall, 1969.
+
+% Use this format for references to journal papers
+\bibitem{Dubious84} A. Dubious, ``Its in the Numbers Baby,''
+\emph{Transactions on Everything}, vol. 9, no. 4, pp. 42-749,
+Dec. 1984.
+
+\end{thebibliography}
+

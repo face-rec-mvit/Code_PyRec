@@ -1,0 +1,21 @@
+\section{Introduction}
+
+This document has been written to help you use \LaTeX~ to prepare your
+project report. The source document \texttt{ProjectReportTemplate.tex}
+is available on-line \cite{Phillips04} and contains comments and
+examples to help you with basic formatting. Before diving straight in
+you may want to check the document `Getting Started with \LaTeX'
+\cite{Phillips04a} which gives instructions on how to run \LaTeX~ on
+the PCs in the School of Electrical \& Electronic Engineering.
+
+This document also contains some examples as to how you can structure
+your project report and what it may contain. However you should note
+that your report must be in accordance with the guidelines published
+on the subject web page \cite{Green04}. Where the information in this
+template contradicts the subject guidelines you should follow the
+guidelines.
+
+The following sections demonstrate one possible structure for your
+report. Appendix~\ref{sec:appendixb} provides some tips for formatting
+your report as well as some examples of how to do this in \LaTeX.
+
