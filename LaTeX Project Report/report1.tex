@@ -1,0 +1,368 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin3]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+
+\begin{center}
+
+\textup{\Large PROJECT REPORT }\\[0.5cm]
+\textup{\Large of }\\[0.5cm]
+
+
+% Title
+\uppercase{\Large \textbf {A Learning Algorithm for Optimal Face Recognition in Dynamic Environments}}\\[3.0cm]
+
+\vspace{1.0cm}
+% Done by
+\normalsize By \\
+\begin{table}[h]
+\centering
+\begin{tabular}{lr}\hline \\
+Roll No & Names of Students \\ \\ \hline
+\\
+1MV07CS025 & Dharini S \\
+1MV07CS029 & Guru Prasad M \\
+1MV07CS043 & Kiran Tej J L \\
+1MV07CS048 & Kunal Ghosh \\ \\ \hline 
+\end{tabular}
+\end{table}
+
+\vfill
+
+% Bottom of the page
+\normalsize
+
+\Large{Department of Computer Science and Engineering}\\
+\LARGE{Sir M Visvesvaraya Institute of Technology }\\
+\normalsize
+\textsc{Krishnadeveraya Nagar, Hunasamranhalli, NH-7,
+Via-Yelahanka, Bangalore-562157, Karnataka, India}\\
+
+\vspace{0.5cm}
+
+\newpage
+
+\begin{table}
+\caption{Database : ORL}
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{Database : YALE GIF}
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{Database : YALE PGM} 
+
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Database : YALE RESIZED}
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Database : Umist Database }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{Database : CALTECH ORIGINAL}
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Database : CALTECH (Cropped) }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Database : Georgia Tech Database ( Original) }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Database : Georgia Tech Database ( Cropped ) }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Database : DBase Males }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}
+\caption{Database : DBase Females }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Algorithm & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+Principal Component Analysis & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Locality Preserving Projections & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Discerete Cosine Transform & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Histogram Based Facerec & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Algorithm : Principal Component Analysis }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Database & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+ORL & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE GIF & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE PGM & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE RESIZED & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Umist & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Original & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Cropped & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( original) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( Cropped) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase males & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase Females  & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Algorithm : Locality Preserving Projections }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Database & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+ORL & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE GIF & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE PGM & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE RESIZED & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Umist & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Original & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Cropped & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( original) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( Cropped) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase males & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase Females  & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Algorithm : Discrete Cosian Transform }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Database & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+ORL & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE GIF & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE PGM & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE RESIZED & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Umist & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Original & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Cropped & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( original) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( Cropped) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase males & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase Females  & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Algorithm : Histogram Based Facerec }
+\centering
+\begin{tabular}{| c | c | c | c | c | c | r | } \hline 
+Database & Run1 & Run2 & Run3 & Run4 & Run5 & Avg  \\  
+\hline
+ORL & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE GIF & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE PGM & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+YALE RESIZED & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Umist & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Original & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Caltech Cropped & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( original) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+Georgia Tech Database ( Cropped) & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase males & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+DBase Females  & Run1 & Run2 & Run3 & Run4 & Run5 & Avg \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\end{center}
+
+
+\end{document}
