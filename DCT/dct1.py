@@ -13,7 +13,9 @@ def imagetoDct(image):
 	##s=Image.open('/home/adiyeaniramanujadaasan/Desktop/5.jpg' ).convert("L")
     pix = numpy.array(s.getdata()).reshape(s.size[0], s.size[1], 1) 
     a = pix.tolist()
-    x, y, z = pix.shape 					
+    x, y, z = pix.shape 
+    #print "printing the values of x,y,z"	
+    #print x,y,z					
 
     ########### z is not used, but just bcoz shape returns 3 values, we have used this variable    
 #    for i in range(x):
@@ -71,14 +73,17 @@ def imagetoDct(image):
 
     for h in range(8):
         for k in range(8):
-            DCT[h][k] = alphaX[h]*alphaY[k] * sum[h][k]
+            tmp = alphaX[h]*alphaY[k] * sum[h][k]
+	    DCT[h][k]=tmp.tolist()
+	#    print "Printing type of DCT individual elements"
+	#    print type(DCT[h][k])
 
 ###################### Print the DCT matrix  ###############################
 
-    for h in range(8):
-        for k in range(8):
-            print DCT[h][k],
-        print "\n"
+    #for h in range(8):
+    #    for k in range(8):
+    #        print DCT[h][k],
+    #    print "\n"
 
 #################### To traverse in this pattern 
 # __  __  __
@@ -89,11 +94,16 @@ def imagetoDct(image):
 #   `` /
 #     /
 ######################### in order to get the maximum "N" values in the top-left corner
+    #print "printing DCT"
+    #print DCT
+    	
+	
     N=20
     i=1
     ListN = []
     #array = [[0 for i in range(8)] for j in range(8)]
-
+    
+    
     for n in range(8):
         if(n%2==0):
             i = n ; j=0
@@ -118,7 +128,16 @@ def imagetoDct(image):
                 i= i+1
                 j= j-1
 
-    return ListN
+    returnLIST=[]
+    tmp=[]
+    for i in ListN:
+	tmp.extend(i)
+        	    
+    returnLIST=tmp
+    #print "printing return list"
+    #print returnLIST
+    #return ListN
+    return returnLIST
 
 ################ now ListN will contain the prominent N values of DCT.. ##################
 
