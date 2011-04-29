@@ -6,31 +6,35 @@
 import numpy
 import Image
 
-def main_dct(image):
-    s=Image.open(image)
-    pix = numpy.array(s.getdata()).reshape(s.size[0], s.size[1], 1) # last argument 1 => grayscale, for a RGB last arg is 3
+
+def imagetoDct(image):
+    s=Image.open(image).convert("L")
+	##s=Image.open('/home/adiyeaniramanujadaasan/Desktop/5.jpg' ).convert("L")
+    pix = numpy.array(s.getdata()).reshape(s.size[0], s.size[1], 1) 
     a = pix.tolist()
-    x, y, z = pix.shape 					# shape returns the diementions, for example for a gray scale it will return 1200, 2400, 1
+    x, y, z = pix.shape 					
 
     ########### z is not used, but just bcoz shape returns 3 values, we have used this variable    
-    for i in range(x):
-        for j in range(y):
-            print(pix[i][j])
+#    for i in range(x):
+#        for j in range(y):
+#            print(pix[i][j])
 ################ Precompute Alpha ####################
     import math
     alphaX = [0 for i in range(8)]
     for i in range(8):
-        if (i==0 or j ==0):
-            alphaX[i]=math.sqrt(1.0/x)
-        else:
-            alphaX[i]=math.sqrt(2.0/x)
+	for j in range(8):
+	    if (i==0 or j ==0):
+                alphaX[i]=math.sqrt(1.0/x)
+            else:
+                alphaX[i]=math.sqrt(2.0/x)
 
     alphaY = [0 for i in range(8)]
     for i in range(8):
-        if (i==0 or j ==0):
-            alphaY[i]=math.sqrt(1.0/y)
-        else:
-            alphaY[i]=math.sqrt(2.0/y)
+        for j in range(8):
+            if (i==0 or j ==0):
+                alphaY[i]=math.sqrt(1.0/y)
+            else:
+                alphaY[i]=math.sqrt(2.0/y)
 
 
 ################ Precompute product of the cosine terms ###########  commmon for all images #########
@@ -45,24 +49,24 @@ def main_dct(image):
 
 #######################  compute sum for each image  ###################################
 
-for h in range(8):
-    for k in range(8):
-        for i in range(x):
-            for j in range(y):
-                sum[h][k] = sum[h][k] + pix[i][j] * product[h][k]
+    for h in range(8):
+        for k in range(8):
+            for i in range(x):
+                for j in range(y):
+                    sum[h][k] = sum[h][k] + pix[i][j] * product[h][k]
 
 ################ Compute the final matrix ####################
-DCT = [[0 for i in range(8)] for j in range(8)]
+    DCT = [[0 for i in range(8)] for j in range(8)]
 
-for h in range(8):
-    for k in range(8):
-        DCT[h][k] = alphaX[h]*alphaY[k] * sum[h][k]
+    for h in range(8):
+        for k in range(8):
+            DCT[h][k] = alphaX[h]*alphaY[k] * sum[h][k]
 
 ###################### Print the DCT matrix  ###############################
 
-for h in range(8):
-    for k in range(8):
-        print DCT[h][k],
+    for h in range(8):
+        for k in range(8):
+            print DCT[h][k],
         print "\n"
 
 #################### To traverse in this pattern 
@@ -74,7 +78,7 @@ for h in range(8):
 #   `` /
 #     /
 ######################### in order to get the maximum "N" values in the top-left corner
-    N=100
+    N=20
     i=1
     ListN = []
     #array = [[0 for i in range(8)] for j in range(8)]
@@ -103,6 +107,7 @@ for h in range(8):
                 i= i+1
                 j= j-1
 
+    return ListN
 
 ################ now ListN will contain the prominent N values of DCT.. ##################
 
