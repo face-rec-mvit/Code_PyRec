@@ -1,6 +1,7 @@
 ################ This is a basic DCT process for a single image.. ###############
 
-
+### USAGE : import dct1
+##@         s=Image.open('/home/adiyeaniramanujadaasan/Desktop/5.jpg' ).convert("L")
 
 
 import numpy
