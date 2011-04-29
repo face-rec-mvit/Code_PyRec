@@ -1,6 +1,5 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.1.21)  15 FEB 2011 00:20
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  24 APR 2011 11:57
 entering extended mode
- restricted \write18 enabled.
  %&-line parsing enabled.
 **reportnew.tex
 (./reportnew.tex
@@ -64,7 +63,7 @@ File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
 
 
 ! Package pdftex.def Error: PDF mode expected, but DVI mode detected!
@@ -76,9 +75,11 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414     }\@ehc
+l.385     }\@ehc
                 
-? 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 \Gread@gobject=\count91
 ))
 \Gin@req@height=\dimen107
@@ -194,40 +195,7 @@ File: pdfmark.def 2009/10/09 v6.79a Hyperref definitions for pdfmark specials
 \pdf@toks=\toks18
 \pdf@defaulttoks=\toks19
 \Fld@listcount=\count98
-))
-(/usr/share/texmf-texlive/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2009/02/07 v0.4g Insert pages of external PDF documents (AM)
-
-(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count99
-\calc@Bcount=\count100
-\calc@Adimen=\dimen112
-\calc@Bdimen=\dimen113
-\calc@Askip=\skip43
-\calc@Bskip=\skip44
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count101
-\calc@Cskip=\skip45
-)
-(/usr/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
-
-(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/usr/share/texmf-texlive/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
-)
-\AM@pagebox=\box27
-\AM@toc@title=\toks20
-\c@AM@survey=\count102
-\AM@templatesizebox=\box28
-) (./reportnew.aux)
+)) (./reportnew.aux)
 \openout1 = `reportnew.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -288,16 +256,16 @@ driver: dvips
 -----------------------
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen114
-\scratchbox=\box29
-\nofMPsegments=\count104
-\nofMParguments=\count105
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen115
-\MPnumerator=\count107
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count99
+\scratchdimen=\dimen112
+\scratchbox=\box27
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen113
+\MPnumerator=\count103
+\everyMPtoPDFconversion=\toks21
 )
 Package hyperref Info: Link coloring OFF on input line 29.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
@@ -306,7 +274,7 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count108
+\c@section@level=\count104
 )
 LaTeX Info: Redefining \ref on input line 29.
 LaTeX Info: Redefining \pageref on input line 29.
@@ -315,16 +283,8 @@ LaTeX Info: Redefining \pageref on input line 29.
 \@outlinefile=\write3
 \openout3 = `reportnew.out'.
 
-\AtBeginShipoutBox=\box30
- ABD: EveryShipout initializing macros
-(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
-
-(/etc/texmf/tex/latex/config/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 130.
-) (./title.tex
+\AtBeginShipoutBox=\box28
+ (./title.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -335,7 +295,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ! Misplaced alignment tab character &.
 l.30 \Large{Department of Computer Science &
                                              Engineering}\\
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 [1
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -422,13 +388,13 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!] (./reportnew.aux) ) 
 Here is how much of TeX's memory you used:
- 5292 strings out of 495062
- 77858 string characters out of 1182644
- 154092 words of memory out of 3000000
- 8383 multiletter control sequences out of 15000+50000
+ 4570 strings out of 495062
+ 66598 string characters out of 1182644
+ 143320 words of memory out of 3000000
+ 7688 multiletter control sequences out of 15000+50000
  8545 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,8n,21p,1143b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,21p,1143b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/
 amsfonts/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
@@ -436,7 +402,7 @@ cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
 texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on reportnew.pdf (4 pages, 100216 bytes).
+Output written on reportnew.pdf (4 pages, 100145 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

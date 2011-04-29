@@ -5,17 +5,47 @@ p2
 aS'PCA'
 p3
 aa(lp4
-S'/home/kiran/Documents/Facerec/databases/trained/YALE RESIZED DATASET'
+S'/home/kiran/Documents/Facerec/databases/trained/yalefaces gif'
 p5
 ag3
 aa(lp6
-S'/home/kiran/Documents/Facerec/databases/trained/caltech_small_version'
+S'/home/kiran/Documents/Facerec/databases/trained/Caltech'
 p7
 aS'PCA'
 p8
 aa(lp9
-S'/home/kiran/Documents/Facerec/databases/trained/umist'
+S'/home/kiran/Documents/Facerec/databases/trained/caltech_downloaded'
 p10
 aS'PCA'
 p11
+aa(lp12
+S'/home/kiran/Documents/Facerec/databases/trained/caltech_small_version'
+p13
+aS'PCA'
+p14
+aa(lp15
+S'/home/kiran/Documents/Facerec/databases/trained/cropped_faces ( Georgia Tech Database )'
+p16
+aS'PCA'
+p17
+aa(lp18
+S'/home/kiran/Documents/Facerec/databases/trained/dbase (downloaded)'
+p19
+aS'PCA'
+p20
+aa(lp21
+S'/home/kiran/Documents/Facerec/databases/trained/gt_db ( Georgia Tech Database )'
+p22
+aS'PCA'
+p23
+aa(lp24
+S'/home/kiran/Documents/Facerec/databases/trained/males'
+p25
+aS'PCA'
+p26
+aa(lp27
+S'/home/kiran/Documents/Facerec/databases/trained/umist'
+p28
+aS'PCA'
+p29
 aa.

@@ -66,7 +66,7 @@ def return_recognized(test_image_hist,trained_image_hists):
 	return temp_diff.index(min(temp_diff))
 
  
-def testdb(test_data_set,train_data_set,train_hist_list,no_of_images_trained_per_class,flag_for_rename):
+def testdb(test_data_set,train_data_set,train_hist_list,count_of_dots_original_path,flag_for_rename):
 
 	sucess=0
 	for i in test_data_set:
@@ -82,11 +82,11 @@ def testdb(test_data_set,train_data_set,train_hist_list,no_of_images_trained_per
 		if(flag_for_rename==1):
 			index_of_underscore=i.find('_')
 			if(index_of_underscore>=0):
-				new_i=i.replace('_',os.sep,1)
+				new_i=i.replace('_',os.sep)
 				new_recognized=recognized.replace('_',os.sep)
 			else:
-				new_i=i.replace('.',os.sep,1)
-				new_recognized=recognized.replace('.',os.sep,1)
+				new_i=i.replace('.',os.sep,count_of_dots_original_path+1)
+				new_recognized=recognized.replace('.',os.sep,count_of_dots_original_path+1)
 		else: 
 			new_i=i
 			new_recognized=recognized

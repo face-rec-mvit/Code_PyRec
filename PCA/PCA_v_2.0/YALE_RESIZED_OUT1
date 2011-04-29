@@ -1,0 +1,65 @@
+Total number of trained images = 150 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/10_1.gif
+taken class : 10
+recognized class : 10
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/11_9.gif
+taken class : 11
+recognized class : 11
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/12_5.gif
+taken class : 12
+recognized class : 12
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/13_4.gif
+taken class : 13
+recognized class : 3
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/14_4.gif
+taken class : 14
+recognized class : 3
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/15_2.gif
+taken class : 15
+recognized class : 15
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/1_5.gif
+taken class : 1
+recognized class : 1
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/2_9.gif
+taken class : 2
+recognized class : 2
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/3_11.gif
+taken class : 3
+recognized class : 3
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/4_10.gif
+taken class : 4
+recognized class : 4
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/5_6.gif
+taken class : 5
+recognized class : 5
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/6_7.gif
+taken class : 6
+recognized class : 2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/7_4.gif
+taken class : 7
+recognized class : 15
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/8_10.gif
+taken class : 8
+recognized class : 8
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/9_3.gif
+taken class : 9
+recognized class : 9
+sucess
+printing sucess
+ identified 11 images out of 15 images 
+efficiency is 
+73.3333333333

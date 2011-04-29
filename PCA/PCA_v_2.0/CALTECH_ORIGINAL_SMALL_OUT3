@@ -1,0 +1,53 @@
+Total number of trained images = 163 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/1/image_0021.jpg
+taken class : 1
+recognized class : 12
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/10/image_0164.jpg
+taken class : 10
+recognized class : 12
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/11/image_0170.jpg
+taken class : 11
+recognized class : 6
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/12/image_0175.jpg
+taken class : 12
+recognized class : 2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/2/image_0033.jpg
+taken class : 2
+recognized class : 3
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/3/image_0043.jpg
+taken class : 3
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/4/image_0056.jpg
+taken class : 4
+recognized class : 4
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/5/image_0088.jpg
+taken class : 5
+recognized class : 7
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/6/image_0097.jpg
+taken class : 6
+recognized class : 2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/7/image_0123.jpg
+taken class : 7
+recognized class : 9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/8/image_0134.jpg
+taken class : 8
+recognized class : 7
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/9/image_0143.jpg
+taken class : 9
+recognized class : 12
+failure
+printing sucess
+ identified 1 images out of 12 images 
+efficiency is 
+8.33333333333

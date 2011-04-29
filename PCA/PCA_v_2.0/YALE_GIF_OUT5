@@ -1,0 +1,65 @@
+Total number of trained images = 150 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject01.leftlight
+taken class : subject01
+recognized class : subject04
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject02.wink
+taken class : subject02
+recognized class : subject02
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject03.centerlight
+taken class : subject03
+recognized class : subject10
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject04.noglasses
+taken class : subject04
+recognized class : subject04
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject05.happy
+taken class : subject05
+recognized class : subject05
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject06.surprised
+taken class : subject06
+recognized class : subject06
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject07.sleepy
+taken class : subject07
+recognized class : subject07
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject08.surprised
+taken class : subject08
+recognized class : subject13
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject09.sad
+taken class : subject09
+recognized class : subject09
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject10.sad
+taken class : subject10
+recognized class : subject10
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject11.noglasses
+taken class : subject11
+recognized class : subject11
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject12.centerlight
+taken class : subject12
+recognized class : subject05
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject13.surprised
+taken class : subject13
+recognized class : subject13
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject14.rightlight
+taken class : subject14
+recognized class : subject06
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject15.wink
+taken class : subject15
+recognized class : subject15
+sucess
+printing sucess
+ identified 10 images out of 15 images 
+efficiency is 
+66.6666666667

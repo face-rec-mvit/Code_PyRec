@@ -1,0 +1,93 @@
+Total number of trained images = 220 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/1/mvc-006f.jpg
+taken class : 1
+recognized class : 1
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/10/mvc-001f.jpg
+taken class : 10
+recognized class : 10
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/11/mvc-012f.jpg
+taken class : 11
+recognized class : 11
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/12/mvc-002f.jpg
+taken class : 12
+recognized class : 12
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/13/mvc-004f.jpg
+taken class : 13
+recognized class : 13
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/14/mvc-005f.jpg
+taken class : 14
+recognized class : 15
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/15/mvc-002f.jpg
+taken class : 15
+recognized class : 15
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/16/mvc-011f.jpg
+taken class : 16
+recognized class : 16
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/17/mvc-004f.jpg
+taken class : 17
+recognized class : 11
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/18/mvc-003f.jpg
+taken class : 18
+recognized class : 14
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/19/mvc-001f.jpg
+taken class : 19
+recognized class : 19
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/2/mvc-003f.jpg
+taken class : 2
+recognized class : 2
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/20/mvc-004f.jpg
+taken class : 20
+recognized class : 21
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/21/mvc-003f.jpg
+taken class : 21
+recognized class : 20
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/22/mvc-007f.jpg
+taken class : 22
+recognized class : 22
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/3/mvc-008f.jpg
+taken class : 3
+recognized class : 3
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/4/mvc-008f.jpg
+taken class : 4
+recognized class : 4
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/5/mvc-010f.jpg
+taken class : 5
+recognized class : 5
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/6/mvc-003f.jpg
+taken class : 6
+recognized class : 6
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/7/mvc-003f.jpg
+taken class : 7
+recognized class : 7
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/8/mvc-008f.jpg
+taken class : 8
+recognized class : 8
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/females/9/mvc-007f.jpg
+taken class : 9
+recognized class : 9
+sucess
+printing sucess
+ identified 17 images out of 22 images 
+efficiency is 
+77.2727272727
