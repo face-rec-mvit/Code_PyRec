@@ -48,7 +48,6 @@ Then using the above return values the training part and testing part is called 
 import random
 import numpy
 import sys
-#import initial_processing as ip
 import get_abs_names as lslR
 import sys
 import Image

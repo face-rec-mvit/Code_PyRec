@@ -18,6 +18,9 @@ import Image
 import sys
 import numpy
 
+### get_histogram : Function that takes image as a input and returns histogram of the image
+# Input : image
+#Output/return : histogram of the image
 
 
 def get_histgram(image):
@@ -26,12 +29,18 @@ def get_histgram(image):
 	image_histogram=numpy.histogram(image_array_flat,10,(0,255))
 	return image_histogram[0]
 
+### train_images_as_hists : returns the histogram of the set of images
+# Input : List containing paths of trained images
+# Output/return - List containing histograms of the trained images
+
 def train_images_as_hists(hbs_images_to_train):
 	train_hist=[]
 	for i in range(len(hbs_images_to_train)):
 		temp_image=Image.open(hbs_images_to_train[i])
 		temp_image_hist=get_histgram(temp_image)
 		train_hist.append(temp_image_hist)
+	#Uncomment following to print the list of histograms of the trained images
+	#print "printing histogram"	
 	#print train_hist
 	return train_hist
 	

@@ -19,18 +19,21 @@ import Image
 import sys
 import os
 
+### get_histogram : Function that takes image as a input and returns histogram of the image
+# Input : image
+#Output/return : histogram of the image
 
-#this function takes four inputs for processing
-#signature_images : contains the signatures of each train image which is a low dimensional image
-#test_set : contains the entire test data set of image names
-#mean_img_for_test : contains the mean of the trained images which is used for finding euclidian/norm
-#eigen_selected_for_test : contains large eigen vectors 
 
 def get_histgram(image):
 	image_array=numpy.asarray(image)
 	image_array_flat=image_array.flatten()
 	image_histogram=numpy.histogram(image_array_flat,10,(0,255))
 	return image_histogram[0]
+
+## return_recognized : method takes two arguments test_image_hist,trained_image_hists, it compare's test_image_hist with each of trained_image_hists and then returns the #nearest image to test_image_hist in the list trained_image_hists. 
+# Input :  
+#     arg_1 : test_image_hist - histogram of the image being tested
+#     arg_2 : trained_image_hists - histogram of the set of trained images
 		
 def return_recognized(test_image_hist,trained_image_hists):
 	temp_diff=[]
@@ -38,12 +41,16 @@ def return_recognized(test_image_hist,trained_image_hists):
 		itest_image_hist=numpy.array(test_image_hist)
 		taken=numpy.array(trained_image_hists[i]) 		
 
+		## Uncomment following to print the furthur details while processing 
 
 		#print "test_image"
 		#print test_image_hist
 		#print "printing comparing image "
 		#print taken
+
 		t=test_image_hist-taken
+
+		## Uncomment following to print the furthur details while processing 
 
 		#print "printing difference"
 		#print t
@@ -51,21 +58,35 @@ def return_recognized(test_image_hist,trained_image_hists):
 
 		temp_diff_temp=sum(abs(t))
 
+		## Uncomment following to print the furthur details while processing 
+
 		#print "prining sum"
 		#print temp_diff_temp
 	
 		temp_diff.append(temp_diff_temp)
 
+	## Uncomment following to print the furthur details while processing 
+
 	#print "printing temp diff"
 	#print temp_diff
 	#print "printing length of difference list"
 	#print len(temp_diff)
-       #print "Minimum difference image index"
+        #print "Minimum difference image index"
         #print temp_diff.index(min(temp_diff))
 	
 	return temp_diff.index(min(temp_diff))
 
- 
+
+### testdb takes some arguments and returns the efficiency of the database
+# arg_1 : test_data_set - this list contains test data set ,( one image per class )
+# arg_2 : entire_train_data_as_list - entire train dataset 
+# arg_3 : train_hist_list - histogram of the trained data
+# arg_4 : count_of_dots_original_path - number of dots in the original given path
+# arg_5 : flag_for_testing - This is the flag which says about the directory directory structure. 
+#	                 flag_for_testing = 1 , means the directory structure is flat, means modifications of path names is necessary to extract class names
+# 			 flag_for_testing = 0 , means the directory structure is hierarchical which means modifcations is not necessary for extracting class names
+
+
 def testdb(test_data_set,train_data_set,train_hist_list,count_of_dots_original_path,flag_for_rename):
 
 	sucess=0
