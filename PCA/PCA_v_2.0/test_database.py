@@ -34,33 +34,6 @@ import os
 
 def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_selected_for_test,count_of_dots_original_path,flag_for_rename):
 
-# Need to set the flags depending on the file names and directory structure
-
-#	rename_flag_is_set=0
-
-#	print test_set
-#	file_path_name_from_test_set_to_set_flag=test_set[0]
-#	file_path_name_from_test_set_to_set_flag_split=file_path_name_from_test_set_to_set_flag.split(os.sep)
-	
-#	print file_path_name_from_test_set_to_set_flag_split
-
-#	file_path_from_test_set_to_set_flag_length=len(file_path_name_from_test_set_to_set_flag_split)
-#	file_name_from_test_set_to_set_flag=file_path_name_from_test_set_to_set_flag_split[file_path_from_test_set_to_set_flag_length-1]
-#	print file_name_from_test_set_to_set_flag
-
-#	index_of_underscore=file_name_from_test_set_to_set_flag.find('_')
-#		
-#	index_of_dot=file_name_from_test_set_to_set_flag.index('.')
-#
-#	rindex_of_dot=file_name_from_test_set_to_set_flag.rindex('.')
-#	print index_of_underscore
-
-#	if(index_of_underscore>=0):
-#		rename_flag_is_set=1
-
-#	if(index_of_dot>=0):
-#		rename_flag_is_set=2		*/
-
 	temp_norm_list=[]
 	sucess=0
 	signature_images_backup=signature_images
@@ -121,5 +94,5 @@ def testdb(signature_images,test_set,train_set,mean_img_vect_for_test,eigen_sele
 
 #if __name__=='__main__':
 #	arg=sys.argv
-#	train(sys.argv[1])
+#	testdb(sys.argv[1])
 	
