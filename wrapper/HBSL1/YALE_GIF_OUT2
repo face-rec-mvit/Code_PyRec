@@ -1,0 +1,65 @@
+Total number of trained images = 150 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject01.happy
+taken class : subject01
+recognized class : subject01
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject02.rightlight
+taken class : subject02
+recognized class : subject11
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject03.sad
+taken class : subject03
+recognized class : subject03
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject04.noglasses
+taken class : subject04
+recognized class : subject04
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject05.sad
+taken class : subject05
+recognized class : subject05
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject06.centerlight
+taken class : subject06
+recognized class : subject02
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject07.sleepy
+taken class : subject07
+recognized class : subject07
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject08.noglasses
+taken class : subject08
+recognized class : subject08
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject09.glasses
+taken class : subject09
+recognized class : subject09
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject10.normal
+taken class : subject10
+recognized class : subject10
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject11.surprised
+taken class : subject11
+recognized class : subject11
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject12.centerlight
+taken class : subject12
+recognized class : subject12
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject13.surprised
+taken class : subject13
+recognized class : subject13
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject14.glasses
+taken class : subject14
+recognized class : subject14
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject15.sleepy
+taken class : subject15
+recognized class : subject15
+success
+printing success
+ identified 13 images out of 15 images 
+efficiency
+86.6666666667

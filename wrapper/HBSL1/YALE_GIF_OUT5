@@ -1,0 +1,65 @@
+Total number of trained images = 150 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject01.sleepy
+taken class : subject01
+recognized class : subject01
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject02.sleepy
+taken class : subject02
+recognized class : subject02
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject03.rightlight
+taken class : subject03
+recognized class : subject05
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject04.centerlight
+taken class : subject04
+recognized class : subject14
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject05.surprised
+taken class : subject05
+recognized class : subject05
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject06.centerlight
+taken class : subject06
+recognized class : subject02
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject07.sleepy
+taken class : subject07
+recognized class : subject07
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject08.sleepy
+taken class : subject08
+recognized class : subject08
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject09.sleepy
+taken class : subject09
+recognized class : subject09
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject10.noglasses
+taken class : subject10
+recognized class : subject10
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject11.rightlight
+taken class : subject11
+recognized class : subject11
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject12.sad
+taken class : subject12
+recognized class : subject12
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject13.rightlight
+taken class : subject13
+recognized class : subject07
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject14.wink
+taken class : subject14
+recognized class : subject14
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject15.sleepy
+taken class : subject15
+recognized class : subject15
+success
+printing success
+ identified 11 images out of 15 images 
+efficiency
+73.3333333333

@@ -62,6 +62,7 @@ def main_pca(images_path):
 	
 	print "efficiency is "	
 	print r
+	return r
 
 if __name__=='__main__':
 	main_pca(sys.argv[1])
