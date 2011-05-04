@@ -19,6 +19,7 @@ import os
 import return_percent_pixels
 from PCA2 import PCA_main
 from HBSL1 import histogram_main_L1
+from HBSL2 import histogram_main_L2
 
 
 def choose_best(new_database):
@@ -29,17 +30,18 @@ def choose_best(new_database):
 	#print efficiency_PCA
 
 	efficiency_PCA=PCA_main.main_pca(new_database)
-	efficiency_LPP=60
-	efficiency_DCT=70
-	efficiency_hist=histogram_main_L1.histmain(new_database)
+	efficiency_LPP=0
+	efficiency_DCT=0
+	efficiency_histL1=histogram_main_L1.histmain(new_database)
+	efficiency_histL2=histogram_main_L2.histmain(new_database)
 	
-	efficiency=[efficiency_PCA,efficiency_DCT,efficiency_LPP,efficiency_hist]
+	efficiency=[efficiency_PCA,efficiency_histL1,efficiency_histL2,efficiency_DCT,efficiency_LPP,]
 	max_efficiency=max(efficiency)
 	max_efficiency_index=efficiency.index(max_efficiency)
 	
-	print "Printing PCA and HBS efficiency"
-	print efficiency_PCA
-	print efficiency_hist
+	#print "Printing PCA and HBS efficiency"
+	#print efficiency_PCA
+	#print efficiency_hist
 
 	
 	print "printing max efficiency "

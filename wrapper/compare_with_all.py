@@ -5,7 +5,7 @@ import os
 from PCA2 import PCA_main
 import return_percent_pixels
 
-algorithms = ["PCA","DCT","LPP","HBS"]
+algorithms = ["PCA","HBSL1","HBSL2","DCT","LPP",]
 
 def compare_hist_percentage(new_percent_pixels,trained_percent_pixels_inst):
 	diff=new_percent_pixels-trained_percent_pixels_inst

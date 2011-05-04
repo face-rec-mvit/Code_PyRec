@@ -14,7 +14,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-algorithms_m=["PCA","DCT","LPP","HBS"]
+algorithms_m = ["PCA","HBSL1","HBSL2","DCT","LPP",]
 best_chosen_algo=[]
 dataset_algo=[]
 

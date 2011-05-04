@@ -30,12 +30,13 @@ import train_with_all
 import compare_with_all
 from PCA2 import PCA_main
 from HBSL1 import histogram_main_L1
+from HBSL2 import histogram_main_L2
 
 ###### get_db_name returns the database name 
 #### Input : path of database
 ## Output : Database name
 
-algorithms = ["PCA","DCT","LPP","HBS"]
+algorithms = ["PCA","HBSL1","HBSL2","DCT","LPP",]
 
 def get_db_name(db_path):
 	db_split_path_names=db_path.split(os.sep) # Spliting the path according to os.sep which retuns a list
@@ -119,6 +120,10 @@ def decide_algo(input_str):
 			identified_algo_name=trained_datasets[i][1]
 			if(identified_algo_name=="PCA"):
 				PCA_main.main_pca(trained_datasets[i][0])			
+			if(identified_algo_name=="HBSL1"):
+				histogram_main_L1.histmain(trained_datasets[i][0])
+			if(identified_algo_name=="HBSL2"):
+				histogram_main_L2.histmain(trained_datasets[i][0])
 			if(identified_algo_name=="DCT"):
 				print "DCT is to be called"
 			if(identified_algo_name=="LPP"):
@@ -141,7 +146,7 @@ def decide_algo(input_str):
 		print "Data base not identifed"
 		print "Adding database to our trained database sets"
 		shutil.copytree(src_path,dest_path) # creating a copy of the entire database, dynamically updating new database to trained set
-		add_database.add_db(dest_path) # Adding the new database (which is presently copied to dest_path) to the previously trained list. 
+		#add_database.add_db(dest_path) # Adding the new database (which is presently copied to dest_path) to the previously trained list. 
 		print "Database added"
 		print dest_path
 		index_best_algo_chosen=compare_with_all.choose_best_algo(dest_path,trained_datasets)
@@ -161,6 +166,10 @@ def decide_algo(input_str):
 		fp_to_update_trained_db.close()
 		if(best_algo_chosen=="PCA"):
 			PCA_main.main_pca(dest_path)			
+		if(best_algo_chosen=="HBSL1"):
+			histogram_main_L1.histmain(dest_path)
+		if(best_algo_chosen=="HBSL2"):
+			histogram_main_L2.histmain(dest_path)
 		if(best_algo_chosen=="DCT"):
 			print "DCT is to be called"
 		if(best_algo_chosen=="LPP"):
