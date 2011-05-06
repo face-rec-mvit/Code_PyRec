@@ -1,0 +1,68 @@
+\documentclass[10pt,a4paper]{article}
+\begin{document}
+\newcommand{\tab}{\hspace*{4em}}
+
+
+\section{Adaptive Learning Algorithm (ALA) } 
+
+There have been many different challenges for face recognition like lighting, occlusion, pose varition etc , and theres no algorithm which can handle all the challenges together, different face recognition algorithms handle different challenges to different extent. So we try to propose a new novel algorithm named Adaptive Learning Algirithm, which is similar to simple perceptron learning algorithm in neural networks. 
+
+(ALA) Adaptive Learning Algorithm : 
+
+\subsubsection{Pre-requisite :} 
+
+\tab (1)Identification of mapping ( which algorithm suits well for which \tab  database ) \\
+\tab (2)Mapping is stored for persistance usage ( Using pickle in python or \tab ObjectSerelization in java ) \\
+
+\subsubsection{Algorithm :}
+
+During the testing two cases are possible :  \\ 
+
+1) The given test database might previously be trained  \\
+2) The given test database might be new one ( previously might not be trained ) \\
+
+\textbf{pseudo code of the adaptive learning algorithm : \\}
+
+function checkifgivenistrained(test,train) : \\
+begin : \\
+\tab  (1) extracting the 16 metrics of the randomly selected image in test db \\
+\tab  (2) extracting the 16 metrics of the same [index] randomly selected \tab image in train db \\
+\tab \textit{Note: see below for the 16 metrics used} \\
+\tab  (3) if (all the metrics match ) \\
+\tab \tab  	return (1) \\
+end : \\
+
+function findoutsimilarity() : \\
+begin : \\
+\tab 	(1)Obtain the histogram of the entire test database \\
+\tab	(2)Obtain the histogram of the previously trained databases \\
+\tab	(3)Compare the test database histgram with the histogram of all the \tab previously trained databases \\
+\tab	(4)select the algorithm of the database which ever matches the most \\
+\tab	(5)return the algorithm \\
+end : \\
+
+ALAmain() : \\
+begin: \\
+\tab  for each database in previously trained databases : \\
+\tab \tab beginfor:\\
+\tab \tab   if(checkifgivenistrained): \\
+\tab \tab \tab (1) print database identified \\ 
+\tab \tab \tab (2) from previously created mapping extract the algo \tab \tab \tab  and run the test database using this algorithm \\
+\tab \tab \tab (3) exit ( means executed properly coz db identified \tab \tab \tab from previous trained one ) \\
+\tab \tab endfor:\\
+\\
+\tab if ( testdatabaseisnew ) : \\
+\tab begin: \\
+\tab \tab (1) algo=findoutsimilarity() \\
+\tab \tab (2) run the given test database with the algo (obtained in \tab \tab previous step ) \\
+\tab \tab (3) Once algo is identified do the following steps in block \\
+\tab \tab begin : \\
+\tab \tab \tab (1)Add the entire new database to our trained set.  \\
+\tab \tab \tab (2)Update the mapping data file. \\
+\tab \tab \tab (3)So that when ever next time same database comes, \tab \tab \tab our algorithm would have learnt which face-recognition \tab \tab \tab algorithm to use. \\
+\tab \tab end : \\
+
+\tab end: \\
+end: \\    
+
+\end{document}
