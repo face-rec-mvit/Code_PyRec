@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  29 APR 2011 10:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  7 MAY 2011 18:32
 entering extended mode
  %&-line parsing enabled.
 **report1.tex
@@ -125,77 +125,82 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 ]
-Overfull \hbox (11.69504pt too wide) in paragraph at lines 50--62
+Overfull \hbox (11.69504pt too wide) in paragraph at lines 50--64
  [][] 
  []
 
 
-Overfull \hbox (21.69507pt too wide) in paragraph at lines 68--80
+Overfull \hbox (21.69507pt too wide) in paragraph at lines 70--85
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 87--99
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 92--107
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 104--116
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 112--127
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 121--133
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 132--147
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 139--151
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 153--168
  [][] 
  []
 
 
-Overfull \hbox (11.69504pt too wide) in paragraph at lines 156--168
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 173--188
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 173--185
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 193--208
  [][] 
  []
 
 
-Overfull \hbox (11.69504pt too wide) in paragraph at lines 190--202
+Overfull \hbox (11.69504pt too wide) in paragraph at lines 213--228
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 207--219
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 233--248
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 225--237
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 254--269
  [][] 
  []
 
 
-Overfull \hbox (32.79225pt too wide) in paragraph at lines 242--268
+Overfull \hbox (32.79225pt too wide) in paragraph at lines 274--300
  [][] 
  []
 
 
-Overfull \hbox (27.79224pt too wide) in paragraph at lines 273--299
+Overfull \hbox (27.79224pt too wide) in paragraph at lines 305--331
  [][] 
  []
 
 
-Overfull \hbox (27.79224pt too wide) in paragraph at lines 304--330
+Overfull \hbox (27.79224pt too wide) in paragraph at lines 336--362
  [][] 
  []
 
 
-Overfull \hbox (37.79227pt too wide) in paragraph at lines 335--361
+Overfull \hbox (37.79227pt too wide) in paragraph at lines 367--393
+ [][] 
+ []
+
+
+Overfull \hbox (32.79225pt too wide) in paragraph at lines 399--425
  [][] 
  []
 
@@ -203,10 +208,10 @@ Overfull \hbox (37.79227pt too wide) in paragraph at lines 335--361
 Here is how much of TeX's memory you used:
  1132 strings out of 495062
  12627 string characters out of 1182644
- 110751 words of memory out of 3000000
+ 121751 words of memory out of 3000000
  4349 multiletter control sequences out of 15000+50000
  6544 words of font info for 26 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  27i,7n,22p,224b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report1.dvi (5 pages, 28272 bytes).
+Output written on report1.dvi (5 pages, 33928 bytes).
