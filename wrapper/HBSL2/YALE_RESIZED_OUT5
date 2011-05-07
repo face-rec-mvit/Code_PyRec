@@ -1,65 +1,65 @@
 Total number of trained images = 150 
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/10_9.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/10_4.gif
 taken class : 10
-recognized class : 10
-success
+recognized class : 15
+failure
 testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/11_8.gif
 taken class : 11
 recognized class : 11
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/12_10.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/12_1.gif
 taken class : 12
 recognized class : 12
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/13_10.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/13_9.gif
 taken class : 13
 recognized class : 13
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/14_6.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/14_9.gif
 taken class : 14
 recognized class : 14
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/15_1.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/15_10.gif
 taken class : 15
-recognized class : 14
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/1_8.gif
+recognized class : 15
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/1_1.gif
 taken class : 1
-recognized class : 1
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/2_7.gif
-taken class : 2
-recognized class : 2
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/3_3.gif
-taken class : 3
-recognized class : 3
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/4_1.gif
-taken class : 4
-recognized class : 14
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/5_4.gif
-taken class : 5
 recognized class : 12
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/6_11.gif
-taken class : 6
-recognized class : 6
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/7_1.gif
-taken class : 7
-recognized class : 13
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/2_4.gif
+taken class : 2
+recognized class : 4
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/8_6.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/3_2.gif
+taken class : 3
+recognized class : 7
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/4_7.gif
+taken class : 4
+recognized class : 15
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/5_11.gif
+taken class : 5
+recognized class : 5
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/6_7.gif
+taken class : 6
+recognized class : 11
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/7_7.gif
+taken class : 7
+recognized class : 7
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/8_2.gif
 taken class : 8
 recognized class : 8
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/9_6.gif
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/YALE RESIZED DATASET/9_4.gif
 taken class : 9
-recognized class : 9
-success
+recognized class : 4
+failure
 printing success
- identified 11 images out of 15 images 
+ identified 8 images out of 15 images 
 efficiency
-73.3333333333
+53.3333333333

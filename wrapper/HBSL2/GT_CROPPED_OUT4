@@ -1,21 +1,21 @@
 Total number of trained images = 700 
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s01_06.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s01_15.jpg
 taken class : s01
-recognized class : s01
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s02_14.jpg
+recognized class : s09
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s02_07.jpg
 taken class : s02
-recognized class : s02
-success
+recognized class : s11
+failure
 testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s03_06.jpg
 taken class : s03
 recognized class : s03
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s04_03.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s04_06.jpg
 taken class : s04
 recognized class : s04
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s05_10.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s05_15.jpg
 taken class : s05
 recognized class : s23
 failure
@@ -23,147 +23,147 @@ testing undergoing for the image: /home/kiran/Documents/Facerec/databases/croppe
 taken class : s06
 recognized class : s06
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s07_09.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s07_10.jpg
 taken class : s07
 recognized class : s07
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s08_10.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s08_07.jpg
 taken class : s08
 recognized class : s08
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s09_03.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s09_11.jpg
 taken class : s09
 recognized class : s09
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s10_07.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s10_04.jpg
 taken class : s10
 recognized class : s10
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s11_01.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s11_03.jpg
 taken class : s11
-recognized class : s02
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s12_07.jpg
+recognized class : s11
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s12_13.jpg
 taken class : s12
 recognized class : s12
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s13_14.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s13_08.jpg
 taken class : s13
 recognized class : s13
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s14_08.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s14_06.jpg
 taken class : s14
 recognized class : s14
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s15_02.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s15_06.jpg
 taken class : s15
 recognized class : s15
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s16_01.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s16_14.jpg
 taken class : s16
 recognized class : s16
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s17_09.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s17_10.jpg
 taken class : s17
 recognized class : s17
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s18_14.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s18_07.jpg
 taken class : s18
 recognized class : s18
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s19_11.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s19_01.jpg
 taken class : s19
 recognized class : s19
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s20_09.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s20_14.jpg
 taken class : s20
 recognized class : s20
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s21_06.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s21_01.jpg
 taken class : s21
 recognized class : s21
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s22_13.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s22_02.jpg
 taken class : s22
 recognized class : s22
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s23_13.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s23_02.jpg
 taken class : s23
-recognized class : s05
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s24_08.jpg
+recognized class : s23
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s24_11.jpg
 taken class : s24
 recognized class : s24
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s25_15.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s25_02.jpg
 taken class : s25
 recognized class : s25
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s26_07.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s26_03.jpg
 taken class : s26
 recognized class : s26
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s27_02.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s27_15.jpg
 taken class : s27
 recognized class : s27
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s28_12.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s28_02.jpg
 taken class : s28
 recognized class : s28
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s29_03.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s29_14.jpg
 taken class : s29
-recognized class : s30
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s30_02.jpg
+recognized class : s29
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s30_08.jpg
 taken class : s30
 recognized class : s30
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s31_15.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s31_11.jpg
 taken class : s31
 recognized class : s31
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s32_01.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s32_10.jpg
 taken class : s32
 recognized class : s32
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s33_02.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s33_11.jpg
 taken class : s33
-recognized class : s33
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s34_01.jpg
-taken class : s34
-recognized class : s11
+recognized class : s39
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s35_11.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s34_12.jpg
+taken class : s34
+recognized class : s34
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s35_14.jpg
 taken class : s35
 recognized class : s35
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s36_09.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s36_12.jpg
 taken class : s36
-recognized class : s48
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s37_02.jpg
+recognized class : s36
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s37_01.jpg
 taken class : s37
 recognized class : s37
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s38_05.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s38_14.jpg
 taken class : s38
 recognized class : s38
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s39_10.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s39_06.jpg
 taken class : s39
 recognized class : s39
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s40_02.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s40_14.jpg
 taken class : s40
-recognized class : s01
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s41_07.jpg
-taken class : s41
-recognized class : s41
+recognized class : s40
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s42_05.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s41_09.jpg
+taken class : s41
+recognized class : s17
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s42_04.jpg
 taken class : s42
 recognized class : s42
 success
@@ -171,7 +171,7 @@ testing undergoing for the image: /home/kiran/Documents/Facerec/databases/croppe
 taken class : s43
 recognized class : s43
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s44_14.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s44_07.jpg
 taken class : s44
 recognized class : s44
 success
@@ -179,15 +179,15 @@ testing undergoing for the image: /home/kiran/Documents/Facerec/databases/croppe
 taken class : s45
 recognized class : s48
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s46_09.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s46_10.jpg
 taken class : s46
 recognized class : s46
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s47_12.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s47_15.jpg
 taken class : s47
-recognized class : s47
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s48_01.jpg
+recognized class : s35
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s48_04.jpg
 taken class : s48
 recognized class : s48
 success
@@ -195,11 +195,11 @@ testing undergoing for the image: /home/kiran/Documents/Facerec/databases/croppe
 taken class : s49
 recognized class : s49
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s50_04.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/cropped_faces ( Georgia Tech Database )/s50_14.jpg
 taken class : s50
 recognized class : s50
 success
 printing success
- identified 42 images out of 50 images 
+ identified 43 images out of 50 images 
 efficiency
-84.0
+86.0

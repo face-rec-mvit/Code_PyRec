@@ -1,53 +1,53 @@
 Total number of trained images = 116 
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/1/mvc-006f.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/1/mvc-009f.jpg
 taken class : 1
-recognized class : 1
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/10/mvc-003f.jpg
+recognized class : 9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/10/mvc-005f.jpg
 taken class : 10
-recognized class : 10
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/11/mvc-004f.jpg
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/11/mvc-006f.jpg
 taken class : 11
-recognized class : 12
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/12/mvc-008f.jpg
-taken class : 12
-recognized class : 12
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/2/mvc-007f.jpg
-taken class : 2
-recognized class : 2
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/3/mvc-004f.jpg
-taken class : 3
-recognized class : 4
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/4/mvc-010f.jpg
-taken class : 4
-recognized class : 4
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/5/mvc-011f.jpg
-taken class : 5
 recognized class : 5
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/6/mvc-010f.jpg
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/12/mvc-006f.jpg
+taken class : 12
+recognized class : 8
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/2/mvc-006f.jpg
+taken class : 2
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/3/mvc-012f.jpg
+taken class : 3
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/4/mvc-004f.jpg
+taken class : 4
+recognized class : 10
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/5/mvc-005f.jpg
+taken class : 5
+recognized class : 9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/6/mvc-006f.jpg
 taken class : 6
-recognized class : 6
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/7/mvc-007f.jpg
+recognized class : 2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/7/mvc-001f.jpg
 taken class : 7
 recognized class : 1
 failure
 testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/8/mvc-003f.jpg
 taken class : 8
-recognized class : 8
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/9/mvc-011f.jpg
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/9/mvc-008f.jpg
 taken class : 9
-recognized class : 9
-success
+recognized class : 1
+failure
 printing success
- identified 9 images out of 12 images 
+ identified 0 images out of 12 images 
 efficiency
-75.0
+0.0

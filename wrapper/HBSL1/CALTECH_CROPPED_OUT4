@@ -1,0 +1,109 @@
+Total number of trained images = 419 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image1/image1_0011.jpg
+taken class : image1
+recognized class : image15
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image10/image_0159.jpg
+taken class : image10
+recognized class : image10
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image11/image_0169.jpg
+taken class : image11
+recognized class : image30
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image12/image_0174.jpg
+taken class : image12
+recognized class : image5
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image13/image_0193.jpg
+taken class : image13
+recognized class : image13
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image14/image_0204.jpg
+taken class : image14
+recognized class : image2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image15/image_0228.jpg
+taken class : image15
+recognized class : image15
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image16/image_0244.jpg
+taken class : image16
+recognized class : image9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image17/image_0264.jpg
+taken class : image17
+recognized class : image1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image18/image_0282.jpg
+taken class : image18
+recognized class : image18
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image19/image_0294.jpg
+taken class : image19
+recognized class : image9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image2/image2_0033.jpg
+taken class : image2
+recognized class : image30
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image20/image_0332.jpg
+taken class : image20
+recognized class : image20
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image21/image_0356.jpg
+taken class : image21
+recognized class : image21
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image22/image_0366.jpg
+taken class : image22
+recognized class : image22
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image23/image_0386.jpg
+taken class : image23
+recognized class : image22
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image29/image_0406.jpg
+taken class : image29
+recognized class : image9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image3/image3_0045.jpg
+taken class : image3
+recognized class : image13
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image30/image_0415.jpg
+taken class : image30
+recognized class : image30
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image31/image_0440.jpg
+taken class : image31
+recognized class : image22
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image4/image4_0064.jpg
+taken class : image4
+recognized class : image14
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image5/image5_0079.jpg
+taken class : image5
+recognized class : image16
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image6/image6_0099.jpg
+taken class : image6
+recognized class : image6
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image7/image7_0131.jpg
+taken class : image7
+recognized class : image30
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image8/image_0137.jpg
+taken class : image8
+recognized class : image18
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech-crop/image9/image_0156.jpg
+taken class : image9
+recognized class : image4
+failure
+printing success
+ identified 9 images out of 26 images 
+efficiency
+34.6153846154

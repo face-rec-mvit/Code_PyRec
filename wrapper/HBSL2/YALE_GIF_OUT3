@@ -1,16 +1,16 @@
 Total number of trained images = 150 
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject01.centerlight
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject01.rightlight
 taken class : subject01
-recognized class : subject01
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject02.noglasses
+recognized class : subject05
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject02.normal
 taken class : subject02
 recognized class : subject02
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject03.rightlight
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject03.happy
 taken class : subject03
-recognized class : subject05
-failure
+recognized class : subject03
+success
 testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject04.leftlight
 taken class : subject04
 recognized class : subject02
@@ -19,27 +19,27 @@ testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.f
 taken class : subject05
 recognized class : subject05
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject06.sad
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject06.glasses
 taken class : subject06
 recognized class : subject06
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject07.noglasses
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject07.centerlight
 taken class : subject07
-recognized class : subject07
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject08.wink
+recognized class : subject10
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject08.rightlight
 taken class : subject08
-recognized class : subject08
-success
+recognized class : subject15
+failure
 testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject09.sleepy
 taken class : subject09
 recognized class : subject09
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject10.rightlight
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject10.glasses
 taken class : subject10
-recognized class : subject06
-failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject11.sad
+recognized class : subject10
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject11.normal
 taken class : subject11
 recognized class : subject11
 success
@@ -47,19 +47,19 @@ testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.f
 taken class : subject12
 recognized class : subject12
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject13.noglasses
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject13.glasses
 taken class : subject13
 recognized class : subject13
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject14.noglasses
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject14.rightlight
 taken class : subject14
-recognized class : subject14
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject15.leftlight
-taken class : subject15
-recognized class : subject03
+recognized class : subject10
 failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yale.faces.gif/subject15.surprised
+taken class : subject15
+recognized class : subject15
+success
 printing success
- identified 11 images out of 15 images 
+ identified 10 images out of 15 images 
 efficiency
-73.3333333333
+66.6666666667

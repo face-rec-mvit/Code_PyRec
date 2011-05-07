@@ -58,7 +58,7 @@ def return_recognized(test_image_hist,trained_image_hists):
 		# L2 : Root mean Square ( Euclidian Distance)
 
 		temp_diff_temp=numpy.sqrt(sum(t**2)) 
-	
+		#temp_diff_temp=sum(t**2)
 		## Uncomment following lines to print the sum of the difference
 
 		#print "prining sum"

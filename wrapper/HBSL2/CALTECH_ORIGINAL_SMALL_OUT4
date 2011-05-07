@@ -1,53 +1,53 @@
 Total number of trained images = 163 
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/1/image_0020.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/1/image_0007.jpg
 taken class : 1
 recognized class : 1
 success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/10/image_0159.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/10/image_0161.jpg
 taken class : 10
-recognized class : 10
-success
+recognized class : 1
+failure
 testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/11/image_0168.jpg
 taken class : 11
-recognized class : 7
+recognized class : 1
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/12/image_0172.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/12/image_0174.jpg
 taken class : 12
-recognized class : 11
+recognized class : 1
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/2/image_0033.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/2/image_0027.jpg
 taken class : 2
-recognized class : 7
+recognized class : 1
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/3/image_0044.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/3/image_0045.jpg
 taken class : 3
 recognized class : 6
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/4/image_0065.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/4/image_0061.jpg
 taken class : 4
-recognized class : 6
+recognized class : 5
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/5/image_0073.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/5/image_0069.jpg
 taken class : 5
-recognized class : 6
+recognized class : 1
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/6/image_0091.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/6/image_0094.jpg
 taken class : 6
-recognized class : 6
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/7/image_0124.jpg
-taken class : 7
-recognized class : 7
-success
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/8/image_0134.jpg
-taken class : 8
 recognized class : 12
 failure
-testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/9/image_0150.jpg
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/7/image_0129.jpg
+taken class : 7
+recognized class : 1
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/8/image_0133.jpg
+taken class : 8
+recognized class : 2
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/caltech_small_version/9/image_0140.jpg
 taken class : 9
 recognized class : 4
 failure
 printing success
- identified 4 images out of 12 images 
+ identified 1 images out of 12 images 
 efficiency
-33.3333333333
+8.33333333333
