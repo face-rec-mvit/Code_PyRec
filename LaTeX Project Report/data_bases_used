@@ -1,0 +1,96 @@
+
+
+1) ORL Database : .pgm format
+   image dimension : 92*112 pixels
+   file size : around 10.2-11 kb
+   download url : http://www.cl.cam.ac.uk/Research/DTG/attarchive/pub/data/att_faces.zip	
+   No of Images = 400
+   No of classes = 40
+   Images per class = 10
+
+2) Yale Database: .gif format 
+   image dimension : 320*243 pixels
+   file size : ranges between 26 to 69 kb	 	
+   download url : http://www.cs.princeton.edu/courses/archive/spr03/cs496/images/
+   No of Images = 165
+   No of classes = 15
+   Images per class = 11	
+
+3) Yale Database: .pgm format 
+   image dimension : 320*243 pixels
+   file size : 76 kb
+   download url : http://www.cs.uml.edu/~giam/91.580.203/Projects/DGabriel/dat/yalefaces/yalefaces%20%28copy%29/
+   No of Images = 165
+   No of classes = 15
+   Images per class = 11
+
+4) Resized yale Database or cropped yale : .gif format  
+   image dimension : 92*112 pixels
+   file size : around 10.2-11 kb
+   download url : http://www.mediafire.com/?uy8435aji57pd26
+   No of Images = 165
+   No of classes = 15
+   Images per class = 11
+
+5) Umist Database : .png format
+   image dimension : 200 * 200 pixels
+   file size : around 18.5 - 20kb
+   download url : http://www.mediafire.com/?9l4mmco8av0o6cm
+   No of Images = 500
+   No of classes = 25
+   Images per class = 20 
+
+6) Caltech Database Original Database : .jpeg format
+   image dimension : 896*592 pixels
+   file size : 170-220 kb
+   download url : http://www.vision.caltech.edu/Image_Datasets/faces/faces.tar 
+   No of Images = 450
+   No of classes = 25
+   Images per class = varies with classes
+
+7) Caltech Cropped Database 
+   image dimension :  Varies with images
+   file size : 
+   download url : http://www.mediafire.com/file/ys4aqaadc3g6g8e
+   No of Images = 450
+   No of classes = 25
+   Images per class = varies with classes
+
+8) Georgia Tech Database :
+   image dimension :  
+   file size : 
+   download url : http://www.anefian.com/research/gt_db.zip
+   No of Images = 
+   No of classes = 
+   Images per class =  
+
+9) Georgia Cropped Database :
+   image dimension :  Varies with images
+   file size : 
+   download url : http://www.anefian.com/research/GTdb_crop.zip
+   No of Images = 
+   No of classes = 
+   Images per class = 
+
+10) Dbase males database : .jpeg format
+   image dimension : 640*480 pixels
+   file size : 23-26 kb
+   download url : http://vis-www.cs.umass.edu/~vidit/IndianFaceDatabase/dbase.zip 
+   No of Images = 434+1 (single test image (lower dimension) not used )
+   No of classes = 39
+   Images per class = varies with class
+
+11) Dbase Females Database : .jpeg format
+   image dimension : 640*480 pixels
+   file size : 25-27kb
+   download url : http://vis-www.cs.umass.edu/~vidit/IndianFaceDatabase/dbase.zip
+   No of Images = 242
+   No of classes = 22
+   Images per class = 11
+
+
+
+
+ 	
+
+
