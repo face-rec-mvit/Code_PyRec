@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.4.22)  11 MAY 2011 13:04
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.4.22)  11 MAY 2011 14:07
 entering extended mode
 **report1.tex
 ("C:\Users\Dharini\Code_PyRec\LaTeX Project Report\report1.tex"
@@ -119,94 +119,94 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 21.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 21.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 50--64
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 49--63
  [][] 
  []
 
 
-Overfull \hbox (21.69507pt too wide) in paragraph at lines 70--85
+Overfull \hbox (21.69507pt too wide) in paragraph at lines 69--84
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 92--107
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 91--106
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 112--127
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 111--126
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 132--147
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 131--146
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 153--168
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 152--167
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 173--188
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 172--187
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 193--208
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 192--207
  [][] 
  []
 
 
-Overfull \hbox (11.69504pt too wide) in paragraph at lines 213--228
+Overfull \hbox (11.69504pt too wide) in paragraph at lines 212--227
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 233--248
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 232--247
  [][] 
  []
 
 
-Overfull \hbox (16.69505pt too wide) in paragraph at lines 254--269
+Overfull \hbox (16.69505pt too wide) in paragraph at lines 253--268
  [][] 
  []
 
 
-Overfull \hbox (32.79225pt too wide) in paragraph at lines 274--300
+Overfull \hbox (32.79225pt too wide) in paragraph at lines 273--299
  [][] 
  []
 
 
-Overfull \hbox (27.79224pt too wide) in paragraph at lines 305--331
+Overfull \hbox (27.79224pt too wide) in paragraph at lines 304--330
  [][] 
  []
 
 
-Overfull \hbox (27.79224pt too wide) in paragraph at lines 336--362
+Overfull \hbox (27.79224pt too wide) in paragraph at lines 335--361
  [][] 
  []
 
 
-Overfull \hbox (37.79227pt too wide) in paragraph at lines 367--393
+Overfull \hbox (37.79227pt too wide) in paragraph at lines 366--392
  [][] 
  []
 
 
-Overfull \hbox (32.79225pt too wide) in paragraph at lines 399--425
+Overfull \hbox (32.79225pt too wide) in paragraph at lines 398--424
  [][] 
  []
 
@@ -219,13 +219,13 @@ Here is how much of TeX's memory you used:
  4462 multiletter control sequences out of 15000+200000
  6544 words of font info for 26 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,7n,22p,224b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,22p,224b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report1.pdf (5 pages, 84126 bytes).
+Output written on report1.pdf (5 pages, 84102 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
