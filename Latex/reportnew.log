@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  24 APR 2011 11:57
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.19)  12 MAY 2011 07:16
 entering extended mode
  %&-line parsing enabled.
 **reportnew.tex
@@ -33,7 +33,7 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 )
 (/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode not detected.
+Package ifpdf Info: pdfTeX in pdf mode detected.
 )
 (/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
@@ -64,27 +64,12 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
-
-
-! Package pdftex.def Error: PDF mode expected, but DVI mode detected!
-(pdftex.def)                If you are using `latex', then call `pdflatex'.
-(pdftex.def)                Otherwise check and correct the driver options.
-(pdftex.def)                Error recovery by switching to PDF mode.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.385     }\@ehc
-                
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 \Gread@gobject=\count91
 ))
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
-) (/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -184,18 +169,16 @@ Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 \c@Item=\count96
 \c@Hfootnote=\count97
 )
-*hyperref using driver hdvips*
-(/usr/share/texmf-texlive/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2009/10/09 v6.79a Hyperref driver for dvips
 
-(/usr/share/texmf-texlive/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2009/10/09 v6.79a Hyperref definitions for pdfmark specials
-\pdf@docset=\toks17
-\pdf@box=\box26
-\pdf@toks=\toks18
-\pdf@defaulttoks=\toks19
+Package hyperref Warning: Wrong driver `hdvips.def';
+(hyperref)                pdfTeX is running in PDF mode.
+(hyperref)                Forcing driver `hpdftex.def'.
+
+*hyperref using driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
 \Fld@listcount=\count98
-)) (./reportnew.aux)
+) (./reportnew.aux)
 \openout1 = `reportnew.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -214,7 +197,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 
 *geometry auto-detecting driver*
-*geometry detected driver: dvips*
+*geometry detected driver: pdftex*
 -------------------- Geometry parameters
 paper: a4paper
 landscape: --
@@ -232,7 +215,7 @@ truedimen: --
 includehead: --
 includefoot: --
 includemp: --
-driver: dvips
+driver: pdftex
 -------------------- Page layout dimensions and switches
 \paperwidth  597.50787pt
 \paperheight 845.04684pt
@@ -258,14 +241,14 @@ driver: dvips
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
 \scratchdimen=\dimen112
-\scratchbox=\box27
+\scratchbox=\box26
 \nofMPsegments=\count100
 \nofMParguments=\count101
-\everyMPshowfont=\toks20
+\everyMPshowfont=\toks17
 \MPscratchCnt=\count102
 \MPscratchDim=\dimen113
 \MPnumerator=\count103
-\everyMPtoPDFconversion=\toks21
+\everyMPtoPDFconversion=\toks18
 )
 Package hyperref Info: Link coloring OFF on input line 29.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
@@ -283,7 +266,7 @@ LaTeX Info: Redefining \pageref on input line 29.
 \@outlinefile=\write3
 \openout3 = `reportnew.out'.
 
-\AtBeginShipoutBox=\box28
+\AtBeginShipoutBox=\box27
  (./title.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 15.
@@ -303,39 +286,18 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 [1
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
 
-
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-(./introduction.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) (./motivation.tex) [1
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] (./algorithm.tex) (./software.tex
+) (./motivation.tex)pdfTeX warning (ext4): destination with the same identifier
+ (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \newpage
+              [1] (./algorithm.tex) (./software.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
@@ -344,26 +306,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
 ) (./hardware.tex)
-(./conclusion.tex [2
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!]
+(./conclusion.tex [2]
 Missing character: There is no ‚ in font cmti12!
 Missing character: There is no Ä in font cmti12!
 Missing character: There is no ú in font cmti12!
@@ -376,35 +319,25 @@ Missing character: There is no ú in font cmti12!
 Missing character: There is no ‚ in font cmti12!
 Missing character: There is no Ä in font cmti12!
 Missing character: There is no ù in font cmti12!
-) [3
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!
-Non-PDF special ignored!] (./reportnew.aux) ) 
+) [3] (./reportnew.aux) ) 
 Here is how much of TeX's memory you used:
- 4570 strings out of 495062
- 66598 string characters out of 1182644
- 143320 words of memory out of 3000000
- 7688 multiletter control sequences out of 15000+50000
+ 4535 strings out of 495061
+ 66038 string characters out of 1182621
+ 137593 words of memory out of 3000000
+ 7643 multiletter control sequences out of 15000+50000
  8545 words of font info for 30 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,7n,21p,1143b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on reportnew.pdf (4 pages, 100145 bytes).
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx8.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb>
+Output written on reportnew.pdf (4 pages, 102068 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 13 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

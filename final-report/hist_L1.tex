@@ -1,0 +1,44 @@
+\documentclass[10pt,a4paper]{article}
+\newcommand{\tab}{\hspace*{4em}}
+\begin{document}
+\section{Histogram}
+A Histogram is a graphical representation showing a visual impression of the distribution of data. It is an estimate of the probability distribution of a continuous variable and was first introduced by Karl Pearson. It is a graph that counts the number of occurrences of data points in a series of ranges or bins.A histogram consists of tabular frequencies, shown as adjacent rectangles, erected over discrete intervals (bins), with an area equal to the frequency of the observations in the interval. The height of a rectangle is also equal to the frequency density of the interval, i.e., the frequency divided by the width of the interval. The total area of the histogram is equal to the number of data. A histogram may also be normalized displaying relative frequencies.It then shows the proportion of cases that fall into each of several categories, with the total area equalling 1. The categories are usually specified as consecutive, non-overlapping intervals of a variable. The categories (intervals) must be adjacent, and often are chosen to be of the same size.Histograms are used to plot density of data, and often for density estimation: estimating the probability density function of the underlying variable.The histogram provides important informations about the shape of a distribution.
+
+\subsection{Image Histogram}
+An image histogram is a type of histogram that acts as a graphical representation of the tonal distribution in a digital image.It plots the number of pixels for each tonal value. By looking at the histogram for a specific image a viewer will be able to judge the entire tonal distribution at a glance.
+Image histograms are present on many modern digital cameras. Photographers can use them as an aid to show the distribution of tones captured, and whether image detail has been lost to blown-out highlights or blacked-out shadows.The horizontal axis of the graph represents the tonal variations, while the vertical axis represents the number of pixels in that particular tone.The left side of the horizontal axis represents the black and dark areas, the middle represents medium grey and the right hand side represents light and pure white areas. The vertical axis represents the size of the area that is captured in each one of these zones. Thus, the histogram for a very bright image with few dark areas and/or shadows will have most of its data points on the right side and center of the graph. Conversely, the histogram for a very dark image will have the majority of its data points on the left side and center of the graph.A color histogram is a representation of the distribution of colors in an image. For digital images, a color histogram represents the number of pixels that have colors in each of a fixed list of color ranges, that span the image's color space, the set of all possible colors.
+
+\subsubsection{Mathematical definition}
+A histogram is a function $m_i$ that counts the number of observations that fall into each of the disjoint categories (known as bins), whereas the graph of a histogram is merely one way to represent a histogram. Thus, if we let n be the total number of observations and k be the total number of bins, the histogram $m_i$ meets the following conditions:
+
+    n = sum $\displaystyle\sum\limits_{i=1}^k m_i$ 
+  
+\subsection{Number of  Bins and Width}
+There is no "best" number of bins, and different bin sizes can reveal different features of the data.Depending on the actual data distribution and the goals of the analysis, different bin widths may be appropriate, so experimentation is usually needed to determine an appropriate width.
+   
+\subsection{Histogram Matching}
+Histogram matching is a method in image processing of color adjustment of two images using the image histograms.It can be used to normalize two images, when the images were acquired at the same local illumination (such as shadows) over the same location, but by different sensors, atmospheric conditions or global illumination.
+
+\subsection{ALGORITHM for L1-norm}
+In our project, histograms are obtained for individual images and used as training set. The histogram is computed for the test image and the algorithm is applied to match the image histograms.
+\subsubsection{Obtain the histogram of all the images in the train set
+}
+Note : Python Image module has methods which provides histogram of the image \\
+
+\subsubsection{The obtained histograms are stored in a list say "train"}
+\subsubsection{The histogram of the test image is obtained stored it in a list say "test"}
+\subsubsection{This "test" is compared with individual histograms in the list "train" by using the following formula and difference stored in "t":\\ \\
+			for i in range (no-of-trained-images): \\ 
+			\tab difference=test-train[i] for $i^t$$^h$  image in the list "train" \\			
+			\tab t=sum(abs(difference)) \\
+			\tab append t to a result list say "result" \\ }
+			
+				
+\subsubsection{The index of the minimum value in this list (result) represents the most similar image to that of the test image. Means the image corresponding to this index in the list "train" is the similar image\\ \\ } 
+			 
+\subsection{Drawbacks}
+The main drawback of histograms for classification is that the representation is dependent of the color of the object being studied, ignoring its shape and texture. Color histograms can potentially be identical for two images with different object content which happens to share color information. Conversely, without spatial or shape information, similar objects of different color may be indistinguishable based solely on color histogram comparisons. There is no way to distinguish a red and white cup from a red and white plate. Put another way, histogram-based algorithms have no concept of a generic 'cup', and a model of a red and white cup is no use when given an otherwise identical blue and white cup.
+ Although there are drawbacks of using histograms for indexing and classification, using color in a real-time system has several advantages. One is that color information is faster to compute compared to other invariants. It has been shown in some cases that color can be an efficient method for identifying objects of known location and appearance.
+
+
+\end{document}
