@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  12 MAY 2011 10:05
+=======
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.4.22)  11 MAY 2011 16:57
+=======
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  12 MAY 2011 07:27
+>>>>>>> 02871554690ddbe937f909daac552d3482a4476c
+>>>>>>> a15230aa6e6fd11f9d3abfc3ed40da3995c30460
 entering extended mode
  %&-line parsing enabled.
 **frontpage.tex

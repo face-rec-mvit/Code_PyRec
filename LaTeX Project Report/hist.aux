@@ -1,0 +1,13 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}Histogram}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Image Histogram}{1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}Mathematical definition}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Number of Bins and Width}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Histogram Matching}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}ALGORITHM}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}1.(a)Individual images are treated as a matrix of order m X n by the computer, these matrices are reshaped into a vector of size (m*n) X 1 ( Note : here m is the number of rows and n is the number of columns ) \\ 1.(b) Step 1.(a) is repeated to all the images in the database \\ 1.(c) Histograms are obtained for these flattened matrices}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}The obtained histograms are appended to a list say "train" and used as the training set of images }{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}The histogram of the test image is determined and say it is stored in "test"}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.4}This "test" is compared with individual histograms in the list "train" by using the following formula and stored in "t":\\ \\ difference=test-train[i] for $i^t$$^h$ image in the list "train" \\ \\ t=sum(abs(difference))}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.5}The value of "t" is appended to a list. The minimum value in this list represents the most similar image to that of the test image.\\ \\ }{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Drawbacks}{3}}
