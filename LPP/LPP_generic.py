@@ -20,7 +20,7 @@ def getRandom(minimum,maximum,count):
             nums.append(num)
     return nums
     
-def LPP(directory,testImageCount=30):
+def LPP(directory,testImageCount=100):
     """
     This is the wrapper LPP function which takes in only the face database
     (directory containing face images) and returns the efficiency of LPP 
@@ -88,7 +88,7 @@ def LPP(directory,testImageCount=30):
     #print testString
     
     #Now call the LPP methods
-    ImageDir=lpp.Image_Directory(directory,classKeys=dict(zip(range(len(Class)),Class)),ftype=Type,exclude=testString,numOfEigVectors=100)
+    ImageDir=lpp.Image_Directory(directory,classKeys=dict(zip(range(len(Class)),Class)),ftype=Type,exclude=testString,numOfEigVectors=400)
     efficiency=ImageDir.test(directory,classKeys=dict(zip(Class,range(len(Class)))),include=testString)
     
     return efficiency

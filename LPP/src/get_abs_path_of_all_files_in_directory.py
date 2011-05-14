@@ -65,7 +65,8 @@ def get_files(directory,include=None,exclude=None,ftype=None):
         newList = list()
         for f in ftemp:
             for typ in ftype:
-                if f.endswith(typ):
+                if f.split(".")[-1] == typ:
+                    #if f.endswith(typ):
                     newList.append(f)
         files = newList
 
@@ -123,14 +124,14 @@ def print_list(l):
 
 if __name__ == '__main__' :
     arg = sys.argv
-    dirname = arg[len(arg)-1]
-    #the last argument is the directory name 
     type_list = None
     includ = None
     exclud = None 
-    
+    dirname = arg[len(arg)-1]
+    #the last argument is the directory name 
+        
     if len(arg) == 1:
-        print get_files(None)
+        print get_files(directory=None)
     elif len(arg) == 2:
         file_list = get_files(directory=dirname,ftype=None)
         print_list(file_list)
