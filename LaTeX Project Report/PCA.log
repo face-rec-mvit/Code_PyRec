@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  14 MAY 2011 13:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2011.4.19)  14 MAY 2011 14:02
 entering extended mode
  %&-line parsing enabled.
 **PCA.tex
@@ -252,14 +252,40 @@ Missing character: There is no ú in font cmbx10!
 Missing character: There is no ‚ in font cmbx10!
 Missing character: There is no Ä in font cmbx10!
 Missing character: There is no ù in font cmbx10!
-[3] [4] (./PCA.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+
+ []
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no † in font cmr10!
+[3] [4] [5] (./PCA.aux) ) 
 Here is how much of TeX's memory you used:
  1100 strings out of 495062
  11925 string characters out of 1182644
- 65749 words of memory out of 3000000
+ 67749 words of memory out of 3000000
  4322 multiletter control sequences out of 15000+50000
  7476 words of font info for 29 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,4n,24p,1625b,111s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,4n,24p,1625b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on PCA.dvi (4 pages, 12372 bytes).
+Output written on PCA.dvi (5 pages, 15992 bytes).
