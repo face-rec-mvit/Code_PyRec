@@ -56,7 +56,56 @@ Every image a matrix of n*m is converted to a vector of 1*(n*m) dimensions. And 
 
 \subsubsection{ Select the leading eigen values in all the vectors of cov-eig }
 
-\subsubsection{ Finally Multiply the transpose of XA ( adjust matrix ) with the leading eigen values selected in the provious step, this value will be of the order ( no of images in database ) X ( no of leading eigen values selected), which is the final matirix ( signature of the entire database ) }
+\subsubsection{ Finally Multiply the transpose of XA ( adjust matrix ) with the leading eigen values selected in the provious step, this value will be of the order ( no of images in database ) X ( no of leading eigen values selected), which is the final matirix ( signature of the entire database ) \\ \\}
+
+\subsection{Limitation of PCA \\ \\} 
+
+    Both the strength and weakness of PCA is that it is a non-
+parametric analysis. One only needs to make the Non-Gaussian
+distributed data causes PCA to fail. In exponentially
+distributed data the axes with the largest variance do not
+correspond to the underlying basis. There are no parameters to
+tweak and no coefficients to adjust based on user experience -
+the answer is unique and independent of the user. This same
+strength can also be viewed as a weakness. If one knows a-
+priori some features of the structure of a system, then it makes
+sense to incorporate these assumptions into a parametric
+algorithm - or an algorithm with selected parameters. Consider
+the recorded positions of a person on a ferris wheel. The
+probability distributions along the axes are approximately
+Gaussian and thus PCA finds (p1, p2), however this answer
+might not be optimal. The most concise form of dimensional
+reduction is to recognize that the phase (or angle along the
+ferris wheel) contains all dynamic information. Thus, the
+appropriate parametric algorithm is to first convert the data to
+the appropriately centered polar coordinates and then compute
+PCA. This prior non-linear transformation is sometimes
+termed a kernel transformation and the entire parametric
+algorithm is termed kernel PCA. Other common kernel
+transformations include Fourier and Gaussian transformations.
+This procedure is parametric because the user must
+incorporate prior knowledge of the structure in the selection of
+the kernel but it is also more optimal in the sense that the
+structure is more concisely described. Sometimes though the
+assumptions themselves are too stringent. One might envision
+situations where the principal components need not be
+orthogonal. Furthermore, the distributions along each
+dimension (xi) need not be Gaussian. The largest variances do
+not correspond to the meaningful axes; thus PCA fails. This
+less constrained set of problems is not trivial and only recently
+has been solved adequately via Independent Component
+Analysis (ICA). The formulation is equivalent. Find a matrix P
+where Y = PX such that CY is diagonalized. However, it
+abandons all assumptions except linearity, and attempts to find
+axes that satisfy the most formal form of redundancy reduction
+– statistical independence. Mathematically ICA finds a basis
+such that the joint probability distribution can be factorized
+P(yi, yi) = P(yi)P(yi) for all i and j, i ≠ j. The downside of ICA
+is that it is a form of nonlinear optimization, making the
+solution difficult to calculate in practice and potentially not
+unique. However ICA has been shown a very practical and
+powerful algorithm for solving a whole new class of problems.
+
 
 
 
