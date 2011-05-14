@@ -1,0 +1,165 @@
+Total number of trained images = 360 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s1/4.pgm
+taken class : s1
+recognized class : s1
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s10/7.pgm
+taken class : s10
+recognized class : s10
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s11/5.pgm
+taken class : s11
+recognized class : s11
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s12/5.pgm
+taken class : s12
+recognized class : s12
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s13/10.pgm
+taken class : s13
+recognized class : s13
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s14/6.pgm
+taken class : s14
+recognized class : s14
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s15/3.pgm
+taken class : s15
+recognized class : s15
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s16/5.pgm
+taken class : s16
+recognized class : s16
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s17/7.pgm
+taken class : s17
+recognized class : s17
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s18/10.pgm
+taken class : s18
+recognized class : s18
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s19/2.pgm
+taken class : s19
+recognized class : s19
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s2/2.pgm
+taken class : s2
+recognized class : s2
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s20/2.pgm
+taken class : s20
+recognized class : s20
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s21/7.pgm
+taken class : s21
+recognized class : s21
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s22/9.pgm
+taken class : s22
+recognized class : s22
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s23/10.pgm
+taken class : s23
+recognized class : s23
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s24/4.pgm
+taken class : s24
+recognized class : s30
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s25/1.pgm
+taken class : s25
+recognized class : s25
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s26/7.pgm
+taken class : s26
+recognized class : s26
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s27/1.pgm
+taken class : s27
+recognized class : s27
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s28/2.pgm
+taken class : s28
+recognized class : s28
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s29/9.pgm
+taken class : s29
+recognized class : s29
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s3/10.pgm
+taken class : s3
+recognized class : s3
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s30/1.pgm
+taken class : s30
+recognized class : s30
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s31/3.pgm
+taken class : s31
+recognized class : s31
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s32/5.pgm
+taken class : s32
+recognized class : s32
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s33/4.pgm
+taken class : s33
+recognized class : s33
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s34/8.pgm
+taken class : s34
+recognized class : s34
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s35/9.pgm
+taken class : s35
+recognized class : s35
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s36/5.pgm
+taken class : s36
+recognized class : s36
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s37/5.pgm
+taken class : s37
+recognized class : s37
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s38/7.pgm
+taken class : s38
+recognized class : s38
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s39/2.pgm
+taken class : s39
+recognized class : s22
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s4/3.pgm
+taken class : s4
+recognized class : s4
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s40/6.pgm
+taken class : s40
+recognized class : s40
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s5/9.pgm
+taken class : s5
+recognized class : s5
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s6/7.pgm
+taken class : s6
+recognized class : s6
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s7/9.pgm
+taken class : s7
+recognized class : s7
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s8/8.pgm
+taken class : s8
+recognized class : s8
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/ORL/s9/6.pgm
+taken class : s9
+recognized class : s9
+success
+printing success
+ identified 38 images out of 40 images 
+efficiency
+95.0

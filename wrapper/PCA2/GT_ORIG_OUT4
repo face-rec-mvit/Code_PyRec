@@ -1,0 +1,45 @@
+Total number of trained images = 140 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s01/03.jpg
+taken class : s01
+recognized class : s01
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s02/02.jpg
+taken class : s02
+recognized class : s02
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s03/01.jpg
+taken class : s03
+recognized class : s03
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s04/07.jpg
+taken class : s04
+recognized class : s04
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s05/14.jpg
+taken class : s05
+recognized class : s05
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s06/13.jpg
+taken class : s06
+recognized class : s06
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s07/13.jpg
+taken class : s07
+recognized class : s07
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s08/14.jpg
+taken class : s08
+recognized class : s08
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s09/03.jpg
+taken class : s09
+recognized class : s09
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/gt_small_version/s10/14.jpg
+taken class : s10
+recognized class : s10
+sucess
+printing sucess
+ identified 10 images out of 10 images 
+efficiency is 
+100.0

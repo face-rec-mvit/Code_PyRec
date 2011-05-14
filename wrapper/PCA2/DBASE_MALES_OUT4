@@ -1,0 +1,53 @@
+Total number of trained images = 116 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/1/mvc-004f.jpg
+taken class : 1
+recognized class : 6
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/10/mvc-008f.jpg
+taken class : 10
+recognized class : 10
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/11/mvc-005f.jpg
+taken class : 11
+recognized class : 12
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/12/mvc-004f.jpg
+taken class : 12
+recognized class : 12
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/2/mvc-004f.jpg
+taken class : 2
+recognized class : 9
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/3/mvc-004f.jpg
+taken class : 3
+recognized class : 3
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/4/mvc-003f.jpg
+taken class : 4
+recognized class : 4
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/5/mvc-009f.jpg
+taken class : 5
+recognized class : 5
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/6/mvc-002f.jpg
+taken class : 6
+recognized class : 6
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/7/mvc-009f.jpg
+taken class : 7
+recognized class : 5
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/8/mvc-009f.jpg
+taken class : 8
+recognized class : 4
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/dbase (downloaded)/males/males (sub-1)/9/mvc-009f.jpg
+taken class : 9
+recognized class : 9
+sucess
+printing sucess
+ identified 7 images out of 12 images 
+efficiency is 
+58.3333333333

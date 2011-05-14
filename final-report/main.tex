@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[top=100px,bottom=100px,left=70px,right=70px]{geometry}
+%\usepackage[pdftex]{graphicx} %for embedding images
+%\usepackage{url} %for proper url entries
+%\usepackage[dvips, bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={Project Report}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+
+\begin{document}
+\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+
+%include other pages
+\input{./frontpage}
+\input{./certificate.tex} 
+\input{./Acknowledgments.tex}
+\input{./Declaration.tex}
+%\pagenumbering{roman} %numbering before main content starts
+
+%\newpage
+%\pagenumbering{arabic} %reset numbering to normal for the main content
+%%%%
+
+
+%\renewcommand{\thesection}{(\arabic{section})}
+%%%%
+
+
+\end{document}

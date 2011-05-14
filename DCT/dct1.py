@@ -1,36 +1,43 @@
 ################ This is a basic DCT process for a single image.. ###############
 
-
+### USAGE : import dct1
+##@         s=Image.open('/home/adiyeaniramanujadaasan/Desktop/5.jpg' ).convert("L")
 
 
 import numpy
 import Image
 
-def main_dct(image):
-    s=Image.open(image)
-    pix = numpy.array(s.getdata()).reshape(s.size[0], s.size[1], 1) # last argument 1 => grayscale, for a RGB last arg is 3
+
+def imagetoDct(image):
+    s=Image.open(image).convert("L")
+	##s=Image.open('/home/adiyeaniramanujadaasan/Desktop/5.jpg' ).convert("L")
+    pix = numpy.array(s.getdata()).reshape(s.size[0], s.size[1], 1) 
     a = pix.tolist()
-    x, y, z = pix.shape 					# shape returns the diementions, for example for a gray scale it will return 1200, 2400, 1
+    x, y, z = pix.shape 
+    #print "printing the values of x,y,z"	
+    #print x,y,z					
 
     ########### z is not used, but just bcoz shape returns 3 values, we have used this variable    
-    for i in range(x):
-        for j in range(y):
-            print(pix[i][j])
+#    for i in range(x):
+#        for j in range(y):
+#            print(pix[i][j])
 ################ Precompute Alpha ####################
     import math
     alphaX = [0 for i in range(8)]
     for i in range(8):
-        if (i==0 or j ==0):
-            alphaX[i]=math.sqrt(1.0/x)
-        else:
-            alphaX[i]=math.sqrt(2.0/x)
+	for j in range(8):
+	    if (i==0 or j ==0):
+                alphaX[i]=math.sqrt(1.0/x)
+            else:
+                alphaX[i]=math.sqrt(2.0/x)
 
     alphaY = [0 for i in range(8)]
     for i in range(8):
-        if (i==0 or j ==0):
-            alphaY[i]=math.sqrt(1.0/y)
-        else:
-            alphaY[i]=math.sqrt(2.0/y)
+        for j in range(8):
+            if (i==0 or j ==0):
+                alphaY[i]=math.sqrt(1.0/y)
+            else:
+                alphaY[i]=math.sqrt(2.0/y)
 
 
 ################ Precompute product of the cosine terms ###########  commmon for all images #########
@@ -43,27 +50,40 @@ def main_dct(image):
                 for j in range(y):
                     product[h][k] = (math.cos(((2*i+1)*h*math.pi)/2*x)) * (math.cos(((2*j+1)*k*math.pi)/2*y))
 
+
+####################################################################################################################
+####################################################################################################################
+
+#     Till this was database specific part.. Which comes in the training and intinal processing states             #
+#            After this is images specific part, which happes for each image in database                           #
+
+####################################################################################################################
+####################################################################################################################
+
 #######################  compute sum for each image  ###################################
 
-for h in range(8):
-    for k in range(8):
-        for i in range(x):
-            for j in range(y):
-                sum[h][k] = sum[h][k] + pix[i][j] * product[h][k]
+    for h in range(8):
+        for k in range(8):
+            for i in range(x):
+                for j in range(y):
+                    sum[h][k] = sum[h][k] + pix[i][j] * product[h][k]
 
 ################ Compute the final matrix ####################
-DCT = [[0 for i in range(8)] for j in range(8)]
+    DCT = [[0 for i in range(8)] for j in range(8)]
 
-for h in range(8):
-    for k in range(8):
-        DCT[h][k] = alphaX[h]*alphaY[k] * sum[h][k]
+    for h in range(8):
+        for k in range(8):
+            tmp = alphaX[h]*alphaY[k] * sum[h][k]
+	    DCT[h][k]=tmp.tolist()
+	#    print "Printing type of DCT individual elements"
+	#    print type(DCT[h][k])
 
 ###################### Print the DCT matrix  ###############################
 
-for h in range(8):
-    for k in range(8):
-        print DCT[h][k],
-        print "\n"
+    #for h in range(8):
+    #    for k in range(8):
+    #        print DCT[h][k],
+    #    print "\n"
 
 #################### To traverse in this pattern 
 # __  __  __
@@ -74,11 +94,16 @@ for h in range(8):
 #   `` /
 #     /
 ######################### in order to get the maximum "N" values in the top-left corner
-    N=100
+    #print "printing DCT"
+    #print DCT
+    	
+	
+    N=20
     i=1
     ListN = []
     #array = [[0 for i in range(8)] for j in range(8)]
-
+    
+    
     for n in range(8):
         if(n%2==0):
             i = n ; j=0
@@ -103,6 +128,16 @@ for h in range(8):
                 i= i+1
                 j= j-1
 
+    returnLIST=[]
+    tmp=[]
+    for i in ListN:
+	tmp.extend(i)
+        	    
+    returnLIST=tmp
+    #print "printing return list"
+    #print returnLIST
+    #return ListN
+    return returnLIST
 
 ################ now ListN will contain the prominent N values of DCT.. ##################
 

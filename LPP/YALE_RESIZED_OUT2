@@ -1,0 +1,29 @@
+XS and YS created
+KNN Model Created
+Creating Adjacency Matrix
+Adjacency Matrix Created
+Adjacency Matrix Calculated
+Weight Matrix Calculated
+Matrix D Calculated
+Matrix L Calculated
+Performing X'L
+Creating Memmap
+10304
+975
+Memmap Created
+Calculating X'LX
+Performing X'L * X
+X'LX Calculated
+Calculating Eigen Vectors and Values
+Eigen Values and Vectors Calculated
+Calculating Yi for all Xi
+Calcuated Yi s
+Created a zip of Y and ys
+
+        Call the test() method like ImageDir , with
+        directory to test images as the first arg and the dictionary 
+        of {regexp:class} as the second argument, NOTE : the file 
+        types are assumed to be the same as that of training images
+        
+Starting to Test
+The efficiency of LPP with the given dataset is 0.000000

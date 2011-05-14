@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb,amsmath}
+\newcommand{\tab}{\hspace*{1.6em}}
+\begin{document}
+
+
+\section{Principal component analysis (PCA)} 
+
+Principal component analysis (PCA) is a mathematical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of uncorrelated variables called principal components. The number of principal components is less than or equal to the number of original variables. This transformation is defined in such a way that the first principal component has as high a variance as possible (that is, accounts for as much of the variability in the data as possible), and each succeeding component in turn has the highest variance possible under the constraint that it be orthogonal to (uncorrelated with) the preceding components \\ \\
+
+PCA was invented in 1901 by Karl Pearson.  Now it is mostly used as a tool in exploratory data analysis and for making predictive models. PCA can be done by eigenvalue decomposition of a data covariance matrix or singular value decomposition of a data matrix, usually after mean centering the data for each attribute. The results of a PCA are usually discussed in terms of component scores (the transformed variable values corresponding to a particular case in the data) and loadings (the weight by which each standarized original variable should be multiplied to get the component score) (Shaw, 2003).\\ \\
+
+PCA is the simplest of the true eigenvector-based multivariate analyses. Often, its operation can be thought of as revealing the internal structure of the data in a way which best explains the variance in the data. If a multivariate dataset is visualised as a set of coordinates in a high-dimensional data space (1 axis per variable), PCA can supply the user with a lower-dimensional picture, a "shadow" of this object when viewed from its (in some sense) most informative viewpoint. This is done by using only the first few principal components so that the dimensionality of the transformed data is reduced. \\ \\
+
+PCA is closely related to factor analysis; indeed, some statistical packages (such as Stata) deliberately conflate the two techniques. True factor analysis makes different assumptions about the underlying structure and solves eigenvectors of a slightly different matrix. \\ \\
+
+\subsection{Details of PCA}
+
+PCA is mathematically defined  as an orthogonal linear transformation that transforms the data to a new coordinate system such that the greatest variance by any projection of the data comes to lie on the first coordinate (called the first principal component), the second greatest variance on the second coordinate, and so on.\\ \\
+
+Define a data matrix,  \begin{math} \mathbf X^\top  \end{math}, with zero empirical mean (the empirical (sample) mean of the distribution has been subtracted from the data set), where each of the n rows represents a different repetition of the experiment, and each of the m columns gives a particular kind of datum (say, the results from a particular probe). (Note that what we are calling \begin{math} \mathbf X^\top \end{math} is often alternatively denoted as \begin{math} \mathbf X \end{math} itself.) The singular value decomposition of \begin{math} \mathbf X \end{math} is \begin{math} \mathbf X = \mathbf{W\Sigma V}^\top, \end{math}  where the m \begin{math} \times \end{math} m matrix \begin{math} \mathbf W \end{math}  is the matrix of eigenvectors of \begin{math} \mathbf{XX}^\top, \end{math} the matrix \begin{math} \mathbf\Sigma is an m\times \end{math} n rectangular diagonal matrix with nonnegative real numbers on the diagonal, and the matrix \begin{math} \mathbf V \end{math} is  \begin{math} n\times \end{math} n. The PCA transformation that preserves dimensionality (that is, gives the same number of principal components as original variables) is then given by: \\ \\
+\begin{math} \mathbf{Y}^\top  = \mathbf{X}^\top\mathbf{W} \\ \tab = \mathbf{V}\mathbf{\Sigma}^\top  \end{math} \\\\
+If we want a reduced-dimensionality representation, we can project \begin{math} \mathbf X  \end{math} down into the reduced space defined by only the first L singular vectors, \begin{math}  \mathbf W_L: \end{math} \\\\
+\begin{math} \mathbf{Y}=\mathbf{W_L}^\top\mathbf{X} = \mathbf{\Sigma_L}\mathbf{V_L}^\top \end{math} \\ \\
+
+The matrix W of singular vectors of X is equivalently the matrix W of eigenvectors of the matrix of observed covariances \begin{math} C = X X^\top \end{math}, \\ \\
+\begin{math}    \mathbf{X}\mathbf{X}^\top = \mathbf{W}\mathbf{\Sigma}\mathbf{\Sigma}^\top\mathbf{W}^\top \end{math} \\ \\
+Given a set of points in Euclidean space, the first principal component corresponds to a line that passes through the multidimensional mean and minimizes the sum of squares of the distances of the points from the line. The second principal component corresponds to the same concept after all correlation with the first principal component has been subtracted out from the points. The singular values (in Σ) are the square roots of the eigenvalues of the matrix XXT. Each eigenvalue is proportional to the portion of the "variance" (more correctly of the sum of the squared distances of the points from their multidimensional mean) that is correlated with each eigenvector. The sum of all the eigenvalues is equal to the sum of the squared distances of the points from their multidimensional mean. PCA essentially rotates the set of points around their mean in order to align with the principal components. This moves as much of the variance as possible (using an orthogonal transformation) into the first few dimensions. The values in the remaining dimensions, therefore, tend to be small and may be dropped with minimal loss of information. PCA is often used in this manner for dimensionality reduction. PCA has the distinction of being the optimal orthogonal transformation for keeping the subspace that has largest "variance" (as defined above). This advantage, however, comes at the price of greater computational requirements if compared, for example and when applicable, to the discrete cosine transform. Nonlinear dimensionality reduction techniques tend to be more computationally demanding than PCA. \\ \\
+PCA is sensitive to the scaling of the variables. If we have just two variables and they have the same sample variance and are positively correlated, then the PCA will entail a rotation by 45° and the "loadings" for the two variables with respect to the principal component will be equal. But if we multiply all values of the first variable by 100, then the principal component will be almost the same as that variable, with a small contribution from the other variable, whereas the second component will be almost aligned with the second original variable. This means that whenever the different variables have different units (like temperature and mass), PCA is a somewhat arbitrary method of analysis. (Different results would be obtained if one used Fahrenheit rather than Celsius for example.) Note that Pearson's original paper was entitled "On Lines and Planes of Closest Fit to Systems of Points in Space" – "in space" implies physical Euclidean space where such concerns do not arise. One way of making the PCA less arbitrary is to use variables scaled so as to have unit variance. \\ \\
+Lets see how is it applied to face recognition : \\ \\
+Every face image is represented as a huge matrix in digital world or computer, processing the images with that huge matrices is practically impossible, dimensions of the images has to be reduces, so PCA is applied to reduce the dimensions. \\ \\
+Every image a matrix of n*m is converted to a vector of 1*(n*m) dimensions. And this vector is taken through the algorithm of PCA and finally we extract, the same number of feature vectors as the number of original images and the extracted feature vector is much less in dimension and processing then is very easy in the real time. \\ 
+
+
+\subsection{ALGORITHM OF PCA}
+\subsubsection{Get the high dimensional data} 
+
+    1.a)  In our case images are the data, individual images are treated as a matrix of order m X n by the computer, these matrices are reshaped into a vector of size (m*n) X 1 ( Note : here m is the number of rows and n is the number of columns ) \\
+    1.b) Step 1.a is repeated to all the images in the database \\
+    1.c) Now all the vector’s are put together to form a huge matrix of the entire database of the order m*n X 1, lets give a name as X \\
+
+
+\subsubsection{Calculate the mean image vector  ( m )  } 
+
+ Note : we can calculate this by adding all the vectors and dividing by  no of images in database
+
+\subsubsection{Calculate the adjust matrix  ( XA = X-m ) }
+
+    This calculated by subtracting each vector by the mean image vector
+
+\subsubsection{ Calculate the co-variance matrix ( Cov=XA*XA’) }
+
+\subsubsection{ Calculate the eigen values and eigen vectors of the obtained co-variance matrix }
+
+\subsubsection{ Multiply the XA ( adjust matrix ) and the eigen vectors to get the mapping / signature of the original images/vectors, lets call this value as “cov-eig” }
+
+\subsubsection{ Select the leading eigen values in all the vectors of cov-eig }
+
+\subsubsection{ Finally Multiply the transpose of XA ( adjust matrix ) with the leading eigen values selected in the provious step, this value will be of the order ( no of images in database ) X ( no of leading eigen values selected), which is the final matirix ( signature of the entire database ) }
+
+
+
+\end{document}

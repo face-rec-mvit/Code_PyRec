@@ -1,0 +1,7 @@
+HBS_L1 : Histogram Based Similarity of Images
+
+	Basic Idea behind this algorithm
+
+	Every image has a different histogram and similar images has similar histograms, Using this property, we can say that similar classes of images has similar histograms, by actualy matching the histograms, which are actually much lesser in dimension then the actual image, image recognition can be done
+	
+	HBS_L1: Uses normal subtraction while comparing the results. i.e sum(abs(hist(im1)-hist(im2)))), then minimum value is identified as the image recognized

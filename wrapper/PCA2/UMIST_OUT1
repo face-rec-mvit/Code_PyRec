@@ -1,0 +1,85 @@
+Total number of trained images = 480 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/S1_12.PNG
+taken class : S1
+recognized class : S1
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/S20_14.PNG
+taken class : S20
+recognized class : S20
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/S2_6.PNG
+taken class : S2
+recognized class : S2
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s10_17.png
+taken class : s10
+recognized class : s10
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s11_23.png
+taken class : s11
+recognized class : s11
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s12_1.png
+taken class : s12
+recognized class : s12
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s13_2.png
+taken class : s13
+recognized class : s13
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s14_20.png
+taken class : s14
+recognized class : s14
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s15_8.png
+taken class : s15
+recognized class : s15
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s16_7.png
+taken class : s16
+recognized class : s16
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s17_16.png
+taken class : s17
+recognized class : s17
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s18_3.png
+taken class : s18
+recognized class : s18
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s19_23.png
+taken class : s19
+recognized class : s19
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s3_18.png
+taken class : s3
+recognized class : s3
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s4_18.png
+taken class : s4
+recognized class : s4
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s5_16.png
+taken class : s5
+recognized class : s5
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s6_19.png
+taken class : s6
+recognized class : s6
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s7_24.png
+taken class : s7
+recognized class : s7
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s8_9.png
+taken class : s8
+recognized class : s8
+sucess
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/umist/s9_2.png
+taken class : s9
+recognized class : s9
+sucess
+printing sucess
+ identified 20 images out of 20 images 
+efficiency is 
+100.0

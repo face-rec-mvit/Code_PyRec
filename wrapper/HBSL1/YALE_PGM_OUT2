@@ -1,0 +1,65 @@
+Total number of trained images = 150 
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject01.rightlight.pgm
+taken class : subject01
+recognized class : subject05
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject02.centerlight.pgm
+taken class : subject02
+recognized class : subject09
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject03.sleepy.pgm
+taken class : subject03
+recognized class : subject03
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject04.surprised.pgm
+taken class : subject04
+recognized class : subject04
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject05.centerlight.pgm
+taken class : subject05
+recognized class : subject05
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject06.glasses.pgm
+taken class : subject06
+recognized class : subject06
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject07.leftlight.pgm
+taken class : subject07
+recognized class : subject13
+failure
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject08.surprised.pgm
+taken class : subject08
+recognized class : subject08
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject09.glasses.pgm
+taken class : subject09
+recognized class : subject09
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject10.glasses.pgm
+taken class : subject10
+recognized class : subject10
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject11.sad.pgm
+taken class : subject11
+recognized class : subject11
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject12.wink.pgm
+taken class : subject12
+recognized class : subject12
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject13.normal.pgm
+taken class : subject13
+recognized class : subject13
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject14.noglasses.pgm
+taken class : subject14
+recognized class : subject14
+success
+testing undergoing for the image: /home/kiran/Documents/Facerec/databases/yalefaces pgm/subject15.noglasses.pgm
+taken class : subject15
+recognized class : subject15
+success
+printing success
+ identified 12 images out of 15 images 
+efficiency
+80.0
