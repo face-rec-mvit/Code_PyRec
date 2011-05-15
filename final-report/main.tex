@@ -1,28 +1,333 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper]{book}
 \usepackage[top=100px,bottom=100px,left=70px,right=70px]{geometry}
 \usepackage{graphics}
-%\usepackage[pdftex]{graphicx} %for embedding images
 \usepackage{url} %for proper url entries
-%\usepackage[dvips, bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={Project Report}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
-%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
-
+\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
 \begin{document}
 \renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+\pagenumbering{roman} %numbering before main content starts
 
-%include other pages
-\input{./frontpage}
-\input{./certificate.tex} 
-\input{./Acknowledgments.tex}
-\input{./Declaration.tex}
-%\pagenumbering{roman} %numbering before main content starts
+\section{Abstract}
 
-%\newpage
+\section{Chapter 1: Introduction:}
+
+	\subsection{Literature Survey}
+		As one of the most important applications of image analysis and understanding,
+face recognition has recently received significant attention, especially during the
+past 15 years. There are at least two reasons for this trend: the first is the wide range
+of commercial and law-enforcement applications, and the second is the availability
+of feasible technologies.Though machine recognition of faces has reached a certain level of maturity
+after more than 35 years of research, e.g., in terms of the number of subjects to
+be recognized, technological challenges still exist in many aspects.As a
+result, the problem of face recognition remains attractive to many researchers
+across multiple disciplines, including image processing, pattern recognition and
+learning, computer vision, computer graphics, neuroscience, and psychology.In a very narrowest sense face recognition means the recognition of facial ID. In a broad sense or from a system
+point of view, it implies face detection, feature extraction, and recognition of
+facial ID.\\ \\
+Although very reliable methods of biometric personal identification exist, e.g.,
+fingerprint analysis and retinal or iris scans, these methods rely on the cooperation
+of the participants, whereas a personal identification system based on analysis of
+frontal or profile images of the face is often effective without the participant’s
+cooperation or knowledge.Commercial and law-enforcement applications of face-recognition technology
+(FRT) range from static, controlled-format photographs to uncontrolled video
+images, posing a wide range of technical challenges and requiring an equally wide
+range of techniques from image processing, analysis, understanding, and pattern
+recognition.\\ \\
+\\ \\ \\
+PROBLEM STATEMENT: \\
+A general statement of the problem of machine recognition of faces can be formulated
+as follows: Given still or video images of a scene, identify or verify one
+or more persons in the scene using a stored database of faces. Available collateral
+information such as race, age, gender, facial expression, or speech may be
+used in narrowing the search (enhancing recognition).
+\\ \\ \\
+The solution to the problem
+involves segmentation of faces (face detection) from cluttered scenes, feature
+extraction from the face regions, recognition, or verification. In identification problems, the input
+to the system is an unknown face, and the system reports back the determined
+identity from a database of known individuals, whereas in verification problems,
+the system needs to confirm or reject the claimed identity of the input face.
+\\ \\ \\
+BRIEF HISTORY\\ \\
+The earliest work on face recognition can be traced back at least to the 1950s
+in psychology [29] and to the 1960s in the engineering literature [20]. (Some of
+the earliest studies include work on facial expression of emotions by Darwin [21]
+(see also Ekman [30]) and on facial profile based biometrics by Galton [22]). But
+research on automatic machine recognition of faces really started in the 1970s
+after the seminal work of Kanade [23] and Kelly [24]. Over the past thirty years,
+extensive research has been conducted by psychophysicists, neuroscientists, and
+engineers on various aspects of face recognition by humans and machines.Psychophysicists and neuroscientists have been concerned with issues such as
+whether face perception is a dedicated process and whether it is done holistically or by
+local feature analysis.Many of the hypotheses and
+theories put forward by researchers in these disciplines have been based on rather
+small sets of images. Nevertheless, many of the findings have important consequences
+for engineers who design algorithms and systems for machine recognition of human faces.During the early and mid-1970s, typical
+pattern-classification techniques, which use measured attributes of features
+(e.g., the distances between important points) in faces or face profiles, were
+used [20, 24, 23]. During the 1980s, work on face recognition remained largely
+dormant. Since the early 1990s, research interest in FRT has grown significantly.
+One can attribute this to several reasons: an increase in interest in commercial
+opportunities; the availability of real-time hardware; and the emergence of
+surveillance-related applications.Over the past 15 years, research has focused on how to make face-recognition
+systems fully automatic by tackling problems such as localization of a face in
+a given image or a video clip and extraction of features such as eyes, mouth,
+etc. Meanwhile, significant advances have been made in the design of classifiers
+for successful face recognition. Among appearance-based holistic approaches,
+eigen faces [122, 73] and Fisher faces [52, 56, 79] have proved to be effective in
+experiments with large databases. Feature-based graph-matching approaches [49]
+have also been quite successful. Compared to holistic approaches, feature-based methods are less sensitive to variations in illumination and viewpoint and to inaccuracy
+in face localization.During the past five to ten years, much research has been concentrated on video based
+face recognition.The still-image problem has several inherent advantages
+and disadvantages. For applications such as airport surveillance, automatic location
+and segmentation of a face could pose serious challenges to any segmentation
+algorithm if only a static picture of a large, crowded area is available. On the other
+hand, if a video sequence is available, segmentation of a moving person can be
+more easily accomplished using motion as a cue. In addition, a sequence of images
+might help to boost the recognition performance if we can effectively utilize all
+these images. But the small size and low image quality of faces captured from
+video can significantly increase the difficulty in recognition.More recently, significant advances have been made in 3D-based face recognition.Though it is known that face recognition using 3D images has many
+advantages over recognition using a single or sequence of 2D images, no serious
+effort was made for 3D face recognition until recently. This was mainly due
+to the feasibility, complexity, and computational cost for acquiring 3D data in
+real time.\\
+The Study of the amazing capability of human
+perception of faces can shed some light on how to improve existing systems
+for machine perception of faces i.e; Neuroscience and psychology.\\
+Face perception is an important capability of human perception system and is a
+routine task for humans, while building a similar computer system is still a daunting
+task. Human recognition processes utilize a broad spectrum of stimuli, obtained from many of the senses.In many situations, contextual knowledge is also applied, e.g., the context plays
+an important role in recognizing faces in relation to where they are supposed to be
+located.However, the
+human brain has its limitations in the total number of persons that it can accurately
+remember.A key advantage of a computer system is its capacity to handle large
+numbers of face images.\\ \\ \\
+
+				-----Trends in contemporary Face Recognition Research
+		---------Barchart  of Contemporary Papers
+		---------Database & Challenge Graphs (2 Graphs)
+
+	\subsection{Motivation}
+		Most of the face recognition work has happened in trying to propose an
+		algorithm which is able to recognize a face , while trying to overcome 
+		all the challenges posed to any face recognition algorithm , namely those
+		of occlusion, lighting variation, pose etc.  \\ 
+			Our motivation was to look at the problem in a different perspective.
+		Given a particular dataset we have tried to identify the challenge that is
+		most pronounced in the dataset and transparently apply the the algorithm that
+		is most efficient in recognizing faces given the particular challenge.
+
+	\subsection{Proposed Work}
+
+		\subsubsection{Problem Statement}
+			To write a wrapper algorithm which transparently identifies the most 				efficient recognition
+			algorithm for a given face dataset. Thereby increasing the overall 					recognition efficiency for
+			any given dataset.
+
+		\subsubsection{Approach to the Solution}
+			----wrapper.tex
+
+		\subsubsection{Tools used to Arrive at the result:}
+			Using a few representative datasets we have run them throught some 				standard recognition algorithms, and the respective efficiencies have been 			noted. The datasets have then been run throught the "wrapper algorithm" 				and the respective efficiencies are obtained. 
+				We have then compared the two sets of data, one from datasets 				running through the standard algorithms and the next for the datasets 				running through the wrapper algorithm.
+
+		\subsubsection{Results Obtained:}
+			The wrapper algorithm performs significantly better than any of the 					standard algorithm individually
+			the results have been tabulated and discussed in "EXPERIMENTAL 				RESULTS"
+
+	\subsection{Organization of the Rest of the Report:}
+		\emph{Chapter 3 and 4} Explain the subspace models that have been employed in our 			studies:\\ \emph{Principal Component Analysis (PCA)} and \emph{Locality Preserving Projections (LPP)} , respectively.\\
+		\emph{Chapter 5} Discusses a Histogram based classification technique.\\
+		\emph{Chapter 6} Documents the experimental results.\\
+		\emph{Chapter 7} Concludes our work and Provides pointers for Future enhancements.\\
+
+\section{Chapter 3: PCA}
+pca.tex
+\section{Chapter 4: LPP}
+	Suppose we have a collection of data points of -dimensional real vectors drawn from an 		unknown probability distribution. In increasingly many cases of interest in machine 		learning and data mining, one is confronted with the situation where is very large. 			However, there might be reason to suspect that the “intrinsic dimensionality” of
+	the data is much lower. This leads one to consider methods of dimensionality reduction 		that allow one to represent the data in a lower dimensional space.
+	
+A great number of dimensionality reduction techniques exist in the literature. In practical 	situations, when is prohibitively large, one is often forced to use linear (or even sublinear) 	techniques. Consequently, projective maps have been the subject of considerable 	investigation.
+	
+Locality Preserving Projections (LPP) is a linear dimensionality reduction algorithm.
+
+	\paragraph{The linear dimensionality Reduction problem}
+The generic problem of linear dimensionality reduction is the following. Given a set x_1,x_2,...,x_k in R_l, find a transformation matrix A that maps these k points to a set of points y1,y2,...,yk in Rm (m>>l), such that yi "represents" xi, where yi =Axi
+
+\subsection{Algorithm}
+\paragraph{Training Phase:}
+	\begin{enumerate}
+\item Given a dataset of images. convert each image Xi into a vector
+and the collection of Xi s is called the matrix X
+
+\item Put the matrix X through the KNN clustering Algorithm.
+\begin{enumerate}
+\item Select appropriate centroids, they can be images or mean of images.
+\item For each new image, find the nearest centroid and assign it with the nearest centroid.
+\item Update the centroid. ( average of all points in the centroid).
+\item Repeate the above two steps till no image switch occurs.
+\end{enumerate}
+\item From the KNN Algorithm get the Adjacency Matrix Sij also get
+the weight matrix Wij.
+
+\item D = \math{diag(\sum_ Wij)}
+\item L = (D-W)
+\item Calculate the matrix A:
+\begin{enumerate}
+
+\item Compute the Eigen Vectors and Eigen Values of the matrix X.L.X'
+\item Sort the eigen Vectors in the ASCENDING ORDER of eigen values.
+\item choose “d” vectors from above, corresponding to smallest eigen vectors.
+\item Save the above matrix as A
+\end{enumerate}
+\item Calculate Yi = A' * Xi
+\item save the Yi vectors as a matrix Y.
+\end{enumerate}
+
+\paragraph{Testing Phase}
+	\begin{enumerate}
+\item Given a "Test Image" project it on the lower dimensional space as follows
+	Ytest = A' * Xtest 
+where Xtest is the Vectorized Test Image
+\item Find the euclidean distances Di of Ynew from each of Yi in Y.
+\item The Yi corresponding to the shortest distance Di is the “recognized” image.
+		\end{enumerate}
+\section{Chapter 5: Histogram normalization}
+\section{Chapter 6: Experimental Results:}
+\section{Chapter 7: Conclusion and Future Enhancements:}
+
+\section{References:}
+
+// dharini’s references.... (that mail..)
+
+/*@misc{ Nobody06,
+       author = "Nobody Jr",
+       title = "My Article",
+       year = "2006" }
+Required fields: none
+Optional fields: author, title, howpublished, month, year, note, key */
+
+
+@misc{ Sri,
+       author = "V. Srisarkun, University of Wollongong and J. Cooper, University of Wollongong",
+       title = "Face recognition using a similarity-based measure in image database for crime investigation",
+       year = "2002" }
+
+[1] Face recognition using a similarity-based measure
+in image database for crime investigation
+Authors : V. Srisarkun, University of Wollongong
+J. Cooper, University of Wollongong
+
+@misc{ Jianz,
+       author = "Jianzhong Fang and Guoping Qiu",
+       title = "A colour histogram based approach to human face detection",
+       year = "2003" }
+
+[2] A colour histogram based approach to human face detection
+Authors : Jianzhong Fang and Guoping Qiu
+
+
+
+@misc{ Stackoverflow,
+       title = "Histogram based  threads",
+}
+
+[3] Histogram based  threads in Stackoverflow.com
+
+
+@misc{ Ghola,
+       author = "Gholamreza”,
+       title = "Histogram based face recognition",
+       year = "2005" }
+
+[4] Histogram based face recognition
+   Authors :  Gholamreza
+
+@misc{ Ghola,
+       author = "Gholamreza”,
+       title = "Histogram based face recognition",
+       year = "2005" }
+
+[5] http://nature.berkeley.edu/~bingxu/UU/spatial/Week15/HistogramAdjust.pdf
+
+@misc{ Wiki,
+       title = "Histogram -- wikipedia",
+}
+[6] http://en.wikipedia.org/wiki/
+
+--------------------
+
+
 %\pagenumbering{arabic} %reset numbering to normal for the main content
 %%%%
-
-
 %\renewcommand{\thesection}{(\arabic{section})}
 %%%%
-
+\end{document}
+-------------------
+%citations
+-------------------
+@ARTICLE{5325612, 
+	author={Jiwen Lu and Yap-Peng Tan}, 
+	journal={Systems, Man, and Cybernetics, Part B: Cybernetics, IEEE Transactions on}, title={Regularized Locality Preserving Projections and Its Extensions for Face 		Recognition}, 
+	year={2010}, 
+	month={june }, 
+	volume={40}, 
+	number={3}, 
+	pages={958 -963}, 
+	keywords={face databases;face recognition;feature space;principal component analysis;regularization method;regularized locality preserving projections;sample size 		problem;useful discriminant information extraction;face recognition;feature extraction;learning (artificial intelligence);principal component analysis;visual 		databases;Algorithms;Artificial Intelligence;Biometry;Face;Humans;Image Enhancement;Image Interpretation, Computer-Assisted;Pattern Recognition, 		Automated;Reproducibility of Results;Sensitivity and Specificity;Subtraction Technique;}, 
+	doi={10.1109/TSMCB.2009.2032926}, 
+	ISSN={1083-4419},
+}
+----------------------------------------
+@INPROCEEDINGS{1238370, 
+	author={Xiaofei He and Shuicheng Yan and Yuxiao Hu and Hong-Jiang Zhang}, 
+	booktitle={Computer Vision, 2003. Proceedings. Ninth IEEE International Conference on}, title={Learning a locality preserving subspace for visual recognition}, 
+	year={2003}, 
+	month={oct.}, 
+	volume={}, 
+	number={}, 
+	pages={385 -392 vol.1}, 
+	keywords={Euclidean structure;LDA;LPP;Laplacianface approach;PCA;eigenface method;face images mapping;face recognition;fisherface method;linear discriminant 		analysis;locality preserving projections;principal component analysis;face recognition;image representation;learning (artificial intelligence);principal component 		analysis;visual databases;}, 
+	doi={10.1109/ICCV.2003.1238370}, 
+	ISSN={},
+}
+----------------------------------------
+@Inproceedings{HN03,
+        author = {Xiaofei He and Partha Niyogi},
+        title = {Locality Preserving Projections},
+        booktitle = {Advances in Neural Information Processing Systems 16},
+        year = {2003}
+}
+----------------------------------------
+@ARTICLE{5325612, 
+	author={Jiwen Lu and Yap-Peng Tan}, 
+	journal={Systems, Man, and Cybernetics, Part B: Cybernetics, IEEE Transactions on}, title={Regularized Locality Preserving Projections and Its Extensions for Face 		Recognition}, 
+	year={2010}, 
+	month={june }, 
+	volume={40}, 
+	number={3}, 
+	pages={958 -963}, 
+	keywords={face databases;face recognition;feature space;principal component analysis;regularization method;regularized locality preserving projections;sample size 		problem;useful discriminant information extraction;face recognition;feature extraction;learning (artificial intelligence);principal component analysis;visual 		databases;Algorithms;Artificial Intelligence;Biometry;Face;Humans;Image Enhancement;Image Interpretation, Computer-Assisted;Pattern Recognition,		Automated;Reproducibility of Results;Sensitivity and Specificity;Subtraction Technique;}, 
+	doi={10.1109/TSMCB.2009.2032926}, 
+	ISSN={1083-4419},
+}
+----------------------------------------
+@article{Zhao:2003:FRL:954339.954342,
+	 author = {Zhao, W. and Chellappa, R. and Phillips, P. J. and Rosenfeld, A.},
+	 title = {Face recognition: A literature survey},
+	 journal = {ACM Comput. Surv.},
+	 volume = {35},
+	 issue = {4},
+	 month = {December},
+	 year = {2003},
+	 issn = {0360-0300},
+	 pages = {399--458},
+	 numpages = {60},
+	 url = {http://doi.acm.org/10.1145/954339.954342},
+	 doi = {http://doi.acm.org/10.1145/954339.954342},
+	 acmid = {954342},
+	 publisher = {ACM},
+	 address = {New York, NY, USA},
+	 keywords = {Face recognition, person identification},
+} 
 
 \end{document}
